@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comunidad — SoulsBase</title>
+    <meta name="description" content="Comunidad SoulsBase — debates, builds, guías y discusiones sobre souls, RPG y ARPG.">
+    <meta property="og:title" content="Comunidad — SoulsBase">
+    <meta property="og:description" content="Debates, builds y guías de la comunidad de jugadores de souls y RPG.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💀</text></svg>">
+    <link rel="stylesheet" href="css/components.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- ══ SIDEBAR ══ -->
+    <aside class="sidebar">
+      <div class="sidebar-logo" onclick="window.location.href='buscador.html'" style="cursor:pointer"><em>Souls</em>Base</div>
+      <nav class="sidebar-section">
+        <ul>
+          <li>
+            <a href="index.html" class="sidebar-item"
+              ><i class="ti ti-home"></i>Inicio</a
+            >
+          </li>
+          <li>
+            <a href="catalogo.html" class="sidebar-item"
+              ><i class="ti ti-layout-grid"></i>Catálogo</a
+            >
+          </li>
+          <li>
+            <a href="guias.html" class="sidebar-item"
+              ><i class="ti ti-book"></i>Guías</a
+            >
+          </li>
+          <li>
+            <a href="galeria.html" class="sidebar-item"
+              ><i class="ti ti-photo"></i>Galería</a
+            >
+          </li>
+          <li>
+            <a href="tierlist.html" class="sidebar-item"
+              ><i class="ti ti-sword"></i>Builds</a
+            >
+          </li>
+          <li>
+            <a href="tierlist.html" class="sidebar-item"
+              ><i class="ti ti-chart-bar"></i>Tier list</a
+            >
+          </li>
+          <li>
+            <a href="comunidad.html" class="sidebar-item active"
+              ><i class="ti ti-users"></i>Comunidad</a
+            >
+          </li>
+          <li>
+            <a href="favoritos.html" class="sidebar-item"
+              ><i class="ti ti-heart"></i>Favoritos</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Juegos</div>
+        <a href="juego.html?id=elden-ring" class="game-pin"
+          ><span class="game-pin-dot" style="background: #9b7d3a"></span>Elden Ring</a
+        >
+        <a href="juego.html?id=dark-souls-3" class="game-pin"
+          ><span class="game-pin-dot" style="background: #4a7ab5"></span>Dark Souls III</a
+        >
+        <a href="juego.html?id=diablo-4" class="game-pin"
+          ><span class="game-pin-dot" style="background: #a83030"></span>Diablo IV</a
+        >
+        <a href="juego.html?id=bloodborne" class="game-pin"
+          ><span class="game-pin-dot" style="background: #8a4da0"></span>Bloodborne</a
+        >
+        <a href="juego.html?id=sekiro" class="game-pin"
+          ><span class="game-pin-dot" style="background: #3d8a4a"></span>Sekiro</a
+        >
+        <a href="juego.html?id=poe2" class="game-pin"
+          ><span class="game-pin-dot" style="background: #7a6b30"></span>Path of Exile 2</a
+        >
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#0a4a8a"></span>FF VII Remake</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#8a3a6a"></span>Persona 5</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#2a6a4a"></span>Baldur's Gate 3</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#6a2a2a"></span>Binding of Isaac</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#2a2a6a"></span>Hades II</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#5a3a8a"></span>Expedition 33</a>
+      </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- ══ MAIN ══ -->
+    <div class="main-wrapper">
+      <header class="topbar">
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Menú">
+          <i class="ti ti-menu-2"></i>
+        </button>
+        <div class="search-box">
+          <i class="ti ti-search"></i>
+          <input
+            type="text"
+            placeholder="Buscar en comunidad..."
+            onkeydown="if(event.key==='Enter' && this.value.trim()) window.location.href='buscador.html?q='+encodeURIComponent(this.value.trim())"
+          />
+        </div>
+        <div class="filter-pills">
+          <button class="pill active" data-filter="todos">Todos</button>
+          <button class="pill" data-filter="debates">Debates</button>
+          <button class="pill" data-filter="builds">Builds</button>
+          <button class="pill" data-filter="guias">Guías</button>
+          <button class="pill" data-filter="off-topic">Off-topic</button>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+          <i class="ti ti-sun" id="theme-icon"></i>
+        </button>
+      </header>
+
+      <main class="content">
+        <!-- Header -->
+        <div class="cat-header">
+          <div>
+            <h1 class="cat-title">Comunidad</h1>
+            <p class="cat-sub">Debates, builds y guías de la comunidad SoulsBase</p>
+          </div>
+          <button
+            id="btn-nuevo-post"
+            class="modal-btn"
+            style="width:auto;padding:8px 18px;display:flex;align-items:center;gap:6px;font-size:13px"
+          >
+            <i class="ti ti-plus"></i>Nuevo post
+          </button>
+        </div>
+
+        <!-- Stats -->
+        <div class="community-stats">
+          <div class="metric-card">
+            <i class="ti ti-users"></i>
+            <div class="metric-val">12.840</div>
+            <div class="metric-label">Miembros</div>
+          </div>
+          <div class="metric-card">
+            <i class="ti ti-message-circle"></i>
+            <div class="metric-val">48.200</div>
+            <div class="metric-label">Posts</div>
+          </div>
+          <div class="metric-card">
+            <i class="ti ti-wifi"></i>
+            <div class="metric-val">234</div>
+            <div class="metric-label">Online ahora</div>
+          </div>
+          <div class="metric-card">
+            <i class="ti ti-flame"></i>
+            <div class="metric-val">18</div>
+            <div class="metric-label">Debates hoy</div>
+          </div>
+        </div>
+
+        <!-- Posts -->
+        <div class="section-header">
+          <span class="section-title">Posts recientes</span>
+          <span id="post-count" style="font-size:12px;color:var(--text-muted)"></span>
+        </div>
+        <div class="post-list" id="post-list"></div>
+      </main>
+    </div>
+
+    <!-- Modal nuevo post -->
+    <div class="modal-overlay" id="modal-overlay">
+      <div class="modal-box">
+        <button class="modal-close" id="modal-close"><i class="ti ti-x"></i></button>
+        <div class="modal-title"><i class="ti ti-edit"></i>Nuevo post</div>
+        <div class="modal-field">
+          <label class="modal-label">Título</label>
+          <input class="modal-input" id="post-titulo" type="text" placeholder="Escribe el título del post..." />
+        </div>
+        <div class="modal-field">
+          <label class="modal-label">Categoría</label>
+          <select class="modal-select" id="post-cat">
+            <option value="debates">Debates</option>
+            <option value="builds">Builds</option>
+            <option value="guias">Guías</option>
+            <option value="off-topic">Off-topic</option>
+          </select>
+        </div>
+        <div class="modal-field">
+          <label class="modal-label">Juego</label>
+          <select class="modal-select" id="post-juego"></select>
+        </div>
+        <div class="modal-field">
+          <label class="modal-label">Contenido</label>
+          <textarea class="modal-textarea" id="post-contenido" placeholder="Escribe el contenido del post..."></textarea>
+        </div>
+        <button class="modal-btn" id="post-submit">Publicar post</button>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/comunidad.js"></script>
+    <script src="js/favoritos.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>

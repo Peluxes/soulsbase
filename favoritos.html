@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Favoritos — SoulsBase</title>
+    <meta name="description" content="Tus juegos y bosses favoritos guardados en SoulsBase.">
+    <meta property="og:title" content="Mis Favoritos — SoulsBase">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💀</text></svg>">
+    <link rel="stylesheet" href="css/components.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- ══ SIDEBAR ══ -->
+    <aside class="sidebar">
+      <div
+        class="sidebar-logo"
+        onclick="window.location.href = 'buscador.html'"
+        style="cursor: pointer"
+      >
+        <em>Souls</em>Base
+      </div>
+      <nav class="sidebar-section">
+        <ul>
+          <li>
+            <a href="index.html" class="sidebar-item"
+              ><i class="ti ti-home"></i>Inicio</a
+            >
+          </li>
+          <li>
+            <a href="catalogo.html" class="sidebar-item"
+              ><i class="ti ti-layout-grid"></i>Catálogo</a
+            >
+          </li>
+          <li>
+            <a href="guias.html" class="sidebar-item"
+              ><i class="ti ti-book"></i>Guías</a
+            >
+          </li>
+          <li>
+            <a href="galeria.html" class="sidebar-item"
+              ><i class="ti ti-photo"></i>Galería</a
+            >
+          </li>
+          <li>
+            <a href="tierlist.html" class="sidebar-item"
+              ><i class="ti ti-sword"></i>Builds</a
+            >
+          </li>
+          <li>
+            <a href="tierlist.html" class="sidebar-item"
+              ><i class="ti ti-chart-bar"></i>Tier list</a
+            >
+          </li>
+          <li>
+            <a href="comunidad.html" class="sidebar-item"
+              ><i class="ti ti-users"></i>Comunidad</a
+            >
+          </li>
+          <li>
+            <a href="favoritos.html" class="sidebar-item active"
+              ><i class="ti ti-heart"></i>Favoritos</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Juegos</div>
+        <a href="juego.html?id=elden-ring" class="game-pin"
+          ><span class="game-pin-dot" style="background: #9b7d3a"></span>Elden
+          Ring</a
+        >
+        <a href="juego.html?id=dark-souls-3" class="game-pin"
+          ><span class="game-pin-dot" style="background: #4a7ab5"></span>Dark
+          Souls III</a
+        >
+        <a href="juego.html?id=diablo-4" class="game-pin"
+          ><span class="game-pin-dot" style="background: #a83030"></span>Diablo
+          IV</a
+        >
+        <a href="juego.html?id=bloodborne" class="game-pin"
+          ><span class="game-pin-dot" style="background: #8a4da0"></span
+          >Bloodborne</a
+        >
+        <a href="juego.html?id=sekiro" class="game-pin"
+          ><span class="game-pin-dot" style="background: #3d8a4a"></span
+          >Sekiro</a
+        >
+        <a href="juego.html?id=poe2" class="game-pin"
+          ><span class="game-pin-dot" style="background: #7a6b30"></span>Path of
+          Exile 2</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #0a4a8a"></span>FF VII
+          Remake</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #8a3a6a"></span>Persona
+          5</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #2a6a4a"></span
+          >Baldur's Gate 3</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #6a2a2a"></span>Binding
+          of Isaac</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #2a2a6a"></span>Hades
+          II</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #5a3a8a"></span
+          >Expedition 33</a
+        >
+      </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- ══ MAIN ══ -->
+    <div class="main-wrapper">
+      <header class="topbar">
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Menú">
+          <i class="ti ti-menu-2"></i>
+        </button>
+        <div class="search-box">
+          <i class="ti ti-search"></i>
+          <input
+            type="text"
+            placeholder="Buscar en SoulsBase..."
+            onkeydown="
+              if (event.key === 'Enter' && this.value.trim())
+                window.location.href =
+                  'buscador.html?q=' + encodeURIComponent(this.value.trim());
+            "
+          />
+        </div>
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Cambiar tema"
+        >
+          <i class="ti ti-sun" id="theme-icon"></i>
+        </button>
+      </header>
+
+      <main class="content">
+        <div class="cat-header">
+          <div>
+            <h1 class="cat-title">Mis Favoritos</h1>
+            <p class="cat-sub">Juegos y bosses que has guardado</p>
+          </div>
+          <div class="cat-controls">
+            <span
+              id="fav-count"
+              style="font-size: 12px; color: var(--text-muted)"
+            ></span>
+            <a href="catalogo.html" class="tl-share-btn">
+              <i class="ti ti-layout-grid"></i> Ver catálogo
+            </a>
+          </div>
+        </div>
+
+        <!-- Estado vacío -->
+        <div
+          id="fav-empty"
+          style="text-align: center; padding: 80px 20px; display: none"
+        >
+          <div style="font-size: 48px; margin-bottom: 16px">💔</div>
+          <p
+            style="
+              font-size: 16px;
+              color: var(--text-muted);
+              margin-bottom: 8px;
+            "
+          >
+            No tienes favoritos aún
+          </p>
+          <p
+            style="
+              font-size: 13px;
+              color: var(--text-hint);
+              margin-bottom: 24px;
+            "
+          >
+            Haz hover sobre cualquier juego en el catálogo y pulsa el corazón
+          </p>
+          <a
+            href="catalogo.html"
+            class="tl-share-btn"
+            style="display: inline-flex"
+          >
+            <i class="ti ti-layout-grid"></i> Ir al catálogo
+          </a>
+        </div>
+
+        <!-- Juegos -->
+        <div class="section-header" style="margin-bottom: 14px">
+          <span class="section-title">Juegos guardados</span>
+        </div>
+        <div
+          class="games-grid"
+          id="fav-juegos-grid"
+          style="margin-bottom: 32px"
+        ></div>
+
+        <!-- Bosses -->
+        <div class="section-header" style="margin-bottom: 14px">
+          <span class="section-title">Bosses guardados</span>
+        </div>
+        <div class="bosses-grid" id="fav-bosses-grid"></div>
+      </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/favoritos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const data = Favoritos.load();
+
+        const juegosEl = document.getElementById("fav-juegos-grid");
+        const bossesEl = document.getElementById("fav-bosses-grid");
+        const emptyEl = document.getElementById("fav-empty");
+        const countEl = document.getElementById("fav-count");
+
+        const totalFavs =
+          (data.juegos?.length || 0) + (data.bosses?.length || 0);
+        if (countEl) countEl.textContent = totalFavs + " guardados";
+
+        // ── Juegos ──
+        const juegosGuardados = (data.juegos || [])
+          .map((id) => DB.juegos.find((j) => j.id === id))
+          .filter(Boolean);
+
+        if (juegosEl) {
+          if (juegosGuardados.length) {
+            juegosEl.innerHTML = juegosGuardados
+              .map(
+                (j) => `
+              <div class="game-card" data-id="${j.id}"
+                onclick="window.location.href='juego.html?id=${j.id}'">
+                <div class="game-thumb" style="background:${j.thumbBg};height:100px;">
+                  ${j.imagen ? `<img src="${j.imagen}" alt="${j.titulo}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display='none'">` : `<span style="font-size:36px">${j.emoji}</span>`}
+                </div>
+                <div class="game-info" style="padding:10px 12px 12px">
+                  <div class="game-title">${j.titulo}</div>
+                  <div class="game-footer">
+                    <span class="tag tag-${j.tag}">${j.tagLabel}</span>
+                    <span class="rating"><i class="ti ti-star"></i>${j.rating}</span>
+                  </div>
+                </div>
+              </div>`,
+              )
+              .join("");
+          } else {
+            juegosEl.innerHTML =
+              '<p style="font-size:13px;color:var(--text-hint);padding:8px 0">No tienes juegos guardados.</p>';
+          }
+        }
+
+        // ── Bosses ──
+        const bossesGuardados = (data.bosses || [])
+          .map((id) => DB.bosses[id])
+          .filter(Boolean);
+
+        if (bossesEl) {
+          if (bossesGuardados.length) {
+            bossesEl.innerHTML = bossesGuardados
+              .map(
+                (b) => `
+              <div class="boss-card" data-id="${b.id}"
+                onclick="window.location.href='boss.html?id=${b.id}'">
+                <div class="boss-emoji">${b.emoji}</div>
+                <div class="boss-name">${b.nombre}</div>
+                <div class="boss-zone">${b.zona}</div>
+                <div class="boss-footer">
+                  <span class="boss-dif dif-${b.dificultad.toLowerCase()}">${b.dificultad}</span>
+                </div>
+              </div>`,
+              )
+              .join("");
+          } else {
+            bossesEl.innerHTML =
+              '<p style="font-size:13px;color:var(--text-hint);padding:8px 0">No tienes bosses guardados.</p>';
+          }
+        }
+
+        // ── Estado vacío total ──
+        if (emptyEl) {
+          emptyEl.style.display = totalFavs === 0 ? "" : "none";
+        }
+
+        // ── Aplicar botones de corazón ──
+        setTimeout(() => Favoritos.aplicarBotones(), 0);
+      });
+    </script>
+    <script src="js/theme.js"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>

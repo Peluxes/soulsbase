@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo — SoulsBase</title>
+    <meta name="description" content="Catálogo completo de juegos souls, ARPG y RPG. Filtra por categoría, ordena por valoración y encuentra tu próximo juego.">
+    <meta property="og:title" content="Catálogo — SoulsBase">
+    <meta property="og:description" content="27+ juegos souls, ARPG, RPG y roguelike con fichas detalladas, guías y bosses.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💀</text></svg>">
+    <link rel="stylesheet" href="css/components.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- ══ SIDEBAR ══ -->
+    <aside class="sidebar">
+      <div class="sidebar-logo" onclick="window.location.href='buscador.html'" style="cursor:pointer"><em>Souls</em>Base</div>
+      <nav class="sidebar-section">
+        <ul>
+          <li>
+            <a href="index.html" class="sidebar-item"
+              ><i class="ti ti-home"></i>Inicio</a
+            >
+          </li>
+          <li>
+            <a href="catalogo.html" class="sidebar-item active"
+              ><i class="ti ti-layout-grid"></i>Catálogo</a
+            >
+          </li>
+          <li>
+            <a href="guias.html" class="sidebar-item"
+              ><i class="ti ti-book"></i>Guías</a
+            >
+          </li>
+          <li>
+            <a href="galeria.html" class="sidebar-item"
+              ><i class="ti ti-photo"></i>Galería</a
+            >
+          </li>
+          <li>
+            <a href="tierlist.html" class="sidebar-item"
+              ><i class="ti ti-sword"></i>Builds</a
+            >
+          </li>
+          <li>
+            <a href="tierlist.html" class="sidebar-item"
+              ><i class="ti ti-chart-bar"></i>Tier list</a
+            >
+          </li>
+          <li>
+            <a href="comunidad.html" class="sidebar-item"
+              ><i class="ti ti-users"></i>Comunidad</a
+            >
+          </li>
+          <li>
+            <a href="favoritos.html" class="sidebar-item"
+              ><i class="ti ti-heart"></i>Favoritos</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Juegos</div>
+        <a href="tierlist.html" class="game-pin"
+          ><span class="game-pin-dot" style="background: #9b7d3a"></span>Elden
+          Ring</a
+        >
+        <a href="tierlist.html" class="game-pin"
+          ><span class="game-pin-dot" style="background: #4a7ab5"></span>Dark
+          Souls III</a
+        >
+        <a href="tierlist.html" class="game-pin"
+          ><span class="game-pin-dot" style="background: #a83030"></span>Diablo
+          IV</a
+        >
+        <a href="tierlist.html" class="game-pin"
+          ><span class="game-pin-dot" style="background: #8a4da0"></span
+          >Bloodborne</a
+        >
+        <a href="tierlist.html" class="game-pin"
+          ><span class="game-pin-dot" style="background: #3d8a4a"></span
+          >Sekiro</a
+        >
+        <a href="tierlist.html" class="game-pin"
+          ><span class="game-pin-dot" style="background: #7a6b30"></span>Path of
+          Exile 2</a
+        >
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#0a4a8a"></span>FF VII Remake</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#8a3a6a"></span>Persona 5</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#2a6a4a"></span>Baldur's Gate 3</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#6a2a2a"></span>Binding of Isaac</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#2a2a6a"></span>Hades II</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#5a3a8a"></span>Expedition 33</a>
+      </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- ══ MAIN ══ -->
+    <div class="main-wrapper">
+      <header class="topbar">
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Menú">
+          <i class="ti ti-menu-2"></i>
+        </button>
+        <div class="search-box">
+          <i class="ti ti-search"></i>
+          <input type="text" id="search-input" placeholder="Buscar juego..." onkeydown="if(event.key==='Enter' && this.value.trim()) window.location.href='buscador.html?q='+encodeURIComponent(this.value.trim())" />
+        </div>
+        <div class="filter-pills">
+          <button class="pill active" data-filter="todos">Todos</button>
+          <button class="pill" data-filter="souls">Souls</button>
+          <button class="pill" data-filter="arpg">ARPG</button>
+          <button class="pill" data-filter="accion">Acción</button>
+          <button class="pill" data-filter="rpg">RPG</button>
+          <button class="pill" data-filter="roguelike">Roguelike</button>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+          <i class="ti ti-sun" id="theme-icon"></i>
+        </button>
+      </header>
+
+      <main class="content">
+        <!-- Cabecera catálogo -->
+        <div class="cat-header">
+          <div>
+            <h1 class="cat-title">Catálogo de juegos</h1>
+            <p class="cat-sub">
+              Base de datos completa de souls, ARPG y acción
+            </p>
+          </div>
+          <div class="cat-controls">
+            <div class="sort-select-wrap">
+              <i class="ti ti-arrows-sort"></i>
+              <select id="sort-select">
+                <option value="rating">Mejor valorados</option>
+                <option value="año-desc">Más recientes</option>
+                <option value="año-asc">Más antiguos</option>
+                <option value="titulo">Alfabético</option>
+              </select>
+            </div>
+            <div class="view-toggle">
+              <button
+                class="view-btn active"
+                id="btn-grid"
+                title="Vista cuadrícula"
+              >
+                <i class="ti ti-layout-grid"></i>
+              </button>
+              <button class="view-btn" id="btn-list" title="Vista lista">
+                <i class="ti ti-list"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contador resultados -->
+        <div class="results-bar">
+          <span id="results-count" class="text-muted fs-12"></span>
+        </div>
+
+        <!-- Grid de juegos -->
+        <div class="games-grid" id="games-grid"></div>
+
+        <!-- Vista lista (oculta por defecto) -->
+        <div class="games-list" id="games-list" style="display: none"></div>
+      </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/catalogo.js"></script>
+    <script src="js/favoritos.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>

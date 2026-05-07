@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoulsBase — Base de datos de juegos souls y ARPG</title>
+    <meta name="description" content="SoulsBase — Base de datos completa de juegos souls, ARPG y RPG. Guías, bosses, builds, galería y tier list de Elden Ring, Dark Souls, Diablo, Final Fantasy y más.">
+    <meta name="keywords" content="souls, elden ring, dark souls, diablo, RPG, guías, bosses, builds, tier list">
+    <meta name="author" content="SoulsBase">
+    <meta property="og:title" content="SoulsBase — Base de datos de juegos souls y RPG">
+    <meta property="og:description" content="Guías, bosses, builds, galería y tier list de los mejores juegos souls, ARPG y RPG.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://soulsbase.app">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SoulsBase">
+    <meta name="twitter:description" content="Base de datos completa de juegos souls y RPG.">
+    <link rel="canonical" href="https://soulsbase.app">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💀</text></svg>">
+    <link rel="stylesheet" href="css/components.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- ══ SIDEBAR ══ -->
+    <aside class="sidebar">
+      <div
+        class="sidebar-logo"
+        onclick="window.location.href = 'buscador.html'"
+        style="cursor: pointer"
+      >
+        <em>Souls</em>Base
+      </div>
+
+      <nav class="sidebar-section">
+        <ul>
+          <li>
+            <a href="index.html" class="sidebar-item active"
+              ><i class="ti ti-home"></i>Inicio</a
+            >
+          </li>
+          <li>
+            <a href="catalogo.html" class="sidebar-item"
+              ><i class="ti ti-layout-grid"></i>Catálogo</a
+            >
+          </li>
+          <li>
+            <a href="guias.html" class="sidebar-item"
+              ><i class="ti ti-book"></i>Guías</a
+            >
+          </li>
+          <li>
+            <a href="galeria.html" class="sidebar-item"
+              ><i class="ti ti-photo"></i>Galería</a
+            >
+          </li>
+          <li>
+            <a href="tierlist.html" class="sidebar-item"
+              ><i class="ti ti-sword"></i>Builds</a
+            >
+          </li>
+          <li>
+            <a href="tierlist.html" class="sidebar-item"
+              ><i class="ti ti-chart-bar"></i>Tier list</a
+            >
+          </li>
+          <li>
+            <a href="comunidad.html" class="sidebar-item"
+              ><i class="ti ti-users"></i>Comunidad</a
+            >
+          </li>
+          <li>
+            <a href="favoritos.html" class="sidebar-item"
+              ><i class="ti ti-heart"></i>Favoritos</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">Juegos</div>
+        <a href="tierlist.html" class="game-pin"
+          ><span class="game-pin-dot" style="background: #9b7d3a"></span>Elden
+          Ring</a
+        >
+        <a href="tierlist.html" class="game-pin"
+          ><span class="game-pin-dot" style="background: #4a7ab5"></span>Dark
+          Souls III</a
+        >
+        <a href="tierlist.html" class="game-pin"
+          ><span class="game-pin-dot" style="background: #a83030"></span>Diablo
+          IV</a
+        >
+        <a href="tierlist.html" class="game-pin"
+          ><span class="game-pin-dot" style="background: #8a4da0"></span
+          >Bloodborne</a
+        >
+        <a href="tierlist.html" class="game-pin"
+          ><span class="game-pin-dot" style="background: #3d8a4a"></span
+          >Sekiro</a
+        >
+        <a href="tierlist.html" class="game-pin"
+          ><span class="game-pin-dot" style="background: #7a6b30"></span>Path of
+          Exile 2</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #0a4a8a"></span>FF VII
+          Remake</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #8a3a6a"></span>Persona
+          5</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #2a6a4a"></span
+          >Baldur's Gate 3</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #6a2a2a"></span>Binding
+          of Isaac</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #2a2a6a"></span>Hades
+          II</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #5a3a8a"></span
+          >Expedition 33</a
+        >
+      </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- ══ MAIN ══ -->
+    <div class="main-wrapper">
+      <!-- Topbar -->
+      <header class="topbar">
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Menú">
+          <i class="ti ti-menu-2"></i>
+        </button>
+        <div class="search-box">
+          <i class="ti ti-search"></i>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Busca juego, boss, build, guía..."
+            onkeydown="
+              if (event.key === 'Enter' && this.value.trim())
+                window.location.href =
+                  'buscador.html?q=' + encodeURIComponent(this.value.trim());
+            "
+          />
+        </div>
+        <div class="filter-pills">
+          <button class="pill active" data-filter="todos">Todos</button>
+          <button class="pill" data-filter="souls">Souls</button>
+          <button class="pill" data-filter="arpg">ARPG</button>
+          <button class="pill" data-filter="accion">Acción</button>
+          <button class="pill" data-filter="rpg">RPG</button>
+          <button class="pill" data-filter="roguelike">Roguelike</button>
+        </div>
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Cambiar tema"
+        >
+          <i class="ti ti-sun" id="theme-icon"></i>
+        </button>
+      </header>
+
+      <!-- Contenido -->
+      <main class="content">
+        <!-- Juegos destacados -->
+        <div class="section-header">
+          <span class="section-title">Juegos destacados</span>
+          <a href="catalogo.html" class="section-link">Ver todos →</a>
+        </div>
+
+        <div class="games-grid" id="games-grid">
+          <!-- Las cards las inyecta main.js -->
+        </div>
+
+        <!-- Guías recientes -->
+        <div class="section-header">
+          <span class="section-title">Guías recientes</span>
+          <a href="guias.html" class="section-link">Ver todas →</a>
+        </div>
+
+        <div class="guides-list" id="guides-list">
+          <!-- Las filas las inyecta main.js -->
+        </div>
+
+        <!-- Tier list rápida -->
+        <div class="section-header">
+          <span class="section-title">Tier list — 2026</span>
+          <a href="tierlist.html" class="section-link">Ver completa →</a>
+        </div>
+
+        <div class="tier-row" id="tier-row">
+          <!-- Inyectado por main.js -->
+        </div>
+
+        <!-- Bottom row -->
+        <div
+          class="bottom-row"
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 28px;
+          "
+        >
+          <div class="mini-card">
+            <div class="mini-title">
+              <i class="ti ti-chart-bar"></i>Stats del sitio
+            </div>
+            <div class="stat-row">
+              <span>Juegos indexados</span
+              ><span class="stat-val" id="stat-juegos">—</span>
+            </div>
+            <div class="stat-row">
+              <span>Guías publicadas</span
+              ><span class="stat-val" id="stat-guias">—</span>
+            </div>
+            <div class="stat-row">
+              <span>Bosses en DB</span
+              ><span class="stat-val" id="stat-bosses">—</span>
+            </div>
+            <div class="stat-row" style="border: none">
+              <span>Builds comunidad</span
+              ><span class="stat-val" id="stat-builds">—</span>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <div class="mini-title">
+              <i class="ti ti-player-play"></i>Vídeo destacado
+            </div>
+            <div class="video-thumb">▶</div>
+            <div class="video-label">
+              Todas las debilidades de Malenia — 18 min
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/favoritos.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>

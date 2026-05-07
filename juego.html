@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ficha de juego — SoulsBase</title>
+    <meta name="description" content="Ficha completa del juego: descripción, dificultad, bosses, guías, galería y lore.">
+    <meta property="og:title" content="SoulsBase — Ficha de juego">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💀</text></svg>">
+    <link rel="stylesheet" href="css/components.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- ══ SIDEBAR ══ -->
+    <aside class="sidebar">
+      <div class="sidebar-logo" onclick="window.location.href='buscador.html'" style="cursor:pointer"><em>Souls</em>Base</div>
+      <nav class="sidebar-section">
+        <ul>
+          <li>
+            <a href="index.html" class="sidebar-item"
+              ><i class="ti ti-home"></i>Inicio</a
+            >
+          </li>
+          <li>
+            <a href="catalogo.html" class="sidebar-item active"
+              ><i class="ti ti-layout-grid"></i>Catálogo</a
+            >
+          </li>
+          <li>
+            <a href="guias.html" class="sidebar-item"
+              ><i class="ti ti-book"></i>Guías</a
+            >
+          </li>
+          <li>
+            <a href="galeria.html" class="sidebar-item"
+              ><i class="ti ti-photo"></i>Galería</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar-item"
+              ><i class="ti ti-sword"></i>Builds</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar-item"
+              ><i class="ti ti-chart-bar"></i>Tier list</a
+            >
+          </li>
+          <li>
+            <a href="comunidad.html" class="sidebar-item"
+              ><i class="ti ti-users"></i>Comunidad</a
+            >
+          </li>
+          <li>
+            <a href="favoritos.html" class="sidebar-item"
+              ><i class="ti ti-heart"></i>Favoritos</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Juegos</div>
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #9b7d3a"></span>Elden
+          Ring</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #4a7ab5"></span>Dark
+          Souls III</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #a83030"></span>Diablo
+          IV</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #8a4da0"></span
+          >Bloodborne</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #3d8a4a"></span
+          >Sekiro</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #7a6b30"></span>Path of
+          Exile 2</a
+        >
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#0a4a8a"></span>FF VII Remake</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#8a3a6a"></span>Persona 5</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#2a6a4a"></span>Baldur's Gate 3</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#6a2a2a"></span>Binding of Isaac</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#2a2a6a"></span>Hades II</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#5a3a8a"></span>Expedition 33</a>
+      </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- ══ MAIN ══ -->
+    <div class="main-wrapper">
+      <header class="topbar">
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Menú">
+          <i class="ti ti-menu-2"></i>
+        </button>
+        <a href="catalogo.html" class="back-btn">
+          <i class="ti ti-arrow-left"></i> Catálogo
+        </a>
+        <div class="search-box">
+          <i class="ti ti-search"></i>
+          <input type="text" placeholder="Buscar en SoulsBase..." onkeydown="if(event.key==='Enter' && this.value.trim()) window.location.href='buscador.html?q='+encodeURIComponent(this.value.trim())" />
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+          <i class="ti ti-sun" id="theme-icon"></i>
+        </button>
+      </header>
+
+      <main class="content" style="padding: 0">
+        <!-- Hero del juego -->
+        <div class="game-hero" id="game-hero">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <div class="hero-emoji" id="hero-emoji"></div>
+            <div class="hero-info">
+              <div class="hero-tag-row" id="hero-tags"></div>
+              <h1 class="hero-title" id="hero-title"></h1>
+              <div class="hero-meta" id="hero-meta"></div>
+            </div>
+            <div class="hero-score">
+              <div class="score-number" id="hero-score"></div>
+              <div class="score-label">Puntuación</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 24px 20px">
+          <!-- Tabs de navegación -->
+          <div class="tabs-bar">
+            <button class="tab-btn active" data-tab="resumen">Resumen</button>
+            <button class="tab-btn" data-tab="bosses">Bosses</button>
+            <button class="tab-btn" data-tab="guias">Guías</button>
+            <button class="tab-btn" data-tab="galeria">Galería</button>
+            <button class="tab-btn" data-tab="lore">Lore</button>
+          </div>
+
+          <!-- ── Tab: Resumen ── -->
+          <div class="tab-content active" id="tab-resumen">
+            <div class="resumen-grid">
+              <!-- Info general -->
+              <div class="info-card">
+                <div class="info-card-title">
+                  <i class="ti ti-info-circle"></i>Información
+                </div>
+                <div id="info-tabla"></div>
+              </div>
+
+              <!-- Descripción -->
+              <div class="info-card" style="grid-column: span 2">
+                <div class="info-card-title">
+                  <i class="ti ti-align-left"></i>Descripción
+                </div>
+                <p class="info-desc" id="info-desc"></p>
+              </div>
+
+              <!-- Stats de dificultad -->
+              <div class="info-card">
+                <div class="info-card-title">
+                  <i class="ti ti-flame"></i>Dificultad
+                </div>
+                <div id="dificultad-bars"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Tab: Bosses ── -->
+          <div class="tab-content" id="tab-bosses">
+            <div class="bosses-grid" id="bosses-grid"></div>
+          </div>
+
+          <!-- ── Tab: Guías ── -->
+          <div class="tab-content" id="tab-guias">
+            <div class="guides-list" id="juego-guias"></div>
+          </div>
+
+          <!-- ── Tab: Galería ── -->
+          <div class="tab-content" id="tab-galeria">
+            <div class="galeria-grid" id="galeria-grid"></div>
+          </div>
+
+          <!-- ── Tab: Lore ── -->
+          <div class="tab-content" id="tab-lore">
+            <div class="lore-list" id="lore-list"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/juego.js"></script>
+    <script src="js/favoritos.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>

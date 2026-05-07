@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería — SoulsBase</title>
+    <meta name="description" content="Galería de screenshots, artwork y vídeos de Elden Ring, Dark Souls, Bloodborne, Final Fantasy y más juegos.">
+    <meta property="og:title" content="Galería — SoulsBase">
+    <meta property="og:description" content="Screenshots, artwork oficial y vídeos de gameplay de los mejores juegos souls y RPG.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💀</text></svg>">
+    <link rel="stylesheet" href="css/components.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- ══ SIDEBAR ══ -->
+    <aside class="sidebar">
+      <div class="sidebar-logo" onclick="window.location.href='buscador.html'" style="cursor:pointer"><em>Souls</em>Base</div>
+      <nav class="sidebar-section">
+        <ul>
+          <li>
+            <a href="index.html" class="sidebar-item"
+              ><i class="ti ti-home"></i>Inicio</a
+            >
+          </li>
+          <li>
+            <a href="catalogo.html" class="sidebar-item"
+              ><i class="ti ti-layout-grid"></i>Catálogo</a
+            >
+          </li>
+          <li>
+            <a href="guias.html" class="sidebar-item"
+              ><i class="ti ti-book"></i>Guías</a
+            >
+          </li>
+          <li>
+            <a href="galeria.html" class="sidebar-item active"
+              ><i class="ti ti-photo"></i>Galería</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar-item"
+              ><i class="ti ti-sword"></i>Builds</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar-item"
+              ><i class="ti ti-chart-bar"></i>Tier list</a
+            >
+          </li>
+          <li>
+            <a href="comunidad.html" class="sidebar-item"
+              ><i class="ti ti-users"></i>Comunidad</a
+            >
+          </li>
+          <li>
+            <a href="favoritos.html" class="sidebar-item"
+              ><i class="ti ti-heart"></i>Favoritos</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Juegos</div>
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #9b7d3a"></span>Elden
+          Ring</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #4a7ab5"></span>Dark
+          Souls III</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #a83030"></span>Diablo
+          IV</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #8a4da0"></span
+          >Bloodborne</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #3d8a4a"></span
+          >Sekiro</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #7a6b30"></span>Path of
+          Exile 2</a
+        >
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#0a4a8a"></span>FF VII Remake</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#8a3a6a"></span>Persona 5</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#2a6a4a"></span>Baldur's Gate 3</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#6a2a2a"></span>Binding of Isaac</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#2a2a6a"></span>Hades II</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#5a3a8a"></span>Expedition 33</a>
+      </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- ══ MAIN ══ -->
+    <div class="main-wrapper">
+      <header class="topbar">
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Menú">
+          <i class="ti ti-menu-2"></i>
+        </button>
+        <div class="search-box">
+          <i class="ti ti-search"></i>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Buscar en galería..."
+            onkeydown="if(event.key==='Enter' && this.value.trim()) window.location.href='buscador.html?q='+encodeURIComponent(this.value.trim())"
+          />
+        </div>
+        <div class="filter-pills">
+          <button class="pill active" data-filter="todos">Todos</button>
+          <button class="pill" data-filter="screenshot">Screenshots</button>
+          <button class="pill" data-filter="artwork">Artwork</button>
+          <button class="pill" data-filter="video">Vídeos</button>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+          <i class="ti ti-sun" id="theme-icon"></i>
+        </button>
+      </header>
+
+      <main class="content">
+        <div class="cat-header">
+          <div>
+            <h1 class="cat-title">Galería</h1>
+            <p class="cat-sub">Screenshots, artwork y vídeos de la comunidad</p>
+          </div>
+          <div class="cat-controls">
+            <div class="sort-select-wrap">
+              <i class="ti ti-arrows-sort"></i>
+              <select id="sort-select">
+                <option value="reciente">Más recientes</option>
+                <option value="likes">Más valorados</option>
+              </select>
+            </div>
+            <div class="view-toggle">
+              <button
+                class="view-btn active"
+                id="btn-masonry"
+                title="Cuadrícula"
+              >
+                <i class="ti ti-layout-grid"></i>
+              </button>
+              <button class="view-btn" id="btn-grande" title="Grande">
+                <i class="ti ti-layout-list"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filtro por juego -->
+        <div class="juego-filter-row" id="juego-filter-row"></div>
+
+        <div class="results-bar">
+          <span id="results-count" class="text-muted fs-12"></span>
+        </div>
+
+        <!-- Grid galería -->
+        <div class="galeria-masonry" id="galeria-container"></div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+          <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+          <div class="lightbox-box">
+            <button class="lightbox-close" id="lightbox-close">
+              <i class="ti ti-x"></i>
+            </button>
+            <div class="lightbox-media" id="lightbox-media"></div>
+            <div class="lightbox-info">
+              <div class="lightbox-title" id="lightbox-title"></div>
+              <div class="lightbox-meta" id="lightbox-meta"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/galeria.js"></script>
+    <script src="js/favoritos.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>

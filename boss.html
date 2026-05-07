@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ficha Boss — SoulsBase</title>
+    <meta name="description" content="Ficha completa del boss: estrategia, fases, ataques, debilidades, drops y mejores builds.">
+    <meta property="og:title" content="SoulsBase — Ficha Boss">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💀</text></svg>">
+    <link rel="stylesheet" href="css/components.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- ══ SIDEBAR ══ -->
+    <aside class="sidebar">
+      <div class="sidebar-logo" onclick="window.location.href='buscador.html'" style="cursor:pointer"><em>Souls</em>Base</div>
+      <nav class="sidebar-section">
+        <ul>
+          <li>
+            <a href="index.html" class="sidebar-item"
+              ><i class="ti ti-home"></i>Inicio</a
+            >
+          </li>
+          <li>
+            <a href="catalogo.html" class="sidebar-item active"
+              ><i class="ti ti-layout-grid"></i>Catálogo</a
+            >
+          </li>
+          <li>
+            <a href="guias.html" class="sidebar-item"
+              ><i class="ti ti-book"></i>Guías</a
+            >
+          </li>
+          <li>
+            <a href="galeria.html" class="sidebar-item"
+              ><i class="ti ti-photo"></i>Galería</a
+            >
+          </li>
+          <li>
+            <a href="#" class="sidebar-item"
+              ><i class="ti ti-sword"></i>Builds</a
+            >
+          </li>
+          <li>
+            <a href="tierlist.html" class="sidebar-item"
+              ><i class="ti ti-chart-bar"></i>Tier list</a
+            >
+          </li>
+          <li>
+            <a href="comunidad.html" class="sidebar-item"
+              ><i class="ti ti-users"></i>Comunidad</a
+            >
+          </li>
+          <li>
+            <a href="favoritos.html" class="sidebar-item"
+              ><i class="ti ti-heart"></i>Favoritos</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Juegos</div>
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #9b7d3a"></span>Elden
+          Ring</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #4a7ab5"></span>Dark
+          Souls III</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #a83030"></span>Diablo
+          IV</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #8a4da0"></span
+          >Bloodborne</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #3d8a4a"></span
+          >Sekiro</a
+        >
+        <a href="#" class="game-pin"
+          ><span class="game-pin-dot" style="background: #7a6b30"></span>Path of
+          Exile 2</a
+        >
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#0a4a8a"></span>FF VII Remake</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#8a3a6a"></span>Persona 5</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#2a6a4a"></span>Baldur's Gate 3</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#6a2a2a"></span>Binding of Isaac</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#2a2a6a"></span>Hades II</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#5a3a8a"></span>Expedition 33</a>
+      </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- ══ MAIN ══ -->
+    <div class="main-wrapper">
+      <header class="topbar">
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Menú">
+          <i class="ti ti-menu-2"></i>
+        </button>
+        <a href="juego.html?id=elden-ring" class="back-btn" id="back-btn">
+          <i class="ti ti-arrow-left"></i> <span id="back-label">Volver</span>
+        </a>
+        <div class="search-box">
+          <i class="ti ti-search"></i>
+          <input type="text" placeholder="Buscar en SoulsBase..." onkeydown="if(event.key==='Enter' && this.value.trim()) window.location.href='buscador.html?q='+encodeURIComponent(this.value.trim())" />
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+          <i class="ti ti-sun" id="theme-icon"></i>
+        </button>
+      </header>
+
+      <main class="content" style="padding: 0">
+        <!-- Hero boss -->
+        <div class="boss-hero" id="boss-hero">
+          <div class="hero-overlay"></div>
+          <div class="boss-hero-content">
+            <div class="boss-hero-emoji" id="boss-emoji"></div>
+            <div class="boss-hero-info">
+              <div class="boss-breadcrumb" id="boss-breadcrumb"></div>
+              <h1 class="boss-hero-title" id="boss-title"></h1>
+              <div class="boss-hero-meta" id="boss-meta"></div>
+            </div>
+            <div class="boss-hero-dif" id="boss-dif-badge"></div>
+          </div>
+        </div>
+
+        <div style="padding: 24px 20px">
+          <!-- Tabs -->
+          <div class="tabs-bar">
+            <button class="tab-btn active" data-tab="estrategia">
+              Estrategia
+            </button>
+            <button class="tab-btn" data-tab="fases">Fases</button>
+            <button class="tab-btn" data-tab="ataques">Ataques</button>
+            <button class="tab-btn" data-tab="drops">Drops</button>
+            <button class="tab-btn" data-tab="builds">
+              Builds recomendadas
+            </button>
+          </div>
+
+          <!-- ── Tab Estrategia ── -->
+          <div class="tab-content active" id="tab-estrategia">
+            <div class="boss-layout">
+              <!-- Columna principal -->
+              <div class="boss-main">
+                <!-- Stats rápidos -->
+                <div class="boss-stats-row" id="boss-stats-row"></div>
+
+                <!-- Descripción -->
+                <div class="info-card" style="margin-bottom: 16px">
+                  <div class="info-card-title">
+                    <i class="ti ti-align-left"></i>Descripción
+                  </div>
+                  <p class="info-desc" id="boss-desc"></p>
+                </div>
+
+                <!-- Guía de estrategia -->
+                <div class="info-card">
+                  <div class="info-card-title">
+                    <i class="ti ti-shield-check"></i>Estrategia general
+                  </div>
+                  <div id="boss-estrategia-lista"></div>
+                </div>
+              </div>
+
+              <!-- Columna lateral -->
+              <div class="boss-side">
+                <!-- Info rápida -->
+                <div class="info-card" style="margin-bottom: 16px">
+                  <div class="info-card-title">
+                    <i class="ti ti-info-circle"></i>Información
+                  </div>
+                  <div id="boss-info-tabla"></div>
+                </div>
+
+                <!-- Resistencias -->
+                <div class="info-card" style="margin-bottom: 16px">
+                  <div class="info-card-title">
+                    <i class="ti ti-flame"></i>Resistencias
+                  </div>
+                  <div id="boss-resistencias"></div>
+                </div>
+
+                <!-- Debilidades -->
+                <div class="info-card">
+                  <div class="info-card-title">
+                    <i class="ti ti-bolt"></i>Debilidades
+                  </div>
+                  <div id="boss-debilidades"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── Tab Fases ── -->
+          <div class="tab-content" id="tab-fases">
+            <div id="boss-fases-lista"></div>
+          </div>
+
+          <!-- ── Tab Ataques ── -->
+          <div class="tab-content" id="tab-ataques">
+            <div id="boss-ataques-lista"></div>
+          </div>
+
+          <!-- ── Tab Drops ── -->
+          <div class="tab-content" id="tab-drops">
+            <div class="boss-drops-grid" id="boss-drops-grid"></div>
+          </div>
+
+          <!-- ── Tab Builds ── -->
+          <div class="tab-content" id="tab-builds">
+            <div id="boss-builds-lista"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/boss.js"></script>
+    <script src="js/favoritos.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>

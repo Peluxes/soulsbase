@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Has muerto — SoulsBase</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💀</text></svg>">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-base);
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .death-screen {
+      animation: fadeIn .8s ease both;
+      max-width: 480px;
+    }
+    .death-title {
+      font-size: 64px;
+      font-weight: 500;
+      color: #E24B4A;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      animation: deathPulse 2s ease-in-out infinite;
+    }
+    .death-subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      letter-spacing: 1px;
+    }
+    .death-code {
+      font-size: 120px;
+      font-weight: 500;
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+    .death-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+    .death-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .death-btn-primary {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #E24B4A;
+      border: none;
+      border-radius: var(--radius-md);
+      padding: 10px 24px;
+      color: white;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity .15s;
+    }
+    .death-btn-primary:hover { opacity: .85; }
+    .death-btn-secondary {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: none;
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 10px 24px;
+      color: var(--text-muted);
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all .15s;
+    }
+    .death-btn-secondary:hover {
+      border-color: var(--accent-dark);
+      color: var(--text-main);
+    }
+    @keyframes deathPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .6; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .death-rune {
+      font-size: 48px;
+      margin-bottom: 16px;
+      animation: runeFloat 3s ease-in-out infinite;
+    }
+    @keyframes runeFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="death-screen">
+    <div class="death-rune">💀</div>
+    <div class="death-code">404</div>
+    <div class="death-title">Has muerto</div>
+    <div class="death-subtitle">YOU DIED</div>
+    <div class="death-desc">
+      La página que buscas ha sido devorada por la Putrefacción Escarlata.<br>
+      O quizás nunca existió en Las Tierras Intermedias.
+    </div>
+    <div class="death-actions">
+      <a href="index.html" class="death-btn-primary">
+        <i class="ti ti-home"></i> Volver al inicio
+      </a>
+      <a href="catalogo.html" class="death-btn-secondary">
+        <i class="ti ti-layout-grid"></i> Ver catálogo
+      </a>
+      <a href="buscador.html" class="death-btn-secondary">
+        <i class="ti ti-search"></i> Buscar
+      </a>
+    </div>
+  </div>
+  <script src="js/theme.js"></script>
+</body>
+</html>
