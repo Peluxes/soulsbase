@@ -85,9 +85,12 @@ document.addEventListener("DOMContentLoaded", () => {
   guiasList.innerHTML = DB.guias
     .map((g) => {
       const [cls, label] = badgeMap[g.badge];
+      const juegoData = DB.juegos.find((j) => j.titulo === g.juego);
+      const emoji = juegoData ? juegoData.emoji : "🎮";
+      const bg = juegoData ? juegoData.thumbBg : "#17181a";
       return `
       <div class="guide-row">
-        <div class="guide-icon" style="background:${g.thumbBg}">${g.emoji}</div>
+        <div class="guide-icon" style="background:${bg}">${emoji}</div>
         <div class="guide-text">
           <div class="guide-title-text">${g.titulo}</div>
           <div class="guide-sub">${g.juego} · ${g.tipo} · ${g.minutos} min lectura</div>
@@ -98,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .join("");
 
   // ── Tier list ──
+  const tierRow = document.getElementById("tier-row");
   tierRow.innerHTML = DB.tier
     .map(
       (t) => `
@@ -112,10 +116,13 @@ document.addEventListener("DOMContentLoaded", () => {
     .join("");
 
   // ── Stats ──
-  document.getElementById("stat-juegos").textContent = DB.stats.juegos;
+  document.getElementById("stat-juegos").textContent = DB.juegos.length;
   document.getElementById("stat-guias").textContent =
-    DB.stats.guias.toLocaleString("es");
-  document.getElementById("stat-bosses").textContent =
-    DB.stats.bosses.toLocaleString("es");
-  document.getElementById("stat-builds").textContent = DB.stats.builds;
+    DB.guias.length.toLocaleString("es");
+  document.getElementById("stat-bosses").textContent = Object.keys(
+    DB.bosses
+  ).length;
+  document.getElementById("stat-builds").textContent = DB.guias.filter(
+    (g) => g.tipo === "build"
+  ).length;
 });

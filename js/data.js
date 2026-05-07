@@ -354,7 +354,7 @@ const DB = {
       año: 2015,
       developer: "FromSoftware",
       descripcionCorta: "Souls gótico victoriano exclusivo de PS4. Combate agresivo, lore lovecraftiano y una atmósfera única que lo convierten en una obra maestra.",
-      imagen: "https://upload.wikimedia.org/wikipedia/en/6/6e/Bloodborne_Cover_Artwork.jpg"
+      imagen: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tmu.jpg"
     },
     {
       id: "sekiro",
@@ -642,36 +642,6 @@ const DB = {
       descripcionCorta: "ARPG free-to-play con sistema de héroes únicos, viajes temporales y temporadas de contenido regular. Accesible pero con profundidad para los más dedicados.",
       imagen: "https://cdn.cloudflare.steamstatic.com/steam/apps/1974050/header.jpg"
     }
-  ],
-
-  guias: [
-    {
-      titulo: "Guía completa — Malenia, Azote del Árbol",
-      juego: "Elden Ring",
-      tipo: "Boss",
-      emoji: "🌟",
-      thumbBg: "#1a1510",
-      minutos: 12,
-      badge: "hot",
-    },
-    {
-      titulo: "Build Nigromante S-Tier — Temporada 8",
-      juego: "Diablo IV",
-      tipo: "Build",
-      emoji: "🔥",
-      thumbBg: "#150f0f",
-      minutos: 8,
-      badge: "new",
-    },
-    {
-      titulo: "Walkthrough Catedral del Abismo Profundo",
-      juego: "Dark Souls III",
-      tipo: "Zona",
-      emoji: "🩶",
-      thumbBg: "#101418",
-      minutos: 20,
-      badge: "updated",
-    },
   ],
 
   tier: [
