@@ -13,16 +13,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ── Hero ──
   document.getElementById("build-emoji").textContent = build.emoji;
-  document.getElementById("build-title").textContent = build.nombre;
-  document.getElementById("build-juego").textContent = build.juego;
+  document.getElementById("build-nombre").textContent = build.nombre;
+  document.getElementById("build-juego").innerHTML =
+    `<a href="juego.html?id=${build.juegoId}" style="color:var(--text-hint);text-decoration:none">
+      <i class="ti ti-device-gamepad" style="font-size:12px"></i> ${build.juego}
+    </a>`;
 
   const tipoClass = { PvE: "build-badge-pve", PvP: "build-badge-pvp", "PvE/PvP": "build-badge-pvepvp" };
-  document.getElementById("build-badges").innerHTML = `
-    <span class="build-badge ${tipoClass[build.tipo] || "build-badge-dif"}">${build.tipo}</span>
-    <span class="build-badge build-badge-dif">${build.dificultad}</span>
-    <a href="juego.html?id=${build.juegoId}" class="tag tag-souls" style="text-decoration:none;font-size:11px">${build.juego}</a>`;
+  const tipoEl = document.getElementById("build-tipo");
+  tipoEl.textContent = build.tipo;
+  tipoEl.className = `build-badge ${tipoClass[build.tipo] || "build-badge-dif"}`;
 
-  document.getElementById("build-rating-fill").style.width = build.rating + "%";
+  document.getElementById("build-dificultad").textContent = build.dificultad;
+  document.getElementById("build-rating").textContent = build.rating + " / 100";
+
+  document.getElementById("build-efectividad-bar").style.width = build.rating + "%";
   document.getElementById("build-rating-num").textContent = build.rating + "/100";
 
   // ── Tab Resumen ──
