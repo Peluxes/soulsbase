@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Planificador de Builds — Elden Ring — SoulsBase</title>
-    <meta name="description" content="Planifica tu build de Elden Ring con fórmulas reales de HP, FP, Stamina y Equipment Load.">
-    <meta property="og:title" content="Planificador Elden Ring — SoulsBase">
+    <title>Planificador de Builds — Path of Exile 2 — SoulsBase</title>
+    <meta name="description" content="Planifica tu build de Path of Exile 2 con árbol de pasivas, gemas de habilidad, ascendencia y equipo.">
+    <meta property="og:title" content="Planificador PoE2 — SoulsBase">
     <meta property="og:type" content="website">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💀</text></svg>">
     <link rel="stylesheet" href="css/components.css" />
@@ -22,9 +22,9 @@
           <li><a href="guias.html" class="sidebar-item"><i class="ti ti-book"></i>Guías</a></li>
           <li><a href="galeria.html" class="sidebar-item"><i class="ti ti-photo"></i>Galería</a></li>
           <li><a href="builds.html" class="sidebar-item"><i class="ti ti-sword"></i>Builds</a></li>
-          <li><a href="planificador-elden-ring.html" class="sidebar-item active"><i class="ti ti-calculator"></i>Planificador</a></li>
+          <li><a href="planificador-elden-ring.html" class="sidebar-item"><i class="ti ti-calculator"></i>Planificador</a></li>
           <li><a href="planificador-diablo4.html" class="sidebar-item"><i class="ti ti-fire"></i>Plan. Diablo IV</a></li>
-          <li><a href="planificador-poe2.html" class="sidebar-item"><i class="ti ti-hexagon"></i>Plan. PoE2</a></li>
+          <li><a href="planificador-poe2.html" class="sidebar-item active"><i class="ti ti-hexagon"></i>Plan. PoE2</a></li>
           <li><a href="tierlist.html" class="sidebar-item"><i class="ti ti-chart-bar"></i>Tier list</a></li>
           <li><a href="comunidad.html" class="sidebar-item"><i class="ti ti-users"></i>Comunidad</a></li>
           <li><a href="favoritos.html" class="sidebar-item"><i class="ti ti-heart"></i>Favoritos</a></li>
@@ -70,107 +70,127 @@
       </header>
 
       <main class="content">
-        <!-- Header -->
         <div class="section-header" style="margin-bottom:6px">
-          <span class="section-title">🌟 Planificador de Builds — Elden Ring</span>
+          <span class="section-title">💀 Planificador de Builds — Path of Exile 2</span>
         </div>
         <p style="font-size:13px;color:var(--text-muted);margin-bottom:24px">
-          Distribuye puntos de stats con fórmulas reales — HP, FP, Stamina y Equipment Load calculados en tiempo real.
+          Diseña tu build con árbol de pasivas, gemas de habilidad, ascendencia y equipo.
         </p>
 
-        <div class="planificador-layout">
+        <div class="poe2-layout">
           <!-- ══ COLUMNA IZQUIERDA ══ -->
           <div>
 
-            <!-- SECCIÓN 1 — Clase y nivel -->
+            <!-- SECCIÓN 1 — Clase y Ascendencia -->
             <div class="plan-section">
               <div class="plan-section-title">
-                <i class="ti ti-user"></i> Clase y Nivel objetivo
+                <i class="ti ti-user"></i> Clase y Ascendencia
               </div>
-
-              <div id="clase-grid" class="clase-grid"></div>
-
-              <div style="margin-bottom:16px">
-                <div style="font-size:12px;color:var(--text-hint);margin-bottom:8px">Nivel objetivo</div>
-                <div class="nivel-slider-wrap">
-                  <input type="range" id="nivel-slider" class="nivel-slider" min="1" max="713" value="150" />
-                  <span class="nivel-num" id="res-nivel">150</span>
-                </div>
-              </div>
-
-              <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text-hint)">
-                <span>Puntos gastados / disponibles</span>
-                <span id="res-puntos" style="color:var(--accent);font-weight:500">0 / 141</span>
+              <div id="poe2-clase-grid" class="poe2-clase-grid"></div>
+              <div id="poe2-asc-wrap" style="display:none">
+                <div style="font-size:11px;color:var(--text-hint);margin-bottom:8px;margin-top:4px">Elige tu Ascendencia</div>
+                <div id="poe2-asc-grid" class="asc-grid"></div>
               </div>
             </div>
 
-            <!-- SECCIÓN 2 — Stats -->
+            <!-- SECCIÓN 2 — Árbol de Pasivas -->
             <div class="plan-section">
               <div class="plan-section-title">
-                <i class="ti ti-chart-bar"></i> Distribución de stats
+                <i class="ti ti-git-fork"></i> Árbol de Pasivas
+                <span style="margin-left:auto;font-size:11px;color:var(--text-hint);font-weight:400">
+                  <span id="poe2-pasivas-gastados">0</span> / 120 puntos
+                </span>
               </div>
-              <div id="stats-grid" class="stats-grid"></div>
+              <div id="poe2-pasivas-container"></div>
             </div>
 
-            <!-- SECCIÓN 4 — Guardar y cargar -->
+            <!-- SECCIÓN 3 — Gemas de Habilidad -->
+            <div class="plan-section">
+              <div class="plan-section-title">
+                <i class="ti ti-diamond"></i> Gemas de Habilidad
+              </div>
+              <div id="poe2-gems-container"></div>
+            </div>
+
+            <!-- SECCIÓN 4 — Equipo -->
+            <div class="plan-section">
+              <div class="plan-section-title">
+                <i class="ti ti-shield"></i> Equipo
+              </div>
+              <div id="poe2-equipo-container"></div>
+            </div>
+
+            <!-- SECCIÓN 5 — Guardar -->
             <div class="plan-section">
               <div class="plan-section-title">
                 <i class="ti ti-bookmark"></i> Guardar builds
               </div>
               <div style="display:flex;gap:8px;margin-bottom:8px">
-                <input type="text" id="build-name-input" class="share-input" placeholder="Nombre de la build..." style="margin-bottom:0;flex:1" />
-                <button id="btn-guardar" class="build-saved-btn" style="padding:8px 14px;font-size:12px;border-color:var(--accent-dark);color:var(--accent)">Guardar</button>
+                <input type="text" id="poe2-build-name" class="share-input" placeholder="Nombre de la build..." style="margin-bottom:0;flex:1" />
+                <button id="poe2-btn-guardar" class="build-saved-btn" style="padding:8px 14px;font-size:12px;border-color:var(--accent-dark);color:var(--accent)">Guardar</button>
               </div>
-              <button id="btn-compartir" class="build-saved-btn" style="width:100%;padding:8px;font-size:12px;margin-bottom:4px">
+              <button id="poe2-btn-compartir" class="build-saved-btn" style="width:100%;padding:8px;font-size:12px;margin-bottom:4px">
                 <i class="ti ti-share"></i> Compartir build (copiar URL)
               </button>
-              <div id="saved-list" class="builds-saved-list"></div>
-            </div>
-
-            <!-- SECCIÓN 5 — Requisitos de armas -->
-            <div class="plan-section">
-              <div class="plan-section-title">
-                <i class="ti ti-sword"></i> Requisitos de armas populares
-              </div>
-              <div id="armas-list"></div>
+              <div id="poe2-saved-list" class="builds-saved-list"></div>
             </div>
 
           </div>
 
           <!-- ══ COLUMNA DERECHA — Resultados ══ -->
-          <div class="results-sticky">
+          <div>
+            <div class="poe2-results">
 
-            <div class="result-card">
-              <div class="result-big-num" id="res-hp" style="color:#E24B4A">—</div>
-              <div class="result-big-label">HP</div>
+              <div style="text-align:center;margin-bottom:16px;padding-bottom:16px;border-bottom:0.5px solid var(--border)">
+                <div id="poe2-res-emoji" style="font-size:32px;margin-bottom:6px">—</div>
+                <div id="poe2-res-clase" style="font-size:15px;font-weight:500">—</div>
+                <div id="poe2-res-asc" style="font-size:11px;color:var(--text-hint);margin-top:2px">Sin ascendencia</div>
+              </div>
+
+              <div style="margin-bottom:16px;padding-bottom:12px;border-bottom:0.5px solid var(--border)">
+                <div style="font-size:11px;color:var(--text-hint);margin-bottom:8px">Nivel objetivo</div>
+                <div class="nivel-slider-wrap">
+                  <input type="range" id="poe2-nivel-slider" class="nivel-slider" min="1" max="100" value="70" />
+                  <span class="nivel-num" id="poe2-nivel-num">70</span>
+                </div>
+              </div>
+
+              <div id="poe2-res-buildtype" class="build-type-badge" style="margin-bottom:16px">—</div>
+
+              <div id="poe2-res-dps" style="text-align:center;margin-bottom:16px;padding-bottom:16px;border-bottom:0.5px solid var(--border)">
+                <div style="font-size:28px;font-weight:500;color:#EF9F27">—</div>
+                <div style="font-size:10px;color:var(--text-hint);text-transform:uppercase;letter-spacing:.5px">DPS estimado</div>
+              </div>
+
+              <div class="poe2-stat-row">
+                <span class="poe2-stat-label">Vida máx.</span>
+                <span class="poe2-stat-val" id="poe2-res-vida" style="color:#E24B4A">—</span>
+              </div>
+              <div class="poe2-stat-row">
+                <span class="poe2-stat-label">Maná máx.</span>
+                <span class="poe2-stat-val" id="poe2-res-mana" style="color:#85B7EB">—</span>
+              </div>
+              <div class="poe2-stat-row">
+                <span class="poe2-stat-label">Resistencias</span>
+                <span class="poe2-stat-val" id="poe2-res-res" style="color:#97C459">—</span>
+              </div>
+              <div class="poe2-stat-row">
+                <span class="poe2-stat-label">Pasivas gastadas</span>
+                <span class="poe2-stat-val" id="poe2-res-pasivas">0 / 120</span>
+              </div>
+              <div class="poe2-stat-row">
+                <span class="poe2-stat-label">Gemas activas</span>
+                <span class="poe2-stat-val" id="poe2-res-gemas">0 / 6</span>
+              </div>
+
             </div>
-
-            <div class="result-card">
-              <div class="result-big-num" id="res-fp" style="color:#85B7EB">—</div>
-              <div class="result-big-label">FP</div>
-            </div>
-
-            <div class="result-card">
-              <div class="result-big-num" id="res-stamina" style="color:#97C459">—</div>
-              <div class="result-big-label">Stamina</div>
-            </div>
-
-            <div class="result-card">
-              <div class="result-big-num" id="res-el" style="color:#EF9F27">—</div>
-              <div class="result-big-label">Equipment Load</div>
-            </div>
-
-            <div class="result-card">
-              <div id="res-buildtype" class="build-type-badge">—</div>
-            </div>
-
           </div>
         </div>
       </main>
     </div>
 
     <script src="js/data.js"></script>
-    <script src="js/planificador-elden-ring.js"></script>
+    <script src="js/planificador-poe2.js"></script>
     <script src="js/favoritos.js"></script>
     <script src="js/valoraciones.js"></script>
     <script src="js/historial.js"></script>

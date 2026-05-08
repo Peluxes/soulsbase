@@ -2732,3 +2732,55 @@
   .d4-results { position: static; }
   .paragon-layout { grid-template-columns: 1fr; }
 }
+
+/* ══ Planificador PoE2 ══ */
+.poe2-layout { display: grid; grid-template-columns: 1fr 280px; gap: 20px; align-items: start; }
+.poe2-clase-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-bottom: 16px; }
+.poe2-clase-card { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 14px 12px; cursor: pointer; transition: all .15s; }
+.poe2-clase-card:hover { transform: translateY(-2px); }
+.poe2-clase-card.active { border-width: 1.5px; }
+.poe2-clase-emoji { font-size: 24px; margin-bottom: 8px; }
+.poe2-clase-name { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+.poe2-clase-desc { font-size: 10px; color: var(--text-hint); line-height: 1.4; }
+.asc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-top: 12px; }
+.asc-card { background: var(--bg-base); border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 10px; text-align: center; cursor: pointer; transition: all .15s; font-size: 12px; color: var(--text-muted); }
+.asc-card:hover { border-color: var(--accent-dark); color: var(--text-main); }
+.asc-card.active { background: var(--accent-bg); border-color: var(--accent-dark); color: #CECBF6; }
+.pasiva-zona { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 16px; margin-bottom: 12px; }
+.pasiva-zona-title { font-size: 13px; font-weight: 500; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.pasiva-nodos { display: flex; flex-wrap: wrap; gap: 8px; }
+.pasiva-nodo { display: flex; align-items: center; gap: 8px; background: var(--bg-base); border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 8px 12px; cursor: pointer; transition: all .15s; min-width: 180px; }
+.pasiva-nodo:hover { border-color: var(--accent-dark); }
+.pasiva-nodo.active { background: var(--accent-bg); border-color: var(--accent-dark); }
+.pasiva-nodo input[type=checkbox] { accent-color: var(--accent); width: 14px; height: 14px; flex-shrink: 0; }
+.pasiva-nodo-info { flex: 1; }
+.pasiva-nodo-nombre { font-size: 12px; font-weight: 500; }
+.pasiva-nodo-bonus { font-size: 10px; color: var(--text-hint); }
+.pasiva-nodo-coste { font-size: 10px; color: var(--accent); }
+.gem-slot-wrap { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 16px; margin-bottom: 12px; }
+.gem-slot-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.gem-slot-num { width: 24px; height: 24px; border-radius: 50%; background: var(--accent-bg); border: 0.5px solid var(--accent-dark); color: #CECBF6; font-size: 11px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.gem-main-select { flex: 1; background: var(--bg-base); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 6px 10px; color: var(--text-main); font-size: 13px; }
+.gem-nivel-wrap { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-hint); }
+.gem-nivel-input { width: 40px; background: var(--bg-base); border: 0.5px solid var(--border); border-radius: 4px; padding: 3px 6px; color: var(--text-main); font-size: 12px; text-align: center; }
+.gem-supports { display: flex; gap: 8px; flex-wrap: wrap; }
+.gem-support-select { background: var(--bg-base); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 5px 8px; color: var(--text-muted); font-size: 11px; flex: 1; min-width: 120px; }
+.gem-dps { font-size: 11px; color: var(--tier-a); text-align: right; margin-top: 8px; }
+.equipo-slot { display: flex; align-items: center; gap: 10px; background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 10px 12px; margin-bottom: 8px; }
+.equipo-slot-icon { font-size: 20px; flex-shrink: 0; width: 28px; text-align: center; }
+.equipo-slot-name { font-size: 11px; color: var(--text-hint); width: 80px; flex-shrink: 0; }
+.equipo-slot-input { flex: 1; background: var(--bg-base); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 5px 8px; color: var(--text-main); font-size: 12px; }
+.equipo-sockets { display: flex; gap: 4px; }
+.socket { width: 16px; height: 16px; border-radius: 50%; border: 0.5px solid var(--border); background: var(--bg-base); }
+.socket.used { background: var(--accent); border-color: var(--accent-dark); }
+.poe2-results { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 20px; position: sticky; top: calc(var(--topbar-h) + 16px); }
+.poe2-stat-row { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 0.5px solid var(--border-soft); font-size: 12px; }
+.poe2-stat-row:last-child { border-bottom: none; }
+.poe2-stat-label { color: var(--text-muted); }
+.poe2-stat-val { color: var(--text-main); font-weight: 500; }
+@media (max-width: 900px) {
+  .poe2-layout { grid-template-columns: 1fr; }
+  .poe2-clase-grid { grid-template-columns: repeat(2,1fr); }
+  .poe2-results { position: static; }
+  .asc-grid { grid-template-columns: 1fr; }
+}
