@@ -288,6 +288,240 @@ const DB = {
         { rank: "2", rankColor: "#97C459", nombre: "Bleed básico",               desc: "Incluso con un arma de bleed básica del early game la hemorragia acumula bien y simplifica la pelea.", efectividad: 82, tags: ["Destreza", "Hemorragia"] },
         { rank: "3", rankColor: "#85B7EB", nombre: "Escudo + espada quality",    desc: "La opción más segura para el primer boss. Bloquea la mayoría de ataques y contraataca en las ventanas.", efectividad: 75, tags: ["Fuerza", "Destreza", "Defensivo"] }
       ]
+    },
+    "pontiff": {
+      id: "pontiff",
+      nombre: "Pontiff Sulyvahn",
+      subtitulo: "Tirano de Irithyll",
+      juego: "Dark Souls III",
+      juegoId: "dark-souls-3",
+      juegoBg: "#101418",
+      emoji: "⚔️",
+      zona: "Irithyll del Valle Boreal — Iglesia de Yorshka",
+      tipo: "Jefe mayor",
+      dificultad: "Extremo",
+      hp: "13.728",
+      runas: "38.000",
+      fases: 2,
+      debilidades_texto: ["Llama", "Magia oscura"],
+      stats: {
+        hp:    { val: "13.728", label: "HP total" },
+        runas: { val: "38k",    label: "Almas" },
+        fases: { val: "2",      label: "Fases" },
+        nivel: { val: "~75",    label: "Nivel rec." }
+      },
+      descripcion: "Pontiff Sulyvahn es el tirano que gobierna Irithyll del Valle Boreal y ha sometido a los dioses de Anor Londo. Blandiendo dos espadones —uno de fuego y uno de magia oscura— su combate es frenético y puede invocar un clon de sí mismo en fase 2. Es considerado uno de los jefes más difíciles y mejor diseñados de toda la saga Souls.",
+      estrategia: [
+        { titulo: "Aprende a esquivar hacia él siempre", texto: "La mayoría de sus combos se cancelan esquivando hacia adelante, hacia él. Alejarse es la peor opción porque puede cerrar distancia instantáneamente con el salto." },
+        { titulo: "Elimina el clon antes que a Sulyvahn", texto: "En fase 2 invoca un espectro que replica sus movimientos. Eliminar el clon en cuanto aparece es crítico — dos Pontiff simultáneos son casi imposibles de gestionar." },
+        { titulo: "Usa fuego o magia oscura para explotar sus debilidades", texto: "El Pontiff tiene una debilidad notable a la llama y a la magia oscura. Resinas o hechizos del tipo correcto añaden daño extra significativo." },
+        { titulo: "El salto con espada es el ataque más traicionero", texto: "Salta hacia el jugador desde cualquier distancia con velocidad engañosa. Esquiva hacia un lateral en el último segundo, no al verlo saltar." }
+      ],
+      resistencias: [
+        { nombre: "Físico",      icono: "ti-sword", valor: 20, color: "#85B7EB" },
+        { nombre: "Magia",       icono: "ti-wand",  valor: 30, color: "#AFA9EC" },
+        { nombre: "Fuego",       icono: "ti-flame", valor: 5,  color: "#EF9F27" },
+        { nombre: "Trueno",      icono: "ti-bolt",  valor: 40, color: "#FAC775" },
+        { nombre: "Oscuridad",   icono: "ti-moon",  valor: 5,  color: "#8B5CF6" }
+      ],
+      debilidades: [
+        { nombre: "Llama",        icono: "ti-flame", valor: 85, color: "#EF9F27" },
+        { nombre: "Magia oscura", icono: "ti-moon",  valor: 80, color: "#8B5CF6" }
+      ],
+      fases_data: [
+        {
+          num: "I",
+          color: "#EF9F27",
+          titulo: "El Pontiff",
+          sub: "100% — 50% HP",
+          hp_trigger: "100% HP",
+          desc: "Sulyvahn combate con sus dos espadones: el derecho de llamas y el izquierdo de magia oscura. Sus combos son rápidos y de gran alcance. El ataque de salto puede venir en cualquier momento y cierra distancias enormes instantáneamente.",
+          nuevos: "Salto con espada, combo cruzado de dos espadas, ataque barrido giratorio"
+        },
+        {
+          num: "II",
+          color: "#8B5CF6",
+          titulo: "El Tirano y su Sombra",
+          sub: "50% HP",
+          hp_trigger: "50% HP",
+          desc: "Al llegar al 50% de vida invoca un espectro de sí mismo que replica sus movimientos con ligero delay. Los dos Pontiff atacan simultáneamente y la gestión del espacio se vuelve crítica. El clon tiene menos HP y debe eliminarse primero.",
+          nuevos: "Espectro clon, ataques sincronizados, mayor agresividad general"
+        }
+      ],
+      ataques: [
+        { nombre: "Salto con espada",       tipo: "fisico",  tipoLabel: "Físico",   desc: "Se lanza hacia el jugador con el espadón alzado desde cualquier distancia. Muy rápido y difícil de anticipar.", tip: "Esquiva lateral en el último momento. No esquives hacia atrás — te sigue hasta el muro." },
+        { nombre: "Combo cruzado",          tipo: "fisico",  tipoLabel: "Físico",   desc: "Encadena 3-5 golpes alternando los dos espadones en abanico. Cada golpe añade llama u oscuridad.", tip: "Esquiva hacia él en cada golpe alternando izquierda y derecha ligeramente." },
+        { nombre: "Barrido giratorio",      tipo: "magico",  tipoLabel: "Oscuridad", desc: "Gira 360° con ambas espadas extendidas. Alto daño en área, difícil de esquivar desde cerca.", tip: "Crea distancia en cuanto empiece a girar o esquiva a través de él con iframes." },
+        { nombre: "Ataque del espectro",    tipo: "magico",  tipoLabel: "Oscuridad", desc: "Solo fase 2. El clon replica cualquier ataque del Pontiff con un pequeño delay.", tip: "Mantén al clon siempre en tu campo de visión. Prioriza eliminarlo aunque descuides a Sulyvahn." }
+      ],
+      drops: [
+        { emoji: "💍", nombre: "Anillo de Sulyvahn",       desc: "Aumenta la carga máxima de equipo en un 15%. Útil para builds pesadas.", tasa: "100%",     rareza: "raro" },
+        { emoji: "💀", nombre: "Alma del Pontiff Sulyvahn", desc: "Puede canjearse por el Espadón de Profundidad o el Hechizo Visión Frígida.", tasa: "100%",     rareza: "legendario" },
+        { emoji: "⚔️", nombre: "Espadón de Profundidad",   desc: "Arma colosal de oscuridad. Escala con Inteligencia y Fuerza. Habilidad: Ola Oscura.", tasa: "Canje alma", rareza: "legendario" }
+      ],
+      builds: [
+        { rank: "1", rankColor: "#EF9F27", nombre: "Pyromancer — Doble fuego", desc: "Sus debilidades al fuego hacen al Pyromancer especialmente efectivo. Chaos Bed Vestiges o fuego en el arma durante la pelea.", efectividad: 90, tags: ["Fe", "Inteligencia", "Fuego"] },
+        { rank: "2", rankColor: "#97C459", nombre: "Dark Sorcerer — Oscuridad", desc: "La magia oscura explota su segunda debilidad. Hechizos como Affinity o Dark Edge hacen daño masivo.", efectividad: 85, tags: ["Inteligencia", "Fe", "Oscuridad"] },
+        { rank: "3", rankColor: "#85B7EB", nombre: "Quality Greatsword — Esquive", desc: "Un espadón quality con buena estabilidad física. Requiere dominar el esquive pero el daño por apertura es sólido.", efectividad: 78, tags: ["Fuerza", "Destreza", "Físico"] }
+      ]
+    },
+    "genichiro": {
+      id: "genichiro",
+      nombre: "Genichiro Ashina",
+      subtitulo: "Heredero del Arte de Ashina",
+      juego: "Sekiro",
+      juegoId: "sekiro",
+      juegoBg: "#0f1410",
+      emoji: "⚡",
+      zona: "Castillo Ashina — Cima de la Torre",
+      tipo: "Jefe mayor",
+      dificultad: "Extremo",
+      hp: "3 barras de postura",
+      runas: "Memoria de Genichiro",
+      fases: 3,
+      debilidades_texto: ["Fuego", "Shuriken + seguimiento"],
+      stats: {
+        hp:    { val: "3 barras", label: "Postura" },
+        runas: { val: "Memoria",  label: "Recompensa" },
+        fases: { val: "3",        label: "Fases" },
+        nivel: { val: "Temprano", label: "Momento" }
+      },
+      descripcion: "Genichiro Ashina es el nieto de Isshin y el guardián del castillo. Sirve como tutorial avanzado de Sekiro: es el boss que enseña al jugador que solo dominando el sistema de postura puede avanzar. En la fase final invoca el Rayo del Cielo, transformándose en Way of Tomoe. Es el antagonista principal del juego.",
+      estrategia: [
+        { titulo: "Aprende a deflectar, no a esquivar", texto: "Sekiro basa su combate en deflectar (bloquear en el momento exacto). Contra Genichiro, intentar esquivar todo es un error — deflectar sus ataques llena su barra de postura y lleva a la ejecución." },
+        { titulo: "El Mikiri Counter destruye sus thrusts", texto: "Muchos de sus ataques son thrusts (estocadas). El Mikiri Counter los convierte en grandes aperturas de daño de postura. Si no lo tienes aprendido, este boss enseña por qué es esencial." },
+        { titulo: "Fase 3 — cuidado con el Rayo del Cielo", texto: "En su última fase puede lanzar rayos desde el cielo. Usa el Shuriken Espiral para devolver el rayo o esquiva lateralmente. Si te impacta directamente, mueres casi instantáneamente." },
+        { titulo: "Presión constante llena su postura", texto: "Genichiro recupera postura rápidamente si le das respiro. La clave es atacar sin parar, intercalando deflects en sus ataques para mantener su postura acumulada y llegar a la ejecución final." }
+      ],
+      resistencias: [
+        { nombre: "Filo",    icono: "ti-sword",    valor: 15, color: "#85B7EB" },
+        { nombre: "Fuego",   icono: "ti-flame",    valor: 0,  color: "#EF9F27" },
+        { nombre: "Veneno",  icono: "ti-skull",    valor: 40, color: "#97C459" },
+        { nombre: "Rayo",    icono: "ti-bolt",     valor: 80, color: "#FAC775" }
+      ],
+      debilidades: [
+        { nombre: "Fuego",       icono: "ti-flame",     valor: 90, color: "#EF9F27" },
+        { nombre: "Shuriken",    icono: "ti-star",      valor: 75, color: "#85B7EB" }
+      ],
+      fases_data: [
+        {
+          num: "I",
+          color: "#97C459",
+          titulo: "Espadachín de Ashina",
+          sub: "Primera barra de postura",
+          hp_trigger: "Postura llena",
+          desc: "Genichiro usa el estilo de espadachín de Ashina. Sus ataques son variados: combos de filo, thrusts y barridos. Esta fase es la introducción a sus patrones y la más accesible de las tres.",
+          nuevos: "Combo de filo, thrust directo, barrido bajo"
+        },
+        {
+          num: "II",
+          color: "#EF9F27",
+          titulo: "Tormenta de Flechas",
+          sub: "Segunda barra de postura",
+          hp_trigger: "Tras primera ejecución",
+          desc: "Añade ataques con arco y flechas explosivas. Puede disparar ráfagas de flechas desde distancia y mezclarlo con combos de espada. La presión aumenta notablemente y requiere gestionar bien la distancia.",
+          nuevos: "Disparo de flechas, flecha explosiva, combo arco-espada"
+        },
+        {
+          num: "III",
+          color: "#8B5CF6",
+          titulo: "Way of Tomoe — El Rayo del Cielo",
+          sub: "Tercera barra de postura",
+          hp_trigger: "Tras segunda ejecución",
+          desc: "Genichiro invoca el poder del rayo usando el arte proibido Way of Tomoe. Puede lanzar rayos del cielo que te matan en un golpe y empuña una espada eléctrica. El Shuriken Espiral devuelve el rayo. Es la fase más agresiva.",
+          nuevos: "Rayo del Cielo, espada eléctrica, combo eléctrico"
+        }
+      ],
+      ataques: [
+        { nombre: "Thrust directo",    tipo: "fisico",  tipoLabel: "Filo",    desc: "Estocada rápida en línea recta. Señal roja indica que viene. Ideal para Mikiri Counter.", tip: "Espera la señal roja y aplica Mikiri Counter pisando hacia adelante en el último instante." },
+        { nombre: "Barrido bajo",      tipo: "fisico",  tipoLabel: "Filo",    desc: "Barrido a nivel del suelo. Señal roja. Solo puede evitarse saltando.", tip: "Salta sobre el barrido y usa el salto de ataque en el aire para daño de postura extra." },
+        { nombre: "Lluvia de flechas", tipo: "fisico",  tipoLabel: "Físico",  desc: "Dispara una ráfaga de flechas en abanico desde media distancia. Fase 2.", tip: "Deflecta la primera flecha y corre hacia él antes de que dispare más." },
+        { nombre: "Rayo del Cielo",    tipo: "magico",  tipoLabel: "Rayo",    desc: "Salta al aire y convoca un rayo que cae sobre el jugador. Daño mortal. Fase 3.", tip: "Usa el Shuriken Espiral justo cuando cae el rayo para devolverlo. O esquiva lateral al ver el salto." }
+      ],
+      drops: [
+        { emoji: "📜", nombre: "Memoria de Genichiro",        desc: "Se intercambia con el escultor de Buda para obtener un punto de habilidad extra.", tasa: "100%", rareza: "legendario" },
+        { emoji: "🏹", nombre: "Habilidad: Tormenta de Flechas", desc: "Técnica de combate de Ashina aprendida al estudiar la memoria de Genichiro.", tasa: "Memoria", rareza: "raro" }
+      ],
+      builds: [
+        { rank: "1", rankColor: "#EF9F27", nombre: "Mikiri + Deflect puro", desc: "La forma óptima: dominar el Mikiri Counter para los thrusts y deflectar todo lo demás. Fuego en el Shuriken para daño extra.", efectividad: 95, tags: ["Habilidad", "Deflect", "Mikiri"] },
+        { rank: "2", rankColor: "#97C459", nombre: "Aceite + Antorcha",     desc: "Aplicar aceite y después la antorcha de la prótesis hace daño masivo y staggerea a Genichiro brevemente. Útil en fase 1.", efectividad: 80, tags: ["Fuego", "Prótesis", "Aceite"] },
+        { rank: "3", rankColor: "#85B7EB", nombre: "Shuriken Espiral — Rayo", desc: "En fase 3, el Shuriken Espiral devuelve el rayo a Genichiro. Si se domina, elimina la amenaza más letal de la pelea.", efectividad: 75, tags: ["Prótesis", "Shuriken", "Rayo"] }
+      ]
+    },
+    "father-gascoigne": {
+      id: "father-gascoigne",
+      nombre: "Father Gascoigne",
+      subtitulo: "El Cazador Caído",
+      juego: "Bloodborne",
+      juegoId: "bloodborne",
+      juegoBg: "#120f14",
+      emoji: "🎻",
+      zona: "Patio de la Catedral — Cementerio de Oedon",
+      tipo: "Jefe mayor",
+      dificultad: "Alto",
+      hp: "3.064",
+      runas: "Ojo del Cazador Interno",
+      fases: 2,
+      debilidades_texto: ["Fuego", "Música (caja de música)"],
+      stats: {
+        hp:    { val: "3.064",   label: "HP total" },
+        runas: { val: "Ítem",    label: "Recompensa" },
+        fases: { val: "2",       label: "Fases" },
+        nivel: { val: "~15–20",  label: "Nivel rec." }
+      },
+      descripcion: "Father Gascoigne es el primer boss verdaderamente desafiante de Bloodborne y una de las peleas más recordadas de FromSoftware. Antes fue un gran cazador, pero la bestialidad de la noche lo consumió. Su hija lleva una caja de música que puede interrumpir su frenético avance. En fase 2 se transforma en una bestia que ataca con velocidad brutal.",
+      estrategia: [
+        { titulo: "Usa la caja de música en el momento correcto", texto: "Si tienes la Caja de Música (obtenida de la niña del edificio inicial), úsala cuando Gascoigne esté cerca. Lo detiene brevemente dándote una gran ventana de ataque gratuita. Funciona una sola vez por intento." },
+        { titulo: "Fuego en fase 2 es devastador", texto: "Cuando se transforma en bestia tiene debilidad alta al fuego. Los Cócteles Molotov o el aceite+antorcha hacen daño masivo. Guarda los Molotov para fase 2." },
+        { titulo: "Mantén distancia media, nunca lejos", texto: "A larga distancia usa la escopeta de forma impredecible. A distancia media puedes castigar sus combos con facilidad y es más difícil que te acorrale." },
+        { titulo: "La escopeta interrumpe su carga", texto: "Disparar la escopeta en el momento exacto del ataque de Gascoigne lo interrumpe (parry de Bloodborne). Esto es especialmente útil en fase 1 cuando se acerca a cargar." }
+      ],
+      resistencias: [
+        { nombre: "Físico",  icono: "ti-sword", valor: 20, color: "#85B7EB" },
+        { nombre: "Fuego",   icono: "ti-flame", valor: 0,  color: "#EF9F27" },
+        { nombre: "Rayo",    icono: "ti-bolt",  valor: 30, color: "#FAC775" },
+        { nombre: "Sagrado", icono: "ti-sun",   valor: 25, color: "#EF9F27" }
+      ],
+      debilidades: [
+        { nombre: "Fuego",   icono: "ti-flame", valor: 90, color: "#EF9F27" },
+        { nombre: "Música",  icono: "ti-music", valor: 85, color: "#AFA9EC" }
+      ],
+      fases_data: [
+        {
+          num: "I",
+          color: "#EF9F27",
+          titulo: "El Cazador",
+          sub: "100% — 50% HP",
+          hp_trigger: "100% HP",
+          desc: "Gascoigne combate como cazador: usa hacha y escopeta con movimientos predecibles pero rápidos. Sus combos tienen ventanas de castigo claras. La escopeta interrumpe al jugador si ataca desde lejos. Es manejable una vez que se aprende su cadencia.",
+          nuevos: "Combo de hacha, disparo de escopeta, giro con hacha"
+        },
+        {
+          num: "II",
+          color: "#8B5CF6",
+          titulo: "La Bestia",
+          sub: "50% HP",
+          hp_trigger: "50% HP",
+          desc: "Se transforma en una bestia mucho más grande, rápida y feroz. Pierde la escopeta pero sus zarpazos y saltos cubren distancias enormes. El fuego es su mayor debilidad en esta fase. La Caja de Música ya no funciona.",
+          nuevos: "Zarpazo en cadena, salto con embestida, aullido de furia"
+        }
+      ],
+      ataques: [
+        { nombre: "Combo de hacha",      tipo: "fisico",  tipoLabel: "Físico", desc: "Serie de 2-3 golpes de hacha con buena cadencia. El último golpe tiene mayor radio.", tip: "Esquiva hacia él en el primer golpe y contraataca después del segundo o tercero." },
+        { nombre: "Disparo de escopeta", tipo: "fisico",  tipoLabel: "Físico", desc: "Dispara desde distancia media-larga. Interrumpe al jugador si está atacando.", tip: "Mantén distancia media y ataca después de sus combos de hacha, no durante." },
+        { nombre: "Zarpazo en cadena",   tipo: "fisico",  tipoLabel: "Bestia", desc: "Solo fase 2. Serie rápida de zarpazos con la zarpa de bestia. Muy poca ventana entre golpes.", tip: "Esquiva continuamente hacia un lateral. No intentes atacar durante la cadena." },
+        { nombre: "Salto con embestida", tipo: "fisico",  tipoLabel: "Bestia", desc: "Solo fase 2. Salta hacia el jugador desde distancia larga con embestida brutal.", tip: "Espera a que aterrice, esquiva hacia un lado y ataca por la espalda con 1-2 golpes." }
+      ],
+      drops: [
+        { emoji: "👁️", nombre: "Ojo del Cazador Interno", desc: "Ítem clave que muestra la ubicación del primer taller del cazador en el mapa.", tasa: "100%", rareza: "raro" },
+        { emoji: "🩸", nombre: "Sangre de Gascoigne",     desc: "Fragmento de sangre del cazador caído. Puede usarse para fabricar balas de sangre.", tasa: "100%", rareza: "comun" },
+        { emoji: "🪦", nombre: "Insignia del cazador",    desc: "La chapa de identificación de Gascoigne. No tiene uso práctico, pero narra su historia.", tasa: "100%", rareza: "comun" }
+      ],
+      builds: [
+        { rank: "1", rankColor: "#EF9F27", nombre: "Cócteles Molotov + Saw Cleaver", desc: "Guarda los Molotov para fase 2 cuando se transforma en bestia. La Saw Cleaver hace daño extra a bestias. Combinación óptima para principiantes.", efectividad: 92, tags: ["Fuego", "Bestia", "Física"] },
+        { rank: "2", rankColor: "#97C459", nombre: "Parry de escopeta + Saw Spear",   desc: "Dominar el parry con la escopeta interrumpe sus ataques constantemente. Requiere práctica pero transforma la pelea.", efectividad: 85, tags: ["Habilidad", "Parry", "Escopeta"] },
+        { rank: "3", rankColor: "#85B7EB", nombre: "Hunter Axe — Daño bruto",         desc: "El hacha grande hace daño masivo por golpe. Más lento pero cada impacto cuenta. Buena opción para aprender sus patrones sin morir rápido.", efectividad: 75, tags: ["Fuerza", "Lento", "Seguro"] }
+      ]
     }
   },
   juegos: [
@@ -928,6 +1162,171 @@ const DB = {
         { titulo: "El Huevo de Nautiloid y los Elegidos",    texto: "Un huevo de Nautiloid transforma lentamente al portador en un Illithid. Los tres Elegidos de los Dioses Muertos — Ketheric, Orin y Gortash — buscan usar el Cerebro Inferior para conquistar Faerûn mediante el control mental masivo.", tag: "Historia" },
         { titulo: "Los Compañeros y sus historias",          texto: "Cada compañero tiene una historia profunda conectada con los eventos principales: Shadowheart guarda un secreto sobre Shar, Astarion es un vampiro que busca su libertad, Gale es un mago con un orbe de destrucción en el pecho.", tag: "Personajes" },
         { titulo: "El Tejido y la magia de Faerûn",         texto: "Faerûn opera bajo el Sistema de magia del Tejido de Mystra. Tras los eventos de la Spellplague, la magia es menos estable. Los Illithid operan fuera del Tejido usando magia psiónica que no puede ser contrarrestada con métodos convencionales.", tag: "Cosmología" }
+      ]
+    },
+    "bloodborne": {
+      descripcion: "Bloodborne es un action-RPG de FromSoftware exclusivo de PlayStation ambientado en Yharnam, una ciudad victoriana maldita por una plaga de bestias. A diferencia de Dark Souls, el combate es ofensivo y agresivo — no hay escudo, hay que atacar para recuperar vida. El lore lovecraftiano, los grandes seres cósmicos y la atmósfera única lo sitúan entre las mejores obras del estudio.",
+      developer: "FromSoftware",
+      publisher: "Sony Interactive Entertainment",
+      año: 2015,
+      plataformas: "PS4, PS5",
+      modos: "Un jugador, Co-op online",
+      dificultad: {
+        "Dificultad global": 88,
+        "Combate agresivo": 80,
+        "Jefes opcionales": 96,
+        "Exploración": 70
+      },
+      bosses: [
+        { id: "cleric-beast",     nombre: "Cleric Beast",           zona: "Gran Puente",          emoji: "👹", dificultad: "Medio",   drops: "Sangre de Cleric" },
+        { id: "father-gascoigne", nombre: "Father Gascoigne",       zona: "Patio de la Catedral", emoji: "🎻", dificultad: "Alto",    drops: "Ojo del Cazador" },
+        { id: "vicar-amelia",     nombre: "Vicar Amelia",           zona: "Catedral de Yharnam",  emoji: "✝️", dificultad: "Alto",    drops: "Colgante Divino" },
+        { id: "rom",              nombre: "Rom, the Vacuous Spider", zona: "Lago Byrgenwerth",     emoji: "🕷️", dificultad: "Medio",   drops: "Runas de Rom" },
+        { id: "micolash",         nombre: "Micolash, Host of the Nightmare", zona: "Pesadilla del Menis", emoji: "🎭", dificultad: "Alto", drops: "Eco de Micolash" },
+        { id: "mergo-wet-nurse",  nombre: "Mergo's Wet Nurse",      zona: "Pesadilla del Menis",  emoji: "🌑", dificultad: "Extremo", drops: "Tercer Cordón" },
+        { id: "gehrman",          nombre: "Gehrman, the First Hunter", zona: "Jardín del Sueño", emoji: "🌾", dificultad: "Extremo", drops: "Recuerdo de Gehrman" },
+        { id: "moon-presence",    nombre: "Moon Presence",          zona: "Jardín del Sueño",     emoji: "🌕", dificultad: "Extremo", drops: "Final True" }
+      ],
+      guias: [
+        { titulo: "Guía completa — Cómo vencer a Father Gascoigne", tipo: "Boss",  minutos: 8,  badge: "hot" },
+        { titulo: "Build Arcano — Transforming Weapons maximizadas", tipo: "Build", minutos: 18, badge: "new" },
+        { titulo: "Chalice Dungeons — todo lo que necesitas saber",  tipo: "Zona",  minutos: 25, badge: "updated" },
+        { titulo: "Lore completo — los Grandes Seres y Yharnam",    tipo: "Lore",  minutos: 30, badge: "hot" }
+      ],
+      galeria: [
+        { emoji: "🏙️", label: "Yharnam bajo la lluvia" },
+        { emoji: "🕯️", label: "Catedral Ward" },
+        { emoji: "🌊", label: "Lago Byrgenwerth" },
+        { emoji: "🌑", label: "Pesadilla del Menis" },
+        { emoji: "🌕", label: "El sueño del cazador" },
+        { emoji: "🩸", label: "La plaga de las bestias" }
+      ],
+      lore: [
+        { titulo: "La Sangre Antigua y la plaga de bestias",     texto: "Yharnam prosperó gracias a la sangre curativa descubierta bajo la ciudad. Pero la sobreexposición a la sangre de los Grandes Seres desencadenó la transformación de sus habitantes en bestias. La noche de la caza es el intento de la iglesia de controlar la plaga.", tag: "Historia" },
+        { titulo: "Los Grandes Seres cósmicos",                  texto: "Bloodborne bebe del horror cósmico de Lovecraft. Entidades como Ébrietas, Rom o la Presencia Lunar existen en dimensiones más allá de la comprensión humana. La investigación de Byrgenwerth buscaba elevar a la humanidad al nivel de estos seres.", tag: "Cosmología" },
+        { titulo: "Gehrman y el Sueño del Cazador",              texto: "El Primer Cazador está atrapado en el sueño por la Presencia Lunar, sirviendo como guía para los cazadores que llegan. Al final, el jugador puede liberarlo — o tomar su lugar como nuevo guardián del sueño eterno.", tag: "Personajes" }
+      ]
+    },
+    "sekiro": {
+      descripcion: "Sekiro: Shadows Die Twice es un juego de acción de FromSoftware ambientado en el Japón Sengoku tardío. A diferencia de la saga Souls, no hay estadísticas que subir ni equipamiento que cambiar: el progreso se basa exclusivamente en dominar el sistema de combate por postura. El jugador encarna a Wolf, un shinobi que debe rescatar a su señor del clan Ashina.",
+      developer: "FromSoftware",
+      publisher: "Activision / FromSoftware",
+      año: 2019,
+      plataformas: "PC, PS4, PS5, Xbox One, Xbox Series",
+      modos: "Un jugador",
+      dificultad: {
+        "Dificultad global": 87,
+        "Sistema de postura": 75,
+        "Jefes principales": 94,
+        "Exploración": 55
+      },
+      bosses: [
+        { id: "genichiro",      nombre: "Genichiro Ashina",          zona: "Castillo Ashina — Cima",  emoji: "⚡", dificultad: "Extremo", drops: "Memoria: Genichiro" },
+        { id: "lady-butterfly", nombre: "Lady Butterfly",            zona: "Hirata Estate",           emoji: "🦋", dificultad: "Alto",    drops: "Hilo de Seda" },
+        { id: "guardian-ape",   nombre: "Guardian Ape",              zona: "Bosque de Sunken Valley",  emoji: "🦍", dificultad: "Extremo", drops: "Medicina Eterna" },
+        { id: "corrupted-monk", nombre: "Corrupted Monk",            zona: "Santuario Mibu",          emoji: "☯️", dificultad: "Alto",    drops: "Flor Iluminada" },
+        { id: "owl-father",     nombre: "Great Shinobi Owl — Father", zona: "Castillo Ashina — NG+", emoji: "🦉", dificultad: "Extremo", drops: "Memoria: Búho" },
+        { id: "isshin",         nombre: "Isshin, Sword Saint",       zona: "Castillo Ashina — Final", emoji: "🌸", dificultad: "Extremo", drops: "Ruinas de Ashina" }
+      ],
+      guias: [
+        { titulo: "Guía de postura — cómo romper la guardia de cualquier jefe", tipo: "Build", minutos: 15, badge: "hot" },
+        { titulo: "Cómo vencer a Isshin Sword Saint — el boss final",          tipo: "Boss",  minutos: 20, badge: "hot" },
+        { titulo: "Todas las prótesis — cuándo y cómo usarlas",                tipo: "Zona",  minutos: 12, badge: "updated" },
+        { titulo: "Sekiro lore — el Dragón de la Herencia y la inmortalidad",   tipo: "Lore",  minutos: 22, badge: "new" }
+      ],
+      galeria: [
+        { emoji: "🏯", label: "Castillo Ashina" },
+        { emoji: "🌸", label: "Hirata Estate en flor" },
+        { emoji: "🌊", label: "Reserva del Valle Hundido" },
+        { emoji: "🎋", label: "Bosques de bambú de Senpou" },
+        { emoji: "⛩️", label: "Templo de Senpou" },
+        { emoji: "🌙", label: "Ashina en llamas" }
+      ],
+      lore: [
+        { titulo: "El Dragón de la Herencia y la inmortalidad",  texto: "El Dragón de la Herencia otorga inmortalidad a quien lo porte. Kuro, el joven señor de Wolf, nació con este poder. Tanto el clan Ashina como los guerreros del Interior buscan a Kuro para aprovechar o erradicar el poder del dragón.", tag: "Historia" },
+        { titulo: "Wolf y el código shinobi",                    texto: "Wolf (Sekiro) es un shinobi entrenado por el Gran Shinobi Búho. Su código de lealtad absoluta hacia Kuro entra en conflicto con las órdenes de su maestro. El juego explora el honor shinobi a través de sus finales múltiples.", tag: "Personajes" },
+        { titulo: "El clan Ashina y su decadencia",              texto: "Isshin Ashina fundó el clan con su espada legendaria, pero el clan envejece y los ejércitos imperiales avanzan. Genichiro, nieto de Isshin, busca la inmortalidad del Dragón para salvar Ashina — a cualquier precio.", tag: "Política" }
+      ]
+    },
+    "dark-souls-3": {
+      descripcion: "Dark Souls III es el capítulo final de la trilogía Souls de FromSoftware. Ambientado en el reino de Lothric al borde del apocalipsis cíclico, el jugador encarna al Sin Llama — un guerrero muerto resucitado para reunir a los Señores de las Cenizas y retrasar el fin. Con el combate más rápido de la saga y algunos de los mejores jefes de la historia del género.",
+      developer: "FromSoftware",
+      publisher: "Bandai Namco Entertainment",
+      año: 2016,
+      plataformas: "PC, PS4, PS5, Xbox One, Xbox Series",
+      modos: "Un jugador, Co-op/PvP online",
+      dificultad: {
+        "Dificultad global": 82,
+        "Velocidad de combate": 65,
+        "Jefes opcionales": 93,
+        "Exploración": 58
+      },
+      bosses: [
+        { id: "pontiff",       nombre: "Pontiff Sulyvahn",         zona: "Irithyll del Valle Boreal", emoji: "⚔️", dificultad: "Extremo", drops: "Anillo de Sulyvahn" },
+        { id: "nameless-king", nombre: "Nameless King",            zona: "Archdragon Peak",           emoji: "⚡", dificultad: "Extremo", drops: "Memoria del Rey Sin Nombre" },
+        { id: "soul-of-cinder", nombre: "Soul of Cinder",          zona: "Llama de la Primera Hoguera", emoji: "🔥", dificultad: "Extremo", drops: "Recuerdo de las Cenizas" },
+        { id: "sister-friede", nombre: "Sister Friede",            zona: "Pinwheel — DLC Ariandel",   emoji: "❄️", dificultad: "Extremo", drops: "Manto de Friede" },
+        { id: "midir",         nombre: "Darkeater Midir",          zona: "El Ringed City — DLC",      emoji: "🐉", dificultad: "Extremo", drops: "Alma de Midir" },
+        { id: "dancer",        nombre: "Dancer of the Boreal Valley", zona: "Lothric High Wall",     emoji: "💃", dificultad: "Alto",    drops: "Alma de la Bailarina" }
+      ],
+      guias: [
+        { titulo: "Guía de Pontiff Sulyvahn — movimientos y estrategia", tipo: "Boss",  minutos: 12, badge: "hot" },
+        { titulo: "Build Pyromancer — mejor clase para early y endgame",  tipo: "Build", minutos: 16, badge: "updated" },
+        { titulo: "Irithyll del Valle Boreal — guía completa de zona",   tipo: "Zona",  minutos: 18, badge: "new" },
+        { titulo: "Lore — el ciclo del fuego y los Señores de Cenizas",  tipo: "Lore",  minutos: 20, badge: "hot" }
+      ],
+      galeria: [
+        { emoji: "🏰", label: "Castillo de Lothric" },
+        { emoji: "❄️", label: "Irithyll bajo la nieve" },
+        { emoji: "🐉", label: "Archdragon Peak" },
+        { emoji: "⛪", label: "Catedral del Abismo Profundo" },
+        { emoji: "🔥", label: "Hoguera de las Cenizas" },
+        { emoji: "🌑", label: "The Ringed City — DLC" }
+      ],
+      lore: [
+        { titulo: "El ciclo del fuego y la Primera Llama",          texto: "Dark Souls III concluye el ciclo iniciado en el primer juego. La Primera Llama se apaga inevitablemente y los no-muertos son convocados para atizar el fuego con sus almas. Los Señores de las Cenizas — los más poderosos — rechazaron este destino y deben ser traídos de vuelta.", tag: "Historia" },
+        { titulo: "Lothric y los Príncipes Gemelos",                texto: "Lothric y Lorian son los príncipes de la última línea real. Lothric, enfermizo desde su nacimiento, rechazó su destino como Portador de la Llama. Su hermano Lorian asumió su maldición y juntos se convirtieron en uno de los jefes más trágicos de la saga.", tag: "Personajes" },
+        { titulo: "Los caballeros de Irithyll y Sulyvahn",          texto: "Pontiff Sulyvahn corrompió a los caballeros de Anor Londo con su veneno y esclavizó a los dioses. Irithyll del Valle Boreal era la ciudad sagrada de Gwyn, ahora sometida a un tirano que usa gemelos fantasmales para sus propios fines.", tag: "Política" }
+      ]
+    },
+    "diablo-4": {
+      descripcion: "Diablo IV es el ARPG de Blizzard Entertainment que regresa a las raíces oscuras de la saga. Ambientado en el mundo de Santuario, la hija de Mephisto, Lilith, ha sido invocada y amenaza con sumergir el mundo en el caos. Con cinco clases, un mundo abierto compartido y un sistema de temporadas continuo, ofrece cientos de horas de juego.",
+      developer: "Blizzard Entertainment",
+      publisher: "Blizzard Entertainment",
+      año: 2023,
+      plataformas: "PC, PS4, PS5, Xbox One, Xbox Series",
+      modos: "Un jugador, Co-op 4 jugadores, Mundo compartido",
+      dificultad: {
+        "Dificultad global": 58,
+        "Curva de nivel": 45,
+        "Tormentos de endgame": 85,
+        "Builds complejas": 75
+      },
+      bosses: [
+        { id: "lilith",       nombre: "Lilith, Hija del Odio",  zona: "Argent D'Nal — Final",  emoji: "👹", dificultad: "Extremo", drops: "Corazón de Lilith" },
+        { id: "ashava",       nombre: "Ashava the Pestilent",   zona: "Campos del Odio — Mundial", emoji: "🐍", dificultad: "Alto",    drops: "Cenizas de Ashava" },
+        { id: "duriel",       nombre: "Lord of Pain Duriel",    zona: "Alcantarillas de Tortura", emoji: "🦂", dificultad: "Alto",    drops: "Materiales únicos" },
+        { id: "andariel",     nombre: "Andariel, Maiden of Anguish", zona: "Fortaleza de Guulrahn", emoji: "🕷️", dificultad: "Medio",   drops: "Susurros de Andariel" },
+        { id: "uber-duriel",  nombre: "Echo of Duriel",         zona: "Ureh — Endgame",           emoji: "⚡", dificultad: "Extremo", drops: "Únicos Ancestrales" }
+      ],
+      guias: [
+        { titulo: "Mejor build Nigromante Temporada 8 — guía completa", tipo: "Build", minutos: 20, badge: "hot" },
+        { titulo: "Cómo farmear Uber Duriel — materiales y estrategia", tipo: "Boss",  minutos: 10, badge: "new" },
+        { titulo: "Tormento 4 — cómo preparar el salto de dificultad", tipo: "Zona",  minutos: 14, badge: "updated" },
+        { titulo: "Lore de Santuario — la guerra entre ángeles y demonios", tipo: "Lore", minutos: 18, badge: "hot" }
+      ],
+      galeria: [
+        { emoji: "🏜️", label: "Desierto de Kehjistan" },
+        { emoji: "❄️", label: "Fractured Peaks nevado" },
+        { emoji: "🌿", label: "Scosglen — bosques celtas" },
+        { emoji: "🩸", label: "Campos del Odio" },
+        { emoji: "🌑", label: "Hawezar — pantanos" },
+        { emoji: "👹", label: "El trono de Lilith" }
+      ],
+      lore: [
+        { titulo: "Lilith y la creación de Santuario",               texto: "Lilith, hija de Mephisto y madre de la humanidad, creó Santuario junto al arcángel Inarius para escapar del conflicto eterno. Cuando fue desterrada, los humanos quedaron atrapados entre el Cielo Alto y los Infiernos Ardientes.", tag: "Historia" },
+        { titulo: "Las cinco clases y su conexión con el lore",      texto: "Bárbaro, Druida, Nigromante, Pícaro y Hechicero representan linajes y tradiciones de Santuario. Cada clase tiene una motivación narrativa propia para enfrentarse a Lilith, conectada con el lore de los juegos anteriores.", tag: "Personajes" },
+        { titulo: "El sistema de temporadas y la narrativa viva",    texto: "Diablo IV se actualiza con temporadas que añaden nuevos arcos narrativos. Cada temporada introduce mecánicas únicas, jefes temporales y fragmentos de historia que expanden el universo de Santuario de forma continua.", tag: "Sistema" }
       ]
     },
   },
