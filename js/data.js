@@ -1329,6 +1329,726 @@ const DB = {
         { titulo: "El sistema de temporadas y la narrativa viva",    texto: "Diablo IV se actualiza con temporadas que añaden nuevos arcos narrativos. Cada temporada introduce mecánicas únicas, jefes temporales y fragmentos de historia que expanden el universo de Santuario de forma continua.", tag: "Sistema" }
       ]
     },
+    "dark-souls-1": {
+      descripcion: "Dark Souls, el primer título de la saga de FromSoftware, estableció los pilares del género soulslike: muerte como aprendizaje, mundo interconectado sin pantallas de carga y un lore críptico contado a través de descripciones de objetos. Ambientado en Lordran, el jugador debe encender la Primera Llama o dejarla extinguir, enfrentándose a dioses caídos, caballeros malditos y criaturas del Abismo.",
+      developer: "FromSoftware",
+      publisher: "Namco Bandai Games",
+      año: 2011,
+      plataformas: "PC, PS3, PS4, Xbox 360, Xbox One, Switch",
+      modos: "Un jugador, Multijugador asíncrono, Co-op, PvP invasiones",
+      dificultad: {
+        "Dificultad global": 88,
+        "Jefes opcionales": 95,
+        "Navegación del mundo": 80,
+        "Curva de aprendizaje": 85
+      },
+      bosses: [
+        { id: "ornstein-smough",   nombre: "Ornstein y Smough",       zona: "Catedral de Anor Londo",     emoji: "⚡", dificultad: "Extremo", drops: "Alma de Smough / Alma de Ornstein" },
+        { id: "sif",               nombre: "Sif, el Gran Lobo Gris",  zona: "Jardín de Artorias",         emoji: "🐺", dificultad: "Alto",    drops: "Alma de Sif" },
+        { id: "four-kings",        nombre: "Los Cuatro Reyes",        zona: "El Abismo — New Londo",      emoji: "👑", dificultad: "Alto",    drops: "Alma de los Reyes" },
+        { id: "gwyn",              nombre: "Gwyn, Señor del Fuego",   zona: "Llama de Kiln — Final",      emoji: "🔥", dificultad: "Medio",   drops: "Alma de Gwyn" },
+        { id: "artorias",          nombre: "Caballero Artorias",      zona: "Jardín de Artorias — DLC",   emoji: "🗡️", dificultad: "Extremo", drops: "Alma de Artorias" }
+      ],
+      guias: [
+        { titulo: "Ornstein y Smough — la estrategia definitiva para 2025", tipo: "Boss",  minutos: 12, badge: "hot" },
+        { titulo: "Ruta óptima de progresión — Lordran sin perderse",       tipo: "Zona",  minutos: 20, badge: "updated" },
+        { titulo: "Build mago puro — Soul Spear y Crystal Soul Spear",      tipo: "Build", minutos: 15, badge: "hot" },
+        { titulo: "Lore completo de Gwyn y los Señores del Fuego",          tipo: "Lore",  minutos: 18, badge: "new" }
+      ],
+      galeria: [
+        { emoji: "🏰", label: "Anor Londo — ciudad de los dioses" },
+        { emoji: "🕷️", label: "Blighttown — pantanos tóxicos" },
+        { emoji: "🏚️", label: "Sen's Fortress — trampa mortal" },
+        { emoji: "🌊", label: "Ash Lake — lago primordial" },
+        { emoji: "🐉", label: "Dragones de Piedra en el Puente" },
+        { emoji: "🔥", label: "Kiln of the First Flame" }
+      ],
+      lore: [
+        { titulo: "La Era del Fuego y los Señores",           texto: "Antes de la Llama, todo era gris. Cuando surgió la Primera Llama, los Señores hallaron las Almas de los Señores dentro de ella: Gwyn, Nito, la Bruja de Izalith y el Pigmeo Furtivo. Con ellas derrotaron a los Dragones Eternos e instauraron la Era del Fuego.", tag: "Historia" },
+        { titulo: "La maldición del Ser No Muerto",           texto: "El Señal Oscura marca a los humanos convirtiéndolos en No Muertos. Si pierden la esperanza, se vuelven Huecos — cáscaras sin mente. Lordran es el destino de los No Muertos elegidos por la profecía, que deben encender o apagar la Llama.", tag: "Lore" },
+        { titulo: "Artorias y la caída al Abismo",            texto: "El Caballero Artorias fue el único ser capaz de atravesar el Abismo. Cuando intentó salvar al hijo de Sif, el Abismo lo corrompió. Su escudo protegió al lobo, pero él fue consumido. El jugador debe viajar al pasado para enfrentarlo y salvar a Oolacile.", tag: "Personajes" }
+      ]
+    },
+    "poe2": {
+      descripcion: "Path of Exile 2 es la segunda parte del ARPG free-to-play de Grinding Gear Games. Con 6 clases base y 36 ascendencias, un árbol de habilidades pasivas con más de 1.500 nodos y un sistema de gemas 2.0, ofrece una profundidad de builds sin igual. El modo hardcore, las ligas de temporada y la economía de comercio entre jugadores lo convierten en uno de los ARPGs más complejos del mercado.",
+      developer: "Grinding Gear Games",
+      publisher: "Grinding Gear Games",
+      año: 2024,
+      plataformas: "PC, PS5, Xbox Series",
+      modos: "Un jugador, Multijugador cooperativo, Hardcore, Temporadas (Ligas)",
+      dificultad: {
+        "Dificultad de campaña": 72,
+        "Complejidad de builds": 98,
+        "Endgame — Maps y Pinnacle": 90,
+        "Economía y trading": 85
+      },
+      bosses: [
+        { id: "the-arbiter",     nombre: "The Arbiter of Ash",      zona: "Cima del Mundo — Acto 6",    emoji: "🌋", dificultad: "Extremo", drops: "Runa divina, Orbe divino" },
+        { id: "lachlann",        nombre: "Lachlann of Endless Lament", zona: "Cripta Lluviosa — Acto 2", emoji: "☠️", dificultad: "Alto",    drops: "Amuleto de Lachlann" },
+        { id: "doryani",         nombre: "Doryani, el Corruptor",   zona: "Sala de los Eones — Endgame", emoji: "⚡", dificultad: "Extremo", drops: "Gema corrupta única" },
+        { id: "xesht",           nombre: "Xesht, We That Are One",  zona: "Desierto de Vastiri — Acto 3", emoji: "🐛", dificultad: "Alto",   drops: "Piedra de liga" },
+        { id: "the-king-in-shadows", nombre: "The King in Shadows", zona: "Depths — Endgame pinnacle",  emoji: "👁️", dificultad: "Extremo", drops: "Único pintácleo" }
+      ],
+      guias: [
+        { titulo: "Mejor build starter Liga — Minions Infernalist",    tipo: "Build", minutos: 22, badge: "hot" },
+        { titulo: "Árbol de habilidades explicado — guía para nuevos", tipo: "Mecánica", minutos: 30, badge: "new" },
+        { titulo: "Endgame Maps — cómo progresar desde Tier 1 a 16",  tipo: "Zona",  minutos: 18, badge: "updated" },
+        { titulo: "Economía y trading — cómo conseguir divisas rápido", tipo: "Guía", minutos: 15, badge: "hot" }
+      ],
+      galeria: [
+        { emoji: "🌧️", label: "Wraeclast bajo la lluvia" },
+        { emoji: "🏜️", label: "Desierto de Vastiri" },
+        { emoji: "🌊", label: "Puertos de Utzaal" },
+        { emoji: "🌋", label: "Cima de Keth" },
+        { emoji: "🗺️", label: "Atlas del Endgame" },
+        { emoji: "💎", label: "La ciudad de las gemas" }
+      ],
+      lore: [
+        { titulo: "Wraeclast — el continente maldito",              texto: "Los exiliados son enviados al continente de Wraeclast como castigo. La tierra está impregnada de magia corrupta y sus civilizaciones anteriores —Vaal, Eternos, Thaumaturgia— dejaron ruinas llenas de peligros y conocimiento prohibido.", tag: "Historia" },
+        { titulo: "Las Gemmas y el origen de la magia",             texto: "Las gemas de habilidad son restos de criaturas o espíritus cristalizados. Encajarlas en el equipo permite canalizar su poder. Esta magia fue desarrollada por los Eternos, cuyo abuso de las gemas causó la caída de su civilización.", tag: "Lore" },
+        { titulo: "El ciclo de las Ligas y el tiempo fragmentado",  texto: "Cada liga en PoE2 representa un evento que altera las reglas del mundo. Los jugadores comienzan de cero en cada liga, y al terminar los personajes pasan a los servidores Legacy. Este ciclo mantiene la economía fresca y la comunidad unida.", tag: "Sistema" }
+      ]
+    },
+    "final-fantasy-7-remake": {
+      descripcion: "Final Fantasy VII Remake es la primera parte de la retelling del clásico de 1997, que expande y reimagina los eventos en la ciudad de Midgar. Con un sistema de combate en tiempo real combinado con menú de habilidades, gráficos de última generación y una banda sonora orquestal, profundiza en los personajes de Cloud, Aerith, Barret y Tifa de forma inédita.",
+      developer: "Square Enix",
+      publisher: "Square Enix",
+      año: 2020,
+      plataformas: "PS4, PS5, PC",
+      modos: "Un jugador",
+      dificultad: {
+        "Dificultad estándar": 55,
+        "Modo Difícil — sin objetos": 85,
+        "Jefes de capítulo": 70,
+        "Desafíos de arena": 80
+      },
+      bosses: [
+        { id: "scorpion-sentinel",  nombre: "Scorpion Sentinel",       zona: "Reactor Mako 1 — Inicio",   emoji: "🦂", dificultad: "Medio",   drops: "Material de Hielo" },
+        { id: "arsenal",            nombre: "Arsenal",                  zona: "Torre Shinra — Capítulo 16", emoji: "🤖", dificultad: "Alto",    drops: "Mejora de arma" },
+        { id: "jenova-dreamweaver", nombre: "Jenova — Dreamweaver",     zona: "Corredor del Destino — Final", emoji: "👾", dificultad: "Alto",  drops: "Accesorio único" },
+        { id: "sephiroth-final",    nombre: "Sephiroth",                zona: "Más allá del destino — Final", emoji: "🗡️", dificultad: "Extremo", drops: "Trofeo Platino" },
+        { id: "hell-house",         nombre: "Hell House",               zona: "Estadio de Lucha — Cap. 9",  emoji: "🏠", dificultad: "Alto",    drops: "Material único" }
+      ],
+      guias: [
+        { titulo: "Sephiroth en Difícil — guía completa sin objetos",  tipo: "Boss",  minutos: 14, badge: "hot" },
+        { titulo: "Todos los materiales ocultos — localización exacta", tipo: "Zona",  minutos: 20, badge: "updated" },
+        { titulo: "Build óptima para Modo Difícil con Cloud y Aerith",  tipo: "Build", minutos: 16, badge: "hot" },
+        { titulo: "Lore de Jenova y el Proyecto S de Shinra",           tipo: "Lore",  minutos: 18, badge: "new" }
+      ],
+      galeria: [
+        { emoji: "🏙️", label: "Midgar vista desde el aire" },
+        { emoji: "💧", label: "Slums bajo las planchas" },
+        { emoji: "🌸", label: "Invernadero de Aerith" },
+        { emoji: "🎪", label: "Estadio de Wall Market" },
+        { emoji: "⚡", label: "Reactor Mako en llamas" },
+        { emoji: "🗡️", label: "El duelo con Sephiroth" }
+      ],
+      lore: [
+        { titulo: "El Proyecto Jenova y la Nube oscura",    texto: "Jenova es una entidad alienígena que Shinra descubrió hace 2.000 años y confundió con un Cetra. Sus células fueron inyectadas en soldados SOLDIER, incluyendo a Cloud y Sephiroth, lo que les otorga habilidades sobrehumanas pero a un coste psicológico enorme.", tag: "Personajes" },
+        { titulo: "Shinra y la explotación del Planeta",   texto: "La corporación Shinra absorbe la Corriente Vital del Planeta —la esencia de toda vida— para convertirla en energía Mako. Esto agota lentamente al Planeta. AVALANCHA lucha contra esta explotación, aunque sus métodos son vistos como terrorismo.", tag: "Historia" },
+        { titulo: "Los Susurros del Destino",              texto: "En el Remake aparecen los Susurros, entidades que protegen la línea temporal original. El grupo los enfrenta y al destruirlos liberan el destino del Planeta, abriendo la posibilidad de un futuro diferente al canon original del juego de 1997.", tag: "Lore" }
+      ]
+    },
+    "final-fantasy-16": {
+      descripcion: "Final Fantasy XVI lleva la saga a un territorio oscuro y maduro, con un sistema de combate en tiempo real de acción pura inspirado en Devil May Cry. Ambientado en el mundo de Valisthea, la historia sigue a Clive Rosfield en su búsqueda de venganza, rodeado de guerras por los cristales madre y la amenaza de la Laceradura. El juego presenta los Eikons —los invocados de la saga— como seres de poder devastador.",
+      developer: "Square Enix — Creative Business Unit III",
+      publisher: "Square Enix",
+      año: 2023,
+      plataformas: "PS5, PC",
+      modos: "Un jugador",
+      dificultad: {
+        "Modo Historia (asistido)": 30,
+        "Dificultad estándar": 60,
+        "Modo Final Fantasy — NG+": 82,
+        "Jefes de Eikon": 75
+      },
+      bosses: [
+        { id: "benedikta",    nombre: "Benedikta Harman — Garuda",  zona: "Lostwing — Acto I",           emoji: "🌪️", dificultad: "Medio",   drops: "Plumas de Garuda" },
+        { id: "titan",        nombre: "Titan — El Colosal",         zona: "Dhalmekia — Acto II",         emoji: "🗻", dificultad: "Alto",    drops: "Fragmento de cristal" },
+        { id: "bahamut",      nombre: "Bahamut — Dreadwyrm",        zona: "Mothercrystal Drake's Head",  emoji: "🐲", dificultad: "Extremo", drops: "Escama de Bahamut" },
+        { id: "ultima",       nombre: "Ultima",                     zona: "Origin — Clímax final",       emoji: "✨", dificultad: "Extremo", drops: "Trofeo platino" },
+        { id: "barnabas",     nombre: "Barnabas Tharmr — Odin",     zona: "Waloed — Clímax Acto III",    emoji: "⚔️", dificultad: "Alto",    drops: "Hoja del rey" }
+      ],
+      guias: [
+        { titulo: "Bahamut — cómo superar la batalla de Eikons más épica", tipo: "Boss",  minutos: 12, badge: "hot" },
+        { titulo: "Todas las misiones secundarias — guía y recompensas",    tipo: "Zona",  minutos: 25, badge: "updated" },
+        { titulo: "Build de Clive para Modo Final Fantasy — habilidades",   tipo: "Build", minutos: 18, badge: "hot" },
+        { titulo: "Lore de Valisthea y el origen de los Eikons",            tipo: "Lore",  minutos: 20, badge: "new" }
+      ],
+      galeria: [
+        { emoji: "💎", label: "Cristal Madre de Phoenix Gate" },
+        { emoji: "🏰", label: "Fortaleza de Rosaria" },
+        { emoji: "🌊", label: "Costa de Dhalmekia" },
+        { emoji: "🔥", label: "Duelo de Eikons en llamas" },
+        { emoji: "🌑", label: "La Laceradura avanzando" },
+        { emoji: "⚔️", label: "Clive en su armadura final" }
+      ],
+      lore: [
+        { titulo: "Los cristales madre y la Laceradura",      texto: "Los cristales madre son inmensas formaciones que otorgan el don del éter a sus pueblos. Sin embargo, su uso excesivo alimenta la Laceradura, una plaga que petrifica la tierra y a sus habitantes. Los reinos de Valisthea luchan por el control de estos cristales mientras el mundo se consume.", tag: "Historia" },
+        { titulo: "Los Dominantes y los Eikons",              texto: "Los Dominantes son humanos que pueden encarnar a los Eikons —los seres invocados de máximo poder. Dependiendo del reino, son adorados como figuras divinas o esclavizados como armas de guerra. Clive, como Dominante de Ifrit, porta una carga que dará forma al destino de Valisthea.", tag: "Personajes" },
+        { titulo: "Ultima y el plan de los Inmortales",       texto: "Ultima es un ser de una raza de dioses que creó los Eikons como parte de un plan para absorber el éter del mundo y ascender. Toda la historia de los Dominantes y las guerras de Valisthea forman parte de su manipulación milenaria.", tag: "Lore" }
+      ]
+    },
+    "final-fantasy-14": {
+      descripcion: "Final Fantasy XIV es el MMORPG de Square Enix que resurgió de las cenizas con A Realm Reborn en 2013. Con cuatro expansiones principales (Heavensward, Stormblood, Shadowbringers, Endwalker) y una nueva saga iniciada con Dawntrail, ofrece una de las narraciones más aclamadas del género. Su comunidad es famosa por ser una de las más acogedoras de los juegos en línea.",
+      developer: "Square Enix",
+      publisher: "Square Enix",
+      año: 2013,
+      plataformas: "PC, PS4, PS5, Xbox Series",
+      modos: "MMORPG — Mundo persistente multijugador masivo",
+      dificultad: {
+        "Historia principal": 35,
+        "Raids extremas (EX)": 80,
+        "Raids en Savage": 92,
+        "Ultimate — cima del reto": 99
+      },
+      bosses: [
+        { id: "zodiark",      nombre: "Zodiark, Source of Darkness",  zona: "Pillar of Heaven — Endwalker", emoji: "🌑", dificultad: "Alto",    drops: "Equipo Zodiark" },
+        { id: "hydaelyn",     nombre: "Hydaelyn, Goddess of Light",   zona: "The Mothercrystal — Endwalker", emoji: "✨", dificultad: "Alto",   drops: "Arma de diosa" },
+        { id: "endsinger",    nombre: "The Endsinger",                zona: "The Final Day — Endwalker Final", emoji: "🌟", dificultad: "Extremo", drops: "Trofeo narrativo" },
+        { id: "golbez",       nombre: "Golbez",                       zona: "Aether — Patch 6.4",            emoji: "🖤", dificultad: "Alto",    drops: "Equipo de temporada" },
+        { id: "zeromus",      nombre: "Zeromus",                      zona: "Zero's World — Patch 6.5",      emoji: "👁️", dificultad: "Extremo", drops: "Arma final de parche" }
+      ],
+      guias: [
+        { titulo: "Guía para nuevos jugadores — por dónde empezar en 2025", tipo: "Guía", minutos: 25, badge: "hot" },
+        { titulo: "Extreme Trials — cómo prepararse para el primer EX",     tipo: "Mecánica", minutos: 18, badge: "new" },
+        { titulo: "Shadowbringers — la historia más aclamada resumida",     tipo: "Lore",  minutos: 30, badge: "updated" },
+        { titulo: "Jobs para principiantes — cuál elegir y por qué",        tipo: "Build", minutos: 15, badge: "hot" }
+      ],
+      galeria: [
+        { emoji: "🏙️", label: "Limsa Lominsa al atardecer" },
+        { emoji: "🌿", label: "Gridania y el bosque eterno" },
+        { emoji: "🏜️", label: "Ul'dah y sus arenas doradas" },
+        { emoji: "🌌", label: "The First — mundo de luz eterna" },
+        { emoji: "🌙", label: "Elpis — paraíso del pasado" },
+        { emoji: "✨", label: "El Final — Endwalker climax" }
+      ],
+      lore: [
+        { titulo: "A Realm Reborn — el renacimiento del mundo",     texto: "Tras el desastre del Umbral Séptimo, Eorzea fue destruida y reconstruida. Los Guerreros de la Luz son los únicos que recuerdan el futuro gracias a la Memoria del Eco. Su misión es proteger al Cristal Madre Hydaelyn de las fuerzas del Imperio Garlean y de entidades astrales.", tag: "Historia" },
+        { titulo: "Shadowbringers y el mundo al revés",             texto: "En Shadowbringers, el Guerrero de la Luz viaja a The First, una versión paralela del mundo donde la Luz amenaza con aniquilarlo todo. Allí se convierte en Guerrero de la Oscuridad para salvar a sus habitantes. Es considerada una de las mejores historias en la historia de los MMORPG.", tag: "Personajes" },
+        { titulo: "Endwalker y el fin del ciclo",                   texto: "Endwalker concluye la saga del Hidaelyn y Zodiark con una amenaza existencial: el Endsinger, nacido del desesperado llanto colectivo de la humanidad. La historia explora temas de depresión, esperanza y el valor de vivir, convirtiéndose en un fenómeno emocional para su comunidad.", tag: "Lore" }
+      ]
+    },
+    "final-fantasy-6": {
+      descripcion: "Final Fantasy VI (conocido como Final Fantasy III en Occidente en su lanzamiento original) es considerado por muchos el punto más alto del RPG clásico de Square. Con 14 protagonistas jugables, la historia de Terra Branford y sus aliados contra el Emperador Gestahl y el bufón-dios Kefka Palazzo ofreció una narrativa madura sobre trauma, esperanza y resistencia, acompañada de la legendaria banda sonora de Nobuo Uematsu.",
+      developer: "Square",
+      publisher: "Square",
+      año: 1994,
+      plataformas: "SNES, PS1, GBA, PC, iOS, Android",
+      modos: "Un jugador",
+      dificultad: {
+        "Campaña principal": 50,
+        "Jefes opcionales": 78,
+        "Dragon's Den — GBA": 90,
+        "Coliseo de Kohlingen": 65
+      },
+      bosses: [
+        { id: "kefka-god",     nombre: "Kefka — Dios de la Magia",  zona: "Torre de Kefka — Final",      emoji: "🃏", dificultad: "Alto",    drops: "Esfera Aliento de Dios" },
+        { id: "atma-weapon",   nombre: "Atma Weapon",               zona: "Tierra Flotante — Acto I",    emoji: "⚔️", dificultad: "Alto",    drops: "Esencia de Atma" },
+        { id: "magic-master",  nombre: "Magic Master",              zona: "Thamasa — Acto II",            emoji: "🔮", dificultad: "Medio",   drops: "Runa mágica" },
+        { id: "kaiser-dragon", nombre: "Kaiser Dragon",             zona: "Dragon's Den — GBA",           emoji: "🐉", dificultad: "Extremo", drops: "Esfera exclusiva GBA" },
+        { id: "doom-gaze",     nombre: "Doom Gaze",                 zona: "Sobrevolando el mundo",        emoji: "👁️", dificultad: "Medio",   drops: "Esfera Bahamut" }
+      ],
+      guias: [
+        { titulo: "Kefka en la Torre — estrategia para los tres cuerpos", tipo: "Boss",  minutos: 12, badge: "hot" },
+        { titulo: "Todos los Espers — cómo conseguirlos todos",            tipo: "Zona",  minutos: 22, badge: "updated" },
+        { titulo: "Build definitiva — Sabin y las técnicas Blitz",         tipo: "Build", minutos: 14, badge: "hot" },
+        { titulo: "Kefka Palazzo — el primer villano que lo destruyó todo", tipo: "Lore", minutos: 18, badge: "new" }
+      ],
+      galeria: [
+        { emoji: "🎪", label: "Ópera de Jidoor" },
+        { emoji: "🏙️", label: "Ciudad de Vector y el Imperio" },
+        { emoji: "🌋", label: "Narshe cubierta de nieve" },
+        { emoji: "🃏", label: "Kefka como payaso y como dios" },
+        { emoji: "🌍", label: "El mundo apocalíptico del Acto II" },
+        { emoji: "✨", label: "Terra transformada en Esper" }
+      ],
+      lore: [
+        { titulo: "Terra y los Espers — la magia como arma",         texto: "Terra Branford es una joven capaz de usar magia de forma natural en un mundo donde fue erradicada hace siglos. El Imperio Gestahl la controla mediante una corona de control mental. Su historia es una metáfora de la explotación y el descubrimiento de la propia identidad.", tag: "Personajes" },
+        { titulo: "Kefka — el nihilismo encarnado como villano",     texto: "Kefka Palazzo comenzó como un bufón del Imperio, pero un experimento para crear el primer Mago de la Magia lo dejó psicológicamente roto. Su ascenso hasta convertirse en dios destructor —y el único villano de Final Fantasy que logra su objetivo de destruir el mundo— lo convierte en un personaje único.", tag: "Historia" },
+        { titulo: "El Apocalipsis de Kefka y la resistencia",        texto: "En el punto medio del juego, Kefka reordena las Piedras del Mundo y destruye la civilización. El Acto II comienza en un mundo en ruinas donde los protagonistas deben reunirse de nuevo y hallar la voluntad de luchar. Es uno de los giros narrativos más audaces en la historia de los RPG.", tag: "Lore" }
+      ]
+    },
+    "disco-elysium": {
+      descripcion: "Disco Elysium es un RPG de investigación radicalmente único desarrollado por ZA/UM. Sin combate tradicional, todo se resuelve mediante habilidades de diálogo y tiradas de dado. El jugador encarna a un detective amnésico en la ciudad de Revachol, investigando un asesinato mientras intenta reconstruir su identidad política e ideológica. Sus 24 habilidades representan voces de la propia psique del protagonista.",
+      developer: "ZA/UM",
+      publisher: "ZA/UM",
+      año: 2019,
+      plataformas: "PC, PS4, PS5, Xbox One, Xbox Series",
+      modos: "Un jugador",
+      dificultad: {
+        "Tiradas de habilidad": 60,
+        "Builds especializadas": 70,
+        "Narrativa y elecciones": 45,
+        "Final verdadero": 65
+      },
+      bosses: [
+        { id: "tribunal",      nombre: "El Tribunal — Confrontación final", zona: "Muelle de Martinaise — Final",  emoji: "⚖️", dificultad: "Alto",    drops: "Resolución del caso" },
+        { id: "insulindian",   nombre: "La Fosa Insulindiana",               zona: "Mar del Norte",                 emoji: "🌊", dificultad: "Medio",   drops: "Visión psicodélica" },
+        { id: "mega-rich",     nombre: "El Mega Rico Mercader",               zona: "Yatch — Investigación",         emoji: "💰", dificultad: "Medio",   drops: "Pista crucial" },
+        { id: "clarence",      nombre: "Coupris Kineema",                     zona: "Proscenio de la muerte",        emoji: "🎪", dificultad: "Alto",    drops: "Cinta de música" },
+        { id: "raphael-ambrosius", nombre: "Raphael Ambrosius Costeau",       zona: "Conversación en el bar",        emoji: "🍺", dificultad: "Medio",   drops: "Memoria recuperada" }
+      ],
+      guias: [
+        { titulo: "Build Superstar Cop — todas las habilidades de persuasión", tipo: "Build", minutos: 15, badge: "hot" },
+        { titulo: "Todas las tiradas ocultas — lista completa de checks",       tipo: "Mecánica", minutos: 20, badge: "updated" },
+        { titulo: "Final verdadero de la Isla — cómo llegar al Pálido",        tipo: "Zona",  minutos: 18, badge: "new" },
+        { titulo: "Lore de Revachol y el fracaso de la Revolución",            tipo: "Lore",  minutos: 25, badge: "hot" }
+      ],
+      galeria: [
+        { emoji: "🏚️", label: "Cuarto del detective en ruinas" },
+        { emoji: "🌧️", label: "Martinaise bajo la lluvia eterna" },
+        { emoji: "🎨", label: "Arte callejero de Revachol" },
+        { emoji: "🌊", label: "La Fosa Insulindiana" },
+        { emoji: "🎪", label: "Carnaval de la investigación" },
+        { emoji: "🍺", label: "El Whirling In Rags — bar de inicio" }
+      ],
+      lore: [
+        { titulo: "Revachol y la Revolución fallida",              texto: "Revachol fue el centro de una revolución comunista que fue aplastada por una coalición de potencias internacionales décadas antes del juego. La ciudad sigue en ruinas bajo administración extranjera. El fracaso de la revolución impregna el ambiente de melancolía política y desilusión.", tag: "Historia" },
+        { titulo: "El Pálido y la entropía del mundo",             texto: "El Pálido es una anomalía existencial que borra zonas de la realidad. Es una metáfora de la entropía cultural y del olvido colectivo. Las zonas que toca simplemente dejan de existir. Tiene connotaciones filosóficas sobre la memoria, el fin de las civilizaciones y la inevitabilidad del vacío.", tag: "Lore" },
+        { titulo: "Las 24 habilidades como fragmentos del yo",    texto: "Las habilidades de Disco Elysium no son solo estadísticas —son voces de la psique del detective. Electrochemistry le empuja a las adicciones; Empathy le hace sentir el dolor ajeno; Inland Empire le habla de lo sobrenatural. El jugador moldea una identidad a partir de estas voces en conflicto.", tag: "Sistema" }
+      ]
+    },
+    "hades-2": {
+      descripcion: "Hades II es la secuela del aclamado roguelite de Supergiant Games. Protagonizado por Melinoë, princesa de la muerte e hija de Hades, el juego expande el mundo del Olimpo con nuevas divinidades griegas, un mayor número de biomas, hechizos y el sistema de Arcana Cards. La lucha contra el Titán Cronos ofrece más profundidad narrativa y mecánica que su predecesor.",
+      developer: "Supergiant Games",
+      publisher: "Supergiant Games",
+      año: 2024,
+      plataformas: "PC (Acceso Anticipado)",
+      modos: "Un jugador",
+      dificultad: {
+        "Primeras runs": 65,
+        "Pactos de castigo": 88,
+        "Jefes intermedios": 72,
+        "Cronos — jefe final": 85
+      },
+      bosses: [
+        { id: "hecate",        nombre: "Hécate — La Bruja Oscura",   zona: "Campos Asfódelos — Tutorial", emoji: "🌙", dificultad: "Medio",   drops: "Cenizas de Hécate" },
+        { id: "scylla",        nombre: "Scylla y las Sirenas",        zona: "Mar de la Soledad",            emoji: "🦑", dificultad: "Alto",    drops: "Escamas de Scylla" },
+        { id: "eris",          nombre: "Eris — La Discordia",         zona: "Mar Cradle",                   emoji: "🍎", dificultad: "Extremo", drops: "Manzana dorada" },
+        { id: "chronos",       nombre: "Cronos, Titán del Tiempo",    zona: "Tartarus — Final",             emoji: "⏳", dificultad: "Extremo", drops: "Fragmento de cronología" },
+        { id: "cerberus",      nombre: "Cerberus",                    zona: "Puerta del Inframundo",        emoji: "🐕", dificultad: "Medio",   drops: "Collar de Cerbero" }
+      ],
+      guias: [
+        { titulo: "Mejor build Melinoë — arma Eje del Caos + bendiciones", tipo: "Build", minutos: 18, badge: "hot" },
+        { titulo: "Arcana Cards — cuáles priorizar en cada run",            tipo: "Mecánica", minutos: 14, badge: "new" },
+        { titulo: "Cómo llegar a Cronos — progresión de biomas",           tipo: "Zona",  minutos: 16, badge: "updated" },
+        { titulo: "Lore de Melinoë y su relación con Hades y Perséfone",   tipo: "Lore",  minutos: 20, badge: "hot" }
+      ],
+      galeria: [
+        { emoji: "🌙", label: "Campos Asfódelos bañados de luna" },
+        { emoji: "🌊", label: "El mar del Inframundo" },
+        { emoji: "🌸", label: "Jardines de Elíseo" },
+        { emoji: "⏳", label: "El dominio de Cronos" },
+        { emoji: "🔮", label: "Melinoë y su magia de sombras" },
+        { emoji: "🏛️", label: "El Olimpo reconstruido" }
+      ],
+      lore: [
+        { titulo: "Melinoë y la familia de Hades",          texto: "Melinoë es la hija menor de Hades y Perséfone, criada en secreto por Hécate para convertirse en la única capaz de enfrentarse a Cronos. A diferencia de Zagreus, su hermano, Melinoë es seria, disciplinada y lleva la carga del deber desde su infancia.", tag: "Personajes" },
+        { titulo: "El ascenso de Cronos desde el Tártaro",  texto: "Cronos, el Titán del Tiempo, ha escapado del Tártaro y sometido al propio Hades. Su poder sobre el tiempo le permite anticipar los ataques y manipular el campo de batalla. La misión de Melinoë es liberar a su padre y devolver el orden al Inframundo.", tag: "Historia" },
+        { titulo: "El sistema de biomas y el Inframundo ampliado", texto: "Hades II expande el Inframundo con regiones inéditas: el Mar de la Soledad, los Campos del Pecado y el dominio de Cronos. Cada zona tiene su propio diseño visual, enemigos únicos y jefes con mecánicas propias, duplicando el contenido del primer juego.", tag: "Sistema" }
+      ]
+    },
+    "dead-cells": {
+      descripcion: "Dead Cells es un roguelite metroidvania de Motion Twin donde el jugador encarna a una masa de células que habita cadáveres en una isla-prisión maldita. Cada run genera un mapa procedural con encuentros, armas y mejoras aleatorias. El combate es veloz, con armas cuerpo a cuerpo, a distancia y habilidades, y los jefes requieren memorizar patrones muy exigentes.",
+      developer: "Motion Twin / Evil Empire",
+      publisher: "Motion Twin",
+      año: 2018,
+      plataformas: "PC, PS4, PS5, Xbox, Switch, iOS, Android",
+      modos: "Un jugador",
+      dificultad: {
+        "Boss Cell 0 (Normal)": 60,
+        "Boss Cell 3": 80,
+        "Boss Cell 5 (Máximo)": 95,
+        "Jefes principales": 75
+      },
+      bosses: [
+        { id: "the-hand",       nombre: "The Hand of the King",      zona: "Trono del Rey — Final B.C.0",   emoji: "👑", dificultad: "Alto",    drops: "Célula de Jefe" },
+        { id: "the-servants",   nombre: "The Servants",               zona: "Castillo del Oblivión — B.C.5", emoji: "🤺", dificultad: "Extremo", drops: "Runa de dificultad" },
+        { id: "conjunctivius",  nombre: "Conjunctivius",              zona: "Aguas Residuales",               emoji: "👁️", dificultad: "Medio",   drops: "Ojo de Bestia" },
+        { id: "giant",          nombre: "The Giant",                  zona: "Relojes de Arena — Mid",        emoji: "🗿", dificultad: "Alto",    drops: "Runa de Movimiento" },
+        { id: "slumbering",     nombre: "The Slumbering Sanctuary Boss", zona: "Santuario Dormido",          emoji: "🐝", dificultad: "Medio",   drops: "Runa de bioma" }
+      ],
+      guias: [
+        { titulo: "Boss Cell 5 — cómo llegar a la dificultad máxima",      tipo: "Guía", minutos: 20, badge: "hot" },
+        { titulo: "Las mejores sinergias de armas — guía de combos",        tipo: "Build", minutos: 16, badge: "updated" },
+        { titulo: "Todas las runas — localización y desbloqueo",            tipo: "Zona",  minutos: 18, badge: "hot" },
+        { titulo: "Lore de la isla-prisión — la enfermedad y el Rey",       tipo: "Lore",  minutos: 14, badge: "new" }
+      ],
+      galeria: [
+        { emoji: "🏰", label: "Castillo infestado al amanecer" },
+        { emoji: "🌿", label: "Bioma de jardines letales" },
+        { emoji: "🕯️", label: "Cripta en las profundidades" },
+        { emoji: "🌊", label: "Costa de los Naufragios" },
+        { emoji: "❄️", label: "Pico nevado de hielo" },
+        { emoji: "🔥", label: "Relojes de Arena en llamas" }
+      ],
+      lore: [
+        { titulo: "La Enfermedad Maligna y el origen de la isla",   texto: "La isla-prisión fue devastada por una enfermedad llamada La Maligna que convirtió a sus habitantes en criaturas. El Rey trató de contenerla encerrando a todos en la isla. La masa de células que controla el jugador es un experimento del alquimista que busca la forma de escapar.", tag: "Historia" },
+        { titulo: "El ciclo de muerte y las células",               texto: "Al morir, el jugador regresa al inicio como una nueva célula que habita otro cadáver. Las memorias y habilidades permanecen en el castillo. Este ciclo está explicado por el experimento del alquimista que buscaba la inmortalidad a través de la transferencia de conciencia.", tag: "Lore" },
+        { titulo: "Boss Cells y la dificultad escalada",            texto: "Cada vez que el jugador derrota al jefe final, puede activar una célula adicional que aumenta permanentemente la dificultad de todas las runs. Las Boss Cells añaden enemigos, reducen salud y potencian a los jefes, creando una escalada de desafío opcional pero extrema.", tag: "Sistema" }
+      ]
+    },
+    "slay-the-spire": {
+      descripcion: "Slay the Spire es el roguelite de cartas que popularizó el género deckbuilding roguelite. Desarrollado por MegaCrit, ofrece cuatro personajes con mazos únicos, reliquias que modifican las reglas del juego y una torre de tres actos con un jefe secreto. Cada run genera una combinación distinta de cartas y reliquias, haciendo que nunca dos partidas sean iguales.",
+      developer: "MegaCrit",
+      publisher: "Humble Bundle",
+      año: 2019,
+      plataformas: "PC, PS4, Xbox One, Switch, iOS, Android",
+      modos: "Un jugador",
+      dificultad: {
+        "Actos 1-3 (Normal)": 55,
+        "Heart Run (Acto 4)": 82,
+        "Ascensión 20": 95,
+        "Personaje Watcher": 70
+      },
+      bosses: [
+        { id: "the-heart",      nombre: "The Corrupt Heart",          zona: "Acto 4 — Secreto",              emoji: "❤️", dificultad: "Extremo", drops: "Victoria del run" },
+        { id: "act3-boss",      nombre: "Time Eater / Awakened One",  zona: "Acto 3 — Final",               emoji: "⏰", dificultad: "Alto",    drops: "Clave del Acto 4" },
+        { id: "bronze-automaton", nombre: "Bronze Automaton",         zona: "Acto 2 — Final",               emoji: "🤖", dificultad: "Alto",    drops: "Reliquia de bronce" },
+        { id: "guardian",       nombre: "The Guardian",               zona: "Acto 1 — Final",               emoji: "🛡️", dificultad: "Medio",   drops: "Reliquia de roca" },
+        { id: "hexaghost",      nombre: "Hexaghost",                  zona: "Acto 1 — Alternativo",         emoji: "👻", dificultad: "Medio",   drops: "Reliquia fantasma" }
+      ],
+      guias: [
+        { titulo: "Cómo conseguir la llave para el Corazón — guía paso a paso", tipo: "Zona",  minutos: 15, badge: "hot" },
+        { titulo: "Las mejores reliquias del juego — tier list actualizada",     tipo: "Mecánica", minutos: 18, badge: "updated" },
+        { titulo: "Build Watcher infinita — combo de stance y daño masivo",     tipo: "Build", minutos: 14, badge: "hot" },
+        { titulo: "Ascensión 20 — cómo llegar al máximo desafío",              tipo: "Guía",  minutos: 20, badge: "new" }
+      ],
+      galeria: [
+        { emoji: "🏰", label: "La Aguja ascendiendo en la niebla" },
+        { emoji: "🌿", label: "Ruinas del Acto 1" },
+        { emoji: "🕯️", label: "Catacumbas del Acto 2" },
+        { emoji: "⛰️", label: "Cima de la Aguja — Acto 3" },
+        { emoji: "❤️", label: "El Corazón Corrupto" },
+        { emoji: "🃏", label: "Mano de cartas" }
+      ],
+      lore: [
+        { titulo: "La Aguja y su misterio",                  texto: "La Aguja es una torre surgida misteriosamente en las tierras de Spire. Nadie conoce su origen exacto. Los aventureros que intentan escalarla rara vez regresan. Las entidades que la habitan parecen tener una conciencia propia que va más allá de simples monstruos.", tag: "Historia" },
+        { titulo: "El Corazón Corrupto",                     texto: "Al final de la Aguja vive El Corazón, una entidad pulsante que parece ser el núcleo del mal de la torre. Solo aparece cuando el jugador ha recolectado tres objetos clave en los actos anteriores. Derrotarlo es el reto final del juego y revela fragmentos de la naturaleza de la Aguja.", tag: "Lore" },
+        { titulo: "Los cuatro personajes y su visión del mundo", texto: "El Ironclad es un guerrero maldito que busca purgar su oscuridad. La Silent es una asesina envenenada. El Defect es un autómata que ganó conciencia. La Watcher es una monje cósmica que ve el futuro. Cada uno tiene motivaciones únicas para escalar la Aguja.", tag: "Personajes" }
+      ]
+    },
+    "returnal": {
+      descripcion: "Returnal es el roguelite de tercera persona de Housemarque que fusiona el bullet-hell con la exploración de ciencia ficción. La astronauta Selene queda atrapada en un bucle temporal en el planeta Atropos, muriendo y reviviendo sin cesar. Combina una narrativa psicológica profunda con un combate frenético de esquiva y armas alienígenas, y es uno de los roguelites más exigentes y aclamados de PS5.",
+      developer: "Housemarque",
+      publisher: "PlayStation Studios",
+      año: 2021,
+      plataformas: "PS5, PC",
+      modos: "Un jugador, Co-op 2 jugadores (parches post-lanzamiento)",
+      dificultad: {
+        "Primeros Ciclos": 80,
+        "Jefes de bioma": 88,
+        "Acto II — Biomas 4-6": 92,
+        "Final verdadero": 90
+      },
+      bosses: [
+        { id: "phrike",        nombre: "Phrike",                     zona: "Bioma 1 — Bosque Overgrown",   emoji: "🕷️", dificultad: "Alto",    drops: "Artefacto Phrike" },
+        { id: "ixion",         nombre: "Ixion",                      zona: "Bioma 2 — Las Colmenas",       emoji: "🦋", dificultad: "Alto",    drops: "Artefacto Ixion" },
+        { id: "nemesis",       nombre: "Nemesis",                    zona: "Bioma 3 — Precipicio Decrépito", emoji: "⚡", dificultad: "Extremo", drops: "Artefacto Nemesis" },
+        { id: "hyperion",      nombre: "Hyperion",                   zona: "Bioma 4 — Ribera de las Lamentaciones", emoji: "🎵", dificultad: "Extremo", drops: "Artefacto Hyperion" },
+        { id: "ophion",        nombre: "Ophion",                     zona: "Bioma 6 — Catacumbas — Final", emoji: "🌀", dificultad: "Extremo", drops: "Resolución del bucle" }
+      ],
+      guias: [
+        { titulo: "Cómo superar Phrike en el primer intento — consejos",  tipo: "Boss",  minutos: 12, badge: "hot" },
+        { titulo: "Armas de Atropos — tier list y mejores combinaciones",  tipo: "Mecánica", minutos: 18, badge: "updated" },
+        { titulo: "Final verdadero — cómo obtener las 6 claves",          tipo: "Zona",  minutos: 20, badge: "new" },
+        { titulo: "Lore de Selene — teorías sobre el bucle y Atropos",    tipo: "Lore",  minutos: 22, badge: "hot" }
+      ],
+      galeria: [
+        { emoji: "🌿", label: "Bosque bioluminiscente de Atropos" },
+        { emoji: "🏚️", label: "Casa de Selene — recuerdo del bucle" },
+        { emoji: "🌊", label: "Ribera de las Lamentaciones" },
+        { emoji: "🌌", label: "El cielo alienígena de Atropos" },
+        { emoji: "⚡", label: "Sala de Nemesis — bullet hell" },
+        { emoji: "🔮", label: "El Obelisco y el final verdadero" }
+      ],
+      lore: [
+        { titulo: "El bucle de Atropos y la psique de Selene",       texto: "Cada muerte de Selene reinicia el ciclo. A lo largo de las runs, encuentra grabaciones de audio, mensajes en las paredes y cadáveres de versiones anteriores de sí misma. El planeta Atropos parece estar construido por —o para— Selene específicamente, fusionando realidad y memoria.", tag: "Lore" },
+        { titulo: "Los Xénoglifos y la civilización perdida",        texto: "Atropos está llena de ruinas de una civilización alienígena. Los Xénoglifos son inscripciones que Selene va descifrando progresivamente. Revelan que entidades antiguas transformaron el planeta en una máquina de ciclos temporales con un propósito que el jugador descubre en el final verdadero.", tag: "Historia" },
+        { titulo: "El final de Icaro — metáfora y narrativa ambiental", texto: "La narrativa de Returnal es intencionalmente fragmentada. Selene parece haber estado en Atropos desde mucho antes de su misión. Las referencias al mito de Ícaro —volar demasiado alto y caer— impregnan el juego. El final sugiere que el bucle no es solo externo, sino también psicológico.", tag: "Personajes" }
+      ]
+    },
+    "monster-hunter-wilds": {
+      descripcion: "Monster Hunter Wilds es la entrega más reciente y ambiciosa de la saga de Capcom, presentando ecosistemas vivos que cambian con el clima y los ciclos naturales. Con caza cooperativa para 4 jugadores, 14 tipos de armas y un nuevo compañero Seikret además del Palico, ofrece la experiencia de cacería más cinematográfica hasta la fecha. El Terreno Árido y la mecánica de Tormenta desatan combates de enorme escala.",
+      developer: "Capcom",
+      publisher: "Capcom",
+      año: 2025,
+      plataformas: "PC, PS5, Xbox Series",
+      modos: "Un jugador, Co-op 4 jugadores",
+      dificultad: {
+        "Historia principal": 55,
+        "Tempered Monsters": 80,
+        "Arch-Tempered": 92,
+        "Armas de alta destreza": 75
+      },
+      bosses: [
+        { id: "arkveld",        nombre: "Arkveld",                    zona: "Abismo Perdido — Final",       emoji: "🐉", dificultad: "Extremo", drops: "Escama de Arkveld" },
+        { id: "nu-udra",        nombre: "Nu Udra",                    zona: "Pantanos Nocturnos",            emoji: "🐙", dificultad: "Alto",    drops: "Tentáculo de Nu Udra" },
+        { id: "balahara",       nombre: "Balahara",                   zona: "Costa de las Mareas",           emoji: "🦈", dificultad: "Medio",   drops: "Aleta de Balahara" },
+        { id: "doshaguma",      nombre: "Doshaguma",                  zona: "Llanuras del Viento",           emoji: "🦁", dificultad: "Medio",   drops: "Pelaje de Doshaguma" },
+        { id: "gore-magala-w",  nombre: "Gore Magala",                zona: "Zona de Caos — Tormenta",      emoji: "🌑", dificultad: "Alto",    drops: "Escama de Caos" }
+      ],
+      guias: [
+        { titulo: "Arkveld Arch-Tempered — guía de caza completa",           tipo: "Boss",  minutos: 18, badge: "hot" },
+        { titulo: "Las 14 armas explicadas — cuál elegir para empezar",       tipo: "Mecánica", minutos: 25, badge: "new" },
+        { titulo: "Mejor build Espadón Grande para endgame",                  tipo: "Build", minutos: 16, badge: "hot" },
+        { titulo: "Ecosistema de las Tierras Yermas — guía de zonas",         tipo: "Zona",  minutos: 20, badge: "updated" }
+      ],
+      galeria: [
+        { emoji: "🏜️", label: "Terreno Árido bajo la Tormenta" },
+        { emoji: "🌿", label: "Jungla de Sekia — ecosistema vivo" },
+        { emoji: "🌊", label: "Costa de las Mareas" },
+        { emoji: "🌑", label: "Pantanos bajo la luna" },
+        { emoji: "🐉", label: "Arkveld en pleno vuelo" },
+        { emoji: "🏕️", label: "Campamento base del Gremio" }
+      ],
+      lore: [
+        { titulo: "Las Tierras Yermas y el Ciclo de la Naturaleza",   texto: "Las Tierras Yermas son una región misteriosamente aislada del mundo conocido. Su ecosistema funciona en ciclos de tormenta y calma que determinan el comportamiento de los monstruos. El Gremio de Cazadores envía una expedición para estudiar estos ciclos y el origen de los Arkveld.", tag: "Historia" },
+        { titulo: "Los Arkveld — dragones del Abismo",                texto: "Los Arkveld son dragones ancestrales de naturaleza desconocida que han absorbido energía vital de otros monstruos. Su relación con el Qurio —parásito del caos— los convierte en amenazas únicas. Investigar su origen revela verdades sobre el pasado de las Tierras Yermas.", tag: "Lore" },
+        { titulo: "El Gremio de Cazadores y el código de la caza",    texto: "El Gremio regula la caza para mantener el equilibrio del ecosistema. Los cazadores no destruyen, sino que participan en la cadena. Esta filosofía es central en la saga: cazar no es exterminar, sino coexistir y comprender. Wilds profundiza en esto con monstruos que tienen familias y territorios.", tag: "Sistema" }
+      ]
+    },
+    "lies-of-p": {
+      descripcion: "Lies of P es el soulslike de Neowiz que reimagina el cuento de Pinocho en un mundo steampunk oscuro llamado Krat. El jugador encarna a P, una marioneta que busca a su creador Geppetto mientras la ciudad es devastada por marionetas enloquecidas y una misteriosa enfermedad. Su sistema de mentiras —que afecta al desarrollo narrativo— y la personalización de armas mediante partes intercambiables lo distinguen del género.",
+      developer: "Neowiz / Round8 Studio",
+      publisher: "Neowiz",
+      año: 2023,
+      plataformas: "PC, PS4, PS5, Xbox One, Xbox Series",
+      modos: "Un jugador",
+      dificultad: {
+        "Dificultad global": 78,
+        "Jefes de guardia perfecta": 85,
+        "Builds avanzadas": 72,
+        "Jefes opcionales": 88
+      },
+      bosses: [
+        { id: "parade-master",   nombre: "Parade Master",             zona: "Entrada de Krat — Inicio",    emoji: "🎪", dificultad: "Alto",    drops: "Corazón de Arlequín" },
+        { id: "romeo",           nombre: "Romeo, King of Puppets",    zona: "Gran Teatro — Acto 4",         emoji: "🤺", dificultad: "Extremo", drops: "Alma del Rey de Marionetas" },
+        { id: "fuoco",           nombre: "Fuoco, el Cocinero de Fuego", zona: "Fábrica de Krat",           emoji: "🔥", dificultad: "Alto",    drops: "Corazón de Fuoco" },
+        { id: "laxasia",         nombre: "Laxasia the Complete",      zona: "Abismo de Arche — Final",      emoji: "⚡", dificultad: "Extremo", drops: "Ojo de Laxasia" },
+        { id: "simon-manus",     nombre: "Simon Manus — God of Arche", zona: "Tumba de los Señores",        emoji: "👁️", dificultad: "Extremo", drops: "Alma de Manus" }
+      ],
+      guias: [
+        { titulo: "Romeo — cómo dominar la guardia perfecta en su segunda fase", tipo: "Boss",  minutos: 14, badge: "hot" },
+        { titulo: "Sistema de armas Lies of P — mejores combinaciones de partes", tipo: "Mecánica", minutos: 18, badge: "updated" },
+        { titulo: "Build Motricidad pura — el mejor camino del guerrero",        tipo: "Build", minutos: 15, badge: "hot" },
+        { titulo: "Todos los finales — cómo conseguir el final verdadero",        tipo: "Zona",  minutos: 16, badge: "new" }
+      ],
+      galeria: [
+        { emoji: "🏙️", label: "Krat al anochecer steampunk" },
+        { emoji: "🎪", label: "Gran Desfile de Marionetas" },
+        { emoji: "🏭", label: "Fábrica de Krat en llamas" },
+        { emoji: "🌧️", label: "Calles de Krat bajo la lluvia" },
+        { emoji: "🌹", label: "Hotel Krat — refugio de supervivientes" },
+        { emoji: "⚙️", label: "Mecanismo interior de una marioneta" }
+      ],
+      lore: [
+        { titulo: "Krat y la Enfermedad de la Petrificación",        texto: "Krat es una ciudad industrial donde las marionetas de Ergo —una sustancia misteriosa— realizaban todo el trabajo. Cuando enloquecieron por razones desconocidas, masacraron a sus dueños. Paralelamente, una enfermedad que petrifica a los humanos avanza sin control. P debe sobrevivir entre ambas amenazas.", tag: "Historia" },
+        { titulo: "El Ergo y la naturaleza de P",                    texto: "El Ergo es la energía vital que da movimiento a las marionetas y que también puede usarse como moneda. P es único: puede mentir, lo que en el mundo del cuento representa la capacidad de sentir. Cada mentira que dice lo hace más humano, acercándolo a la verdadera vida.", tag: "Lore" },
+        { titulo: "Geppetto y los secretos de Arche",               texto: "Geppetto no es el padre bondadoso del cuento. Sus motivos son oscuros y complejos: busca usar a P para alcanzar algo en Arche, el reino celestial. Los finales alternativos revelan distintas facetas de su carácter y el verdadero coste de dar vida a una marioneta.", tag: "Personajes" }
+      ]
+    },
+    "lords-of-the-fallen": {
+      descripcion: "Lords of the Fallen (2023) es el soulslike de HEXWORKS que introduce el sistema de dos mundos paralelos: Axiom (el mundo de los vivos) y Umbral (el mundo de los muertos). La linterna Umbral permite al jugador ver entre ambos mundos y resolver puzzles o acceder a zonas exclusivas del reino de los muertos. Con un mundo interconectado de gran escala y jefes imponentes, es uno de los soulslikes más ambiciosos fuera de FromSoftware.",
+      developer: "HEXWORKS",
+      publisher: "CI Games",
+      año: 2023,
+      plataformas: "PC, PS5, Xbox Series",
+      modos: "Un jugador, Co-op 2 jugadores",
+      dificultad: {
+        "Dificultad global": 75,
+        "Mundo Umbral — acumulación": 82,
+        "Jefes principales": 78,
+        "Final de Umbral": 88
+      },
+      bosses: [
+        { id: "pieta",           nombre: "Pieta, She of Blessed Renewal", zona: "Puerta de Mournstead — Inicio", emoji: "🕊️", dificultad: "Alto",    drops: "Ala de Pieta" },
+        { id: "spurned-progeny", nombre: "Spurned Progeny",               zona: "Abadía de la Condena",          emoji: "🗿", dificultad: "Alto",    drops: "Piedra Umbral" },
+        { id: "congregator",     nombre: "Congregator of Flesh",          zona: "Santuario de la Carne",          emoji: "🧟", dificultad: "Medio",   drops: "Masa de Carne" },
+        { id: "adyr",            nombre: "Adyr, the Bereft Exile",        zona: "Bramis Castle — Final",          emoji: "👿", dificultad: "Extremo", drops: "Trofeo de Adyr" },
+        { id: "rapturous-huntress", nombre: "Rapturous Huntress of the Dread Witch", zona: "Laberinto Umbral", emoji: "🏹", dificultad: "Alto", drops: "Flecha del Éxtasis" }
+      ],
+      guias: [
+        { titulo: "Pieta en el primer intento — guía para nuevos Creyentes",   tipo: "Boss",  minutos: 12, badge: "hot" },
+        { titulo: "Mundo Umbral — cómo no morir de acumulación de almas",      tipo: "Mecánica", minutos: 15, badge: "new" },
+        { titulo: "Build Radiance — el mejor mago del juego completa",         tipo: "Build", minutos: 18, badge: "updated" },
+        { titulo: "Todos los finales — el verdadero y los alternativos",        tipo: "Zona",  minutos: 16, badge: "hot" }
+      ],
+      galeria: [
+        { emoji: "🏰", label: "Mournstead — ciudad en dos mundos" },
+        { emoji: "💀", label: "Umbral — reino de los muertos" },
+        { emoji: "🌅", label: "Axiom al amanecer" },
+        { emoji: "🕯️", label: "Catacumbas de la Condena" },
+        { emoji: "🌑", label: "Laberinto Umbral nocturno" },
+        { emoji: "🏛️", label: "Castillo de Bramis" }
+      ],
+      lore: [
+        { titulo: "Axiom y Umbral — los dos reinos de Mournstead",   texto: "En Mournstead existen dos reinos superpuestos: Axiom, el mundo de los vivos, y Umbral, el mundo de los muertos. La linterna Umbral permite al Portador de la Maldición ver entre ambos. Umbral es peligroso: cuanto más tiempo pasa en él el jugador, más poderosas son las entidades que acuden.", tag: "Sistema" },
+        { titulo: "Adyr y la Gran Cruzada",                          texto: "Adyr es el dios oscuro que fue derrotado y encarcelado siglos atrás por los Creyentes de Orius. La Gran Cruzada de los Creyentes destruyó a sus seguidores. Ahora el sello que lo aprisiona se debilita, y el jugador debe decidir si liberarlo, sustituirlo o imponer un nuevo orden.", tag: "Historia" },
+        { titulo: "Los Creyentes y las cinco clases de Umbral",     texto: "La sociedad de Mournstead gira en torno a la fe en Orius. Cada clase del juego representa una filosofía diferente: el Devoto confía en la luz, el Renegado la rechaza, el Heretic busca el poder de Umbral. Estas tensiones reflejan conflictos reales sobre la fe, el poder y la corrupción.", tag: "Personajes" }
+      ]
+    },
+    "nioh-2": {
+      descripcion: "Nioh 2 es la precuela del soulslike de Team Ninja ambientado en el Japón feudal del siglo XVI. El jugador crea a Hide, un semi-yokai que puede entrar en el estado Yokai Shift para transformarse y usar poderes sobrenaturales. Con un sistema de tres posiciones de espada (alta, media y baja), mecánicas de Ki Pulse y un arsenal de armas tradicionales japonesas, ofrece uno de los combates más técnicos y profundos del género.",
+      developer: "Team Ninja",
+      publisher: "Koei Tecmo",
+      año: 2020,
+      plataformas: "PS4, PS5, PC",
+      modos: "Un jugador, Co-op 3 jugadores",
+      dificultad: {
+        "Historia principal": 78,
+        "Misiones de umbral — NG+2": 88,
+        "Yokai de alta dificultad": 82,
+        "Maestro de armas — perfección": 90
+      },
+      bosses: [
+        { id: "magara-naotaka",  nombre: "Magara Naotaka",             zona: "La Cueva Roja — Inicio",       emoji: "🔥", dificultad: "Alto",    drops: "Alma de Naotaka" },
+        { id: "otakemaru",       nombre: "Otakemaru",                  zona: "Castillo de Omi — Final",       emoji: "👹", dificultad: "Extremo", drops: "Gran Alma de Yokai" },
+        { id: "shuten-doji",     nombre: "Shuten-Doji",                zona: "Monte Ibuki",                   emoji: "🍶", dificultad: "Extremo", drops: "Cuerno de Shuten" },
+        { id: "shibata-katsuie", nombre: "Shibata Katsuie",            zona: "Castillo de Echizen",           emoji: "⚔️", dificultad: "Alto",    drops: "Nue — alma yokai" },
+        { id: "nobunaga",        nombre: "Oda Nobunaga — El Demonio",  zona: "Castillo de Azuchi — DLC",     emoji: "👺", dificultad: "Extremo", drops: "Alma del Demonio de Owari" }
+      ],
+      guias: [
+        { titulo: "Ki Pulse y Yokai Shift — dominar las mecánicas avanzadas",    tipo: "Mecánica", minutos: 20, badge: "hot" },
+        { titulo: "Mejor build Odachi para Otakemaru en Dream of the Nioh",      tipo: "Build", minutos: 18, badge: "updated" },
+        { titulo: "Todas las Almas de Yokai — cómo obtenerlas y combinarlas",   tipo: "Zona",  minutos: 22, badge: "hot" },
+        { titulo: "Lore de Hide y el Japón feudal yokai",                         tipo: "Lore",  minutos: 16, badge: "new" }
+      ],
+      galeria: [
+        { emoji: "⛩️", label: "Santuario sintoísta en la montaña" },
+        { emoji: "🌸", label: "Castillo bajo los cerezos" },
+        { emoji: "🌊", label: "Costa del Pacífico en tormenta" },
+        { emoji: "🔥", label: "Pueblo en llamas yokai" },
+        { emoji: "🌙", label: "Campo de batalla nocturno" },
+        { emoji: "👹", label: "Transformación Yokai Shift" }
+      ],
+      lore: [
+        { titulo: "Hide y el origen de los semiyokai",         texto: "Hide es hijo de un humano y un yokai. Esta dualidad le da acceso a poderes sobrenaturales pero también lo convierte en un paria: ni humano ni yokai. Su viaje transcurre durante el período Sengoku, cruzándose con figuras históricas reales como Toyotomi Hideyoshi y Oda Nobunaga.", tag: "Personajes" },
+        { titulo: "Los Amrita y la guerra por el poder espiritual", texto: "El Amrita es una sustancia espiritual de enorme poder que los daimyos del juego buscan para dominar Japón. Su uso excesivo despierta a los yokai y corrompe a sus portadores. Esta mezcla de historia real y mitología japonesa es el sello de la saga Nioh.", tag: "Historia" },
+        { titulo: "El Yokai Realm y las guaridas de oscuridad",  texto: "Las Guaridas de Yokai son zonas donde el Yokai Realm irrumpe en el mundo humano. Dentro de ellas, el Ki del jugador se regenera más lento y los enemigos son más agresivos. El estado Yokai Shift permite a Hide sobrevivir en estas zonas usando su naturaleza sobrenatural.", tag: "Sistema" }
+      ]
+    },
+    "last-epoch": {
+      descripcion: "Last Epoch es el ARPG de Eleventh Hour Games que combina viaje en el tiempo, un sistema de crafting de items profundísimo y una progresión de personaje altamente personalizable. Con 5 clases maestras y 15 ascendencias, y un sistema de habilidades con árboles propios por habilidad, compite directamente con Path of Exile en profundidad de builds. Su modo multijugador online y las temporadas en línea lo convierten en una alternativa moderna y accesible al género.",
+      developer: "Eleventh Hour Games",
+      publisher: "Eleventh Hour Games",
+      año: 2024,
+      plataformas: "PC",
+      modos: "Un jugador, Multijugador online, Temporadas",
+      dificultad: {
+        "Campaña principal": 50,
+        "Corruption — endgame": 82,
+        "Monolith of Fate alto": 88,
+        "Builds complejas": 78
+      },
+      bosses: [
+        { id: "lagon",           nombre: "Lagon",                      zona: "Océano del Norte — Acto 8",   emoji: "🌊", dificultad: "Alto",    drops: "Escama de Lagon" },
+        { id: "the-void-touched", nombre: "Void Touched Abomination",  zona: "Monolith — Endgame",           emoji: "🌑", dificultad: "Extremo", drops: "Esencia del Vacío" },
+        { id: "emperor-of-frost", nombre: "Emperor of Frost",          zona: "Era del Hielo — Tiempo pasado", emoji: "❄️", dificultad: "Alto",   drops: "Cristal de tiempo" },
+        { id: "harton",          nombre: "Harton, Seeker of Answers",  zona: "Templo del Tiempo",            emoji: "⏳", dificultad: "Medio",   drops: "Fragmento temporal" },
+        { id: "rahyeh",          nombre: "Rahyeh, the Black Sun",      zona: "Fin de los tiempos — Final",   emoji: "🌑", dificultad: "Extremo", drops: "Oscuridad del Sol Negro" }
+      ],
+      guias: [
+        { titulo: "Mejor build Falconeer para empezar temporada — guía",      tipo: "Build", minutos: 18, badge: "hot" },
+        { titulo: "Crafting de items explicado — el sistema más profundo del género", tipo: "Mecánica", minutos: 25, badge: "new" },
+        { titulo: "Monolith of Fate — cómo progresar en el endgame",          tipo: "Zona",  minutos: 20, badge: "updated" },
+        { titulo: "Todas las ascendencias — cuál es la mejor para cada clase", tipo: "Guía",  minutos: 22, badge: "hot" }
+      ],
+      galeria: [
+        { emoji: "🌊", label: "Puerto de Eterra bajo la lluvia" },
+        { emoji: "❄️", label: "Tundra del tiempo pasado" },
+        { emoji: "🏜️", label: "Desierto de la Era Antigua" },
+        { emoji: "🌑", label: "El Vacío avanzando" },
+        { emoji: "⏳", label: "Portal temporal" },
+        { emoji: "🏙️", label: "Ciudad de Maj'Elka en ruinas" }
+      ],
+      lore: [
+        { titulo: "El Vacío y el fin de la humanidad",              texto: "En Last Epoch, el Vacío es una fuerza de entropía que ha destruido el futuro de la civilización. El jugador viaja entre distintas eras del tiempo —pasado, presente y futuro— para encontrar la forma de alterar el destino de Eterra y evitar la extinción de la humanidad.", tag: "Historia" },
+        { titulo: "Los Dioses del Tiempo y el Círculo de la Fortuna", texto: "Eterra es gobernada por deidades que representan el tiempo y el ciclo natural. El Círculo de la Fortuna es una facción que cree en el destino. Los Comerciantes son pragmáticos. La tensión entre estas facciones da forma a la narrativa del juego.", tag: "Personajes" },
+        { titulo: "El Monolith of Fate y el endgame temporal",      texto: "El Monolith of Fate es la actividad principal del endgame: el jugador recorre ecos de tiempos alternativos, cada vez más difíciles. Al completar líneas temporales, desbloquea jefes únicos y recompensas. El sistema refleja el tema narrativo central del juego: el destino puede cambiarse, pero a un coste.", tag: "Sistema" }
+      ]
+    },
+    "torchlight-infinite": {
+      descripcion: "Torchlight: Infinite es el ARPG free-to-play de XD Entertainment que adapta la fórmula de la saga Torchlight al modelo de juego en línea con temporadas. Con héroes pregenerados de clase única, un sistema de gemas y fichas de habilidades altamente personalizable y una economía de temporada, compite en el espacio de ARPGs accesibles junto a Diablo IV y Last Epoch.",
+      developer: "XD Entertainment",
+      publisher: "Perfect World Entertainment",
+      año: 2022,
+      plataformas: "PC, iOS, Android",
+      modos: "Un jugador, Multijugador online, Temporadas",
+      dificultad: {
+        "Historia principal": 40,
+        "Temporadas endgame": 75,
+        "Jefes de temporada": 82,
+        "Builds de Liga": 70
+      },
+      bosses: [
+        { id: "netherrealm-guardian", nombre: "Netherrealm Guardian",  zona: "Abismo del Nether — Endgame", emoji: "🌑", dificultad: "Extremo", drops: "Esencia Nether" },
+        { id: "season-boss",          nombre: "Jefe de Temporada",      zona: "Zona de temporada activa",    emoji: "🌟", dificultad: "Alto",    drops: "Recompensa de liga" },
+        { id: "void-tyrant",          nombre: "Void Tyrant",            zona: "Grieta del Vacío",            emoji: "👁️", dificultad: "Alto",    drops: "Cristal del Vacío" },
+        { id: "ancient-golem",        nombre: "Ancient Golem",          zona: "Ruinas de Torchlight",        emoji: "🗿", dificultad: "Medio",   drops: "Núcleo de Golem" },
+        { id: "ember-dragon",         nombre: "Ember Dragon",           zona: "Montañas del Ember",          emoji: "🔥", dificultad: "Medio",   drops: "Escama de Ember" }
+      ],
+      guias: [
+        { titulo: "Mejor héroe para empezar la temporada actual",           tipo: "Build", minutos: 14, badge: "hot" },
+        { titulo: "Sistema de Fichas de Pact — guía completa de crafting",  tipo: "Mecánica", minutos: 18, badge: "new" },
+        { titulo: "Cómo farmear materiales de temporada eficientemente",    tipo: "Zona",  minutos: 16, badge: "updated" },
+        { titulo: "Lore de Torchlight — la historia del mundo de Ember",    tipo: "Lore",  minutos: 12, badge: "hot" }
+      ],
+      galeria: [
+        { emoji: "🌋", label: "Montañas de Ember en erupción" },
+        { emoji: "🏙️", label: "Ciudad de Ember bajo la lluvia" },
+        { emoji: "🌿", label: "Jungla de Nether" },
+        { emoji: "❄️", label: "Tundra de la temporada de hielo" },
+        { emoji: "🌑", label: "Abismo del Nether" },
+        { emoji: "⚙️", label: "Mecanismo de Torchlight" }
+      ],
+      lore: [
+        { titulo: "El Ember y la magia del mundo de Torchlight",     texto: "El mundo de Torchlight está impregnado de Ember, una sustancia mágica que da poder a quien la usa pero corrompe a los seres que la consumen en exceso. Las ciudades se construyen alrededor de yacimientos de Ember, y la codicia por este recurso alimenta los conflictos del mundo.", tag: "Historia" },
+        { titulo: "Los Héroes de Torchlight — Infinite",             texto: "A diferencia de los anteriores Torchlight donde el jugador creaba su personaje, Infinite presenta Héroes pregenerados con trasfondos únicos: Moto la inventora, Rehan el guerrero elemental, Gemma la médico del vacío. Cada uno tiene habilidades exclusivas que el jugador personaliza con el sistema de fichas.", tag: "Personajes" },
+        { titulo: "El sistema de temporadas y la narrativa cambiante", texto: "Cada temporada de Torchlight: Infinite introduce una nueva zona, mecánica y arco narrativo. Al terminar la temporada, el contenido se integra al juego base. Este modelo permite mantener la narrativa viva y ofrece a los jugadores razones constantes para volver.", tag: "Sistema" }
+      ]
+    },
+    "binding-of-isaac": {
+      descripcion: "The Binding of Isaac: Rebirth es el roguelite de Edmund McMillen y Nicalis que mezcla mazmorras generadas proceduralmente con temática bíblica oscura y un humor perturbador. Inspirado en La Leyenda de Zelda, el jugador encarna a Isaac huyendo de su madre. Con más de 700 objetos, cientos de combinaciones de sinergias y DLCs masivos como Afterbirth+, Repentance y Repentance+, es uno de los roguelites más completos de la historia.",
+      developer: "Edmund McMillen / Nicalis",
+      publisher: "Nicalis",
+      año: 2014,
+      plataformas: "PC, PS4, PS5, Xbox, Switch, Vita, iOS",
+      modos: "Un jugador, Co-op local 2 jugadores (Repentance)",
+      dificultad: {
+        "Primeras runs": 50,
+        "Curses y Boss Rush": 78,
+        "Desolación — Void y Mega Satan": 88,
+        "Bestiary completo — todos los logros": 95
+      },
+      bosses: [
+        { id: "mega-satan",     nombre: "Mega Satan",                 zona: "Mega Llave — Puerta Dorada",  emoji: "👹", dificultad: "Extremo", drops: "Trofeo dorado" },
+        { id: "hush",           nombre: "Hush",                       zona: "Blue Womb — ?.5",              emoji: "💙", dificultad: "Extremo", drops: "Fragmento de Hush" },
+        { id: "delirium",       nombre: "Delirium",                   zona: "The Void — Endgame final",    emoji: "🌀", dificultad: "Extremo", drops: "Corazón del Vacío" },
+        { id: "mother",         nombre: "Mother",                     zona: "Corpse — Repentance",          emoji: "👁️", dificultad: "Alto",    drops: "Ojo de madre" },
+        { id: "beast",          nombre: "The Beast",                  zona: "Home — Repentance final",      emoji: "😈", dificultad: "Extremo", drops: "Trofeo bestia" }
+      ],
+      guias: [
+        { titulo: "Las mejores sinergias de objetos — guía de combos OP",        tipo: "Mecánica", minutos: 20, badge: "hot" },
+        { titulo: "Todos los personajes — cómo desbloquearlos y jugarlos",        tipo: "Guía",  minutos: 25, badge: "updated" },
+        { titulo: "Repentance — cómo llegar a The Beast paso a paso",            tipo: "Zona",  minutos: 18, badge: "hot" },
+        { titulo: "Lore bíblico de Isaac — la historia detrás del juego",        tipo: "Lore",  minutos: 15, badge: "new" }
+      ],
+      galeria: [
+        { emoji: "🏚️", label: "Habitación de Isaac" },
+        { emoji: "💀", label: "The Basement — primer piso" },
+        { emoji: "🔥", label: "The Chest — el arcón dorado" },
+        { emoji: "🌑", label: "The Void — dimensión del caos" },
+        { emoji: "🏠", label: "Home — el hogar de Isaac" },
+        { emoji: "😈", label: "The Beast en su forma final" }
+      ],
+      lore: [
+        { titulo: "La historia de Isaac y su madre",                texto: "Isaac es un niño que huye de su madre, quien escucha voces de Dios ordenándole sacrificar a su hijo como en el relato bíblico. Encerrado en el sótano, Isaac llora lágrimas que se convierten en armas. La historia mezcla abuso infantil, fe mal interpretada y el trauma de la infancia con simbolismo bíblico.", tag: "Historia" },
+        { titulo: "El simbolismo de los personajes alternativos",   texto: "Cada personaje jugable representa una faceta de la psique de Isaac: Magdalene es su amiga imaginaria, Cain es su culpa, Judas su ira, Samson su violencia. The Lost es su miedo a la muerte. Esta capa de interpretación convierte el juego en una obra con capas de significado psicológico y religioso.", tag: "Personajes" },
+        { titulo: "El final de Repentance y la verdad de Isaac",    texto: "Repentance revela que muchos de los eventos del juego ocurren en la mente de Isaac mientras muere en el arcón del inicio del juego. The Beast representa la manifestación final de todo su miedo. Derrotarla libera a Isaac, cerrando el ciclo narrativo de la saga con un final catártico y oscuro.", tag: "Lore" }
+      ]
+    },
   },
   guias: [
     {

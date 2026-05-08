@@ -6,7 +6,10 @@
       "Read(//c/Users/jorda/Desktop/Creacion de Paginas Web/BDSouls\" 2>/dev/**)",
       "Bash(python3 -)",
       "Bash(python -)",
-      "Bash(node --check \"c:/Users/jorda/Desktop/Creacion de Paginas Web/BDSouls/js/data.js\")"
+      "Bash(node --check \"c:/Users/jorda/Desktop/Creacion de Paginas Web/BDSouls/js/data.js\")",
+      "Bash(node --check \"c:\\\\Users\\\\jorda\\\\Desktop\\\\Creacion de Paginas Web\\\\BDSouls\\\\js\\\\data.js\")",
+      "Bash(node -e \"const fs=require\\('fs'\\); eval\\(fs.readFileSync\\('c:/Users/jorda/Desktop/Creacion de Paginas Web/BDSouls/js/data.js','utf8'\\)\\); console.log\\('fichas:', Object.keys\\(DB.fichas\\).length\\); console.log\\(Object.keys\\(DB.fichas\\).join\\(', '\\)\\);\")",
+      "Bash(node -e \"const fs=require\\('fs'\\); const code=fs.readFileSync\\('c:/Users/jorda/Desktop/Creacion de Paginas Web/BDSouls/js/data.js','utf8'\\); const fn=new Function\\(code+'; return DB;'\\); const DB=fn\\(\\); console.log\\('fichas:', Object.keys\\(DB.fichas\\).length\\); console.log\\(Object.keys\\(DB.fichas\\).join\\(', '\\)\\);\")"
     ]
   }
 }
