@@ -20,7 +20,8 @@
       "Bash(curl -L -A 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36' -o 'c:\\\\Users\\\\jorda\\\\Desktop\\\\Creacion de Paginas Web\\\\BDSouls\\\\img\\\\expedition-33.jpg' https://www.igdb.com/games/clair-obscur-expedition-33/cover -w '\\\\nHTTP:%{http_code} SIZE:%{size_download}')",
       "Bash(curl -L -A Mozilla/5.0 -o 'c:\\\\Users\\\\jorda\\\\Desktop\\\\Creacion de Paginas Web\\\\BDSouls\\\\img\\\\expedition-33-test.jpg' https://images.igdb.com/igdb/image/upload/t_cover_big/co94id.jpg -w '\\\\nHTTP:%{http_code} SIZE:%{size_download}')",
       "Bash(ls '/mnt/c/Users/jorda/Desktop/Creacion de Paginas Web/BDSouls/img/')",
-      "Read(//mnt/c/Users/jorda/Desktop/Creacion de Paginas Web/BDSouls/**)"
+      "Read(//mnt/c/Users/jorda/Desktop/Creacion de Paginas Web/BDSouls/**)",
+      "Bash(python3 -c ' *)"
     ]
   }
 }

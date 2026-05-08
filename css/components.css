@@ -2651,3 +2651,49 @@
   font-size: 11px;
   color: var(--text-hint);
 }
+
+/* ── Planificador Elden Ring ── */
+.planificador-layout { display: grid; grid-template-columns: 1fr 300px; gap: 20px; align-items: start; }
+.plan-section { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 20px; margin-bottom: 16px; }
+.plan-section-title { font-size: 14px; font-weight: 500; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; color: var(--text-main); }
+.plan-section-title i { font-size: 18px; color: var(--accent); }
+.clase-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 20px; }
+.clase-card { background: var(--bg-base); border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 8px 6px; text-align: center; cursor: pointer; transition: all .15s; }
+.clase-card:hover { border-color: var(--accent-dark); }
+.clase-card.active { background: var(--accent-bg); border-color: var(--accent-dark); }
+.clase-card-name { font-size: 11px; font-weight: 500; color: var(--text-main); margin-bottom: 2px; }
+.clase-card-nivel { font-size: 10px; color: var(--text-hint); }
+.nivel-slider-wrap { display: flex; align-items: center; gap: 12px; }
+.nivel-slider { flex: 1; accent-color: var(--accent); height: 4px; }
+.nivel-num { font-size: 22px; font-weight: 500; color: var(--accent); min-width: 40px; text-align: center; }
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.stat-item { display: flex; align-items: center; gap: 8px; padding: 8px 10px; background: var(--bg-base); border: 0.5px solid var(--border); border-radius: var(--radius-md); }
+.stat-item-name { font-size: 12px; color: var(--text-muted); width: 80px; flex-shrink: 0; }
+.stat-item-base { font-size: 10px; color: var(--text-hint); width: 20px; text-align: center; }
+.stat-item-btn { width: 24px; height: 24px; border-radius: 4px; border: 0.5px solid var(--border); background: var(--bg-surface); color: var(--text-muted); font-size: 14px; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; transition: all .15s; line-height: 1; }
+.stat-item-btn:hover { border-color: var(--accent); color: var(--accent); }
+.stat-item-val { font-size: 15px; font-weight: 500; width: 28px; text-align: center; }
+.stat-item-bar { flex: 1; height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
+.stat-item-bar-fill { height: 100%; border-radius: 2px; background: var(--accent); transition: width .15s; }
+.results-sticky { position: sticky; top: calc(var(--topbar-h) + 16px); display: flex; flex-direction: column; gap: 12px; }
+.result-card { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 16px; }
+.result-big-num { font-size: 28px; font-weight: 500; text-align: center; margin-bottom: 2px; }
+.result-big-label { font-size: 10px; color: var(--text-hint); text-align: center; text-transform: uppercase; letter-spacing: .5px; }
+.build-type-badge { text-align: center; padding: 8px; background: var(--accent-bg); border: 0.5px solid var(--accent-dark); border-radius: var(--radius-md); font-size: 12px; color: #CECBF6; margin-top: 8px; }
+.arma-req-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 0.5px solid var(--border-soft); font-size: 12px; }
+.arma-req-row:last-child { border-bottom: none; }
+.arma-req-name { color: var(--text-muted); }
+.arma-req-ok { color: #97C459; font-size: 11px; }
+.arma-req-no { color: #E24B4A; font-size: 11px; }
+.builds-saved-list { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
+.build-saved-item { display: flex; align-items: center; justify-content: space-between; background: var(--bg-base); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; font-size: 12px; }
+.build-saved-actions { display: flex; gap: 6px; }
+.build-saved-btn { background: none; border: 0.5px solid var(--border); border-radius: 4px; padding: 3px 8px; font-size: 11px; color: var(--text-muted); cursor: pointer; transition: all .15s; }
+.build-saved-btn:hover { border-color: var(--accent-dark); color: var(--accent); }
+.share-input { width: 100%; background: var(--bg-base); border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 8px 12px; color: var(--text-main); font-size: 13px; margin-bottom: 8px; }
+@media (max-width: 900px) {
+  .planificador-layout { grid-template-columns: 1fr; }
+  .clase-grid { grid-template-columns: repeat(5, 1fr); }
+  .stats-grid { grid-template-columns: 1fr; }
+  .results-sticky { position: static; }
+}
