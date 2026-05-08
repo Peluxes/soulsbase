@@ -113,32 +113,37 @@
               ><i class="ti ti-scale"></i>Comparador</a
             >
           </li>
+          <li>
+            <a href="noticias.html" class="sidebar-item"
+              ><i class="ti ti-news"></i>Noticias</a
+            >
+          </li>
         </ul>
       </nav>
 
       <div class="sidebar-section">
         <div class="sidebar-label">Juegos</div>
-        <a href="tierlist.html" class="game-pin"
+        <a href="juego.html?id=elden-ring" class="game-pin"
           ><span class="game-pin-dot" style="background: #9b7d3a"></span>Elden
           Ring</a
         >
-        <a href="tierlist.html" class="game-pin"
+        <a href="juego.html?id=dark-souls-3" class="game-pin"
           ><span class="game-pin-dot" style="background: #4a7ab5"></span>Dark
           Souls III</a
         >
-        <a href="tierlist.html" class="game-pin"
+        <a href="juego.html?id=diablo-4" class="game-pin"
           ><span class="game-pin-dot" style="background: #a83030"></span>Diablo
           IV</a
         >
-        <a href="tierlist.html" class="game-pin"
+        <a href="juego.html?id=bloodborne" class="game-pin"
           ><span class="game-pin-dot" style="background: #8a4da0"></span
           >Bloodborne</a
         >
-        <a href="tierlist.html" class="game-pin"
+        <a href="juego.html?id=sekiro" class="game-pin"
           ><span class="game-pin-dot" style="background: #3d8a4a"></span
           >Sekiro</a
         >
-        <a href="tierlist.html" class="game-pin"
+        <a href="juego.html?id=poe2" class="game-pin"
           ><span class="game-pin-dot" style="background: #7a6b30"></span>Path of
           Exile 2</a
         >
@@ -311,6 +316,27 @@
             </div>
           </div>
         </div>
+        <!-- Newsletter -->
+        <div class="newsletter-section">
+          <div class="newsletter-content">
+            <div class="newsletter-icon"><i class="ti ti-mail"></i></div>
+            <div class="newsletter-text">
+              <div class="newsletter-title">Mantente al día con SoulsBase</div>
+              <div class="newsletter-sub">Recibe notificaciones cuando añadamos nuevos juegos, guías y bosses</div>
+            </div>
+            <div class="newsletter-form">
+              <input type="email" class="newsletter-input" id="newsletter-email" placeholder="tu@email.com">
+              <button class="newsletter-btn" id="newsletter-btn">
+                <i class="ti ti-send"></i> Suscribirse
+              </button>
+            </div>
+          </div>
+          <div class="newsletter-success" id="newsletter-success" style="display:none">
+            <i class="ti ti-circle-check" style="color:#97C459;font-size:20px"></i>
+            <span>¡Suscrito correctamente! Te avisaremos de las novedades.</span>
+          </div>
+        </div>
+
       </main>
     </div>
 
@@ -319,8 +345,14 @@
     <script src="js/favoritos.js"></script>
     <script src="js/valoraciones.js"></script>
     <script src="js/historial.js"></script>
+    <script src="js/newsletter.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/responsive.js"></script>
     <script src="js/animations.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      }
+    </script>
   </body>
 </html>

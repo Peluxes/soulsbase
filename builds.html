@@ -29,6 +29,7 @@
           <li><a href="comunidad.html" class="sidebar-item"><i class="ti ti-users"></i>Comunidad</a></li>
           <li><a href="favoritos.html" class="sidebar-item"><i class="ti ti-heart"></i>Favoritos</a></li>
           <li><a href="comparador.html" class="sidebar-item"><i class="ti ti-scale"></i>Comparador</a></li>
+          <li><a href="noticias.html" class="sidebar-item"><i class="ti ti-news"></i>Noticias</a></li>
         </ul>
       </nav>
       <div class="sidebar-section">
@@ -98,5 +99,11 @@
     <script src="js/theme.js"></script>
     <script src="js/responsive.js"></script>
     <script src="js/animations.js"></script>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      }
+    </script>
   </body>
 </html>
