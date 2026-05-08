@@ -2287,7 +2287,7 @@ const DB = {
   },
   guias: [
     {
-      id: 1,
+      id: "guia-malenia",
       titulo: "Guía completa — Cómo vencer a Malenia, Azote del Árbol",
       juego: "Elden Ring",
       juegoEmoji: "🌟",
@@ -2296,13 +2296,39 @@ const DB = {
       tipoLabel: "Boss",
       minutos: 12,
       badge: "hot",
-      descripcion:
-        "Malenia es considerada el boss más difícil de Elden Ring. En esta guía cubrimos sus dos fases, el movimiento Flor de la Putrefacción y las mejores builds para derrotarla.",
+      descripcion: "Malenia es considerada el boss más difícil de Elden Ring. En esta guía cubrimos sus dos fases, el movimiento Flor de la Putrefacción y las mejores builds para derrotarla.",
       fecha: "2026-04-15",
       visitas: 48200,
+      contenido: [
+        {
+          h2: "Introducción — Por qué Malenia es tan difícil",
+          texto: "Malenia, Azote del Árbol, es hija de Marika y Radagon y gemela de Miquella. Jamás ha conocido la derrota en combate. Su mecánica más devastadora es la regeneración de vida — cada golpe que conecta contra el jugador, ya sea bloqueado o no, le devuelve salud. Esto hace que las estrategias defensivas tradicionales sean completamente ineficaces.",
+          tip: "Nunca uses escudo contra Malenia. Cada golpe bloqueado le cura vida igualmente."
+        },
+        {
+          h2: "Fase 1 — La Espadachina de Oro",
+          texto: "En fase 1 Malenia combate con su espada y brazo prostético. Sus movimientos son extremadamente rápidos y encadenados. El ataque más peligroso es el vuelo rasante — se lanza hacia adelante a gran velocidad y puede repetirlo hasta 4 veces consecutivas cambiando dirección. La clave es esquivar HACIA ella, no alejándote. La mayoría de sus combos tienen punto ciego pegado a su cuerpo.",
+          lista: ["Esquiva el vuelo rasante hacia ella en el último momento", "Sus combos de espadazos se pueden esquivar continuamente hacia adelante", "El ataque de salto vertical tiene un delay — espera a que empiece a bajar", "Usa invocaciones de ceniza para dividir su atención"]
+        },
+        {
+          h2: "Fase 2 — Diosa de la Putrefacción",
+          texto: "Al llegar a 0 HP en fase 1, Malenia renace con alas de flores putrefactas y HP completamente restaurado. La Flor de la Putrefacción es su nuevo ataque definitivo — salta al aire, el escenario se llena de flores, y explota en una onda masiva. En cuanto la veas saltar muy alto corre en línea recta alejándote durante 3-4 segundos sin parar.",
+          tip: "La Flor de la Putrefacción tiene rango enorme. Si no corres lo suficientemente lejos morirás aunque estés en los bordes del escenario."
+        },
+        {
+          h2: "Builds recomendadas",
+          texto: "Las builds más efectivas contra Malenia aprovechan sus debilidades principales: es vulnerable al fuego y al trueno, y la hemorragia ignora parcialmente su mecánica de curación.",
+          lista: ["Bleed Arcane con Rivers of Blood — la más popular y efectiva", "Black Knife Tiche como ceniza — esquiva sus ataques y no activa su curación", "Pyromancy con Giant's Flame — daño masivo en sus ventanas de recuperación", "Frost + Bleed combo para double proc de estados alterados"]
+        },
+        {
+          h2: "Consejos finales",
+          texto: "Malenia requiere paciencia y consistencia más que habilidad bruta. Cada intento debería enseñarte algo nuevo sobre sus patrones. No intentes maximizar el daño en cada apertura — prefiere golpes seguros a combos arriesgados. Con suficiente práctica sus patrones se vuelven predecibles y la batalla se convierte en una danza.",
+          tip: "Si llegas a fase 2 consistentemente ya tienes el 80% del trabajo hecho. La fase 2 tiene menos variedad de ataques que la fase 1."
+        }
+      ]
     },
     {
-      id: 2,
+      id: "guia-nigromante",
       titulo: "Build Nigromante S-Tier — Temporada 8 Diablo IV",
       juego: "Diablo IV",
       juegoEmoji: "🔥",
@@ -2311,13 +2337,37 @@ const DB = {
       tipoLabel: "Build",
       minutos: 8,
       badge: "new",
-      descripcion:
-        "La mejor build de Nigromante para la temporada 8. Incluye habilidades principales, gemas recomendadas, equipo de endgame y paragón completo.",
+      descripcion: "La mejor build de Nigromante para la temporada 8. Incluye habilidades principales, gemas recomendadas, equipo de endgame y paragón completo.",
       fecha: "2026-05-01",
       visitas: 12400,
+      contenido: [
+        {
+          h2: "Introducción — La build más fuerte de la temporada",
+          texto: "El Nigromante de Huesos es la build más consistente de la temporada 8 de Diablo IV. Bone Spear como habilidad principal con Corpse Explosion como secundario crea una sinergia devastadora. Esta guía cubre el camino completo desde el nivel 1 hasta el Torment 4."
+        },
+        {
+          h2: "Stats recomendados",
+          texto: "Los stats prioritarios para esta build son Inteligencia como stat principal para escalar el daño de Bone Spear, seguido de Vida para sobrevivir en Torment alto. El Luck no es prioritario en esta build.",
+          lista: ["Inteligencia: prioridad máxima en todo el equipo", "Vida máxima: mínimo 15.000 para Torment 3-4", "Reducción de cooldown: 30%+ para rotar Army of the Dead", "Critical Strike Chance: 50%+ con los aspectos correctos"]
+        },
+        {
+          h2: "Equipo BiS — Best in Slot",
+          texto: "El item central de la build es Blood Artisan Cuirass que genera esqueletos al recoger globos de vida. White Mask aumenta el daño un 10% cuando hay hemorragia activa. Tibault's Will potencia Bone Spear cuando tienes Osificación activa.",
+          tip: "Prioriza conseguir Blood Artisan's Cuirass antes que cualquier otro item. Sin él la build funciona al 60% de su potencial."
+        },
+        {
+          h2: "Rotación de habilidades",
+          texto: "La rotación básica es: activa Ossified Essence para acumular Essence, lanza Bone Spear cuando tengas 50+ Essence para maximizar el daño, usa Corpse Explosion en los cadáveres para daño de área, reserva Army of the Dead para grupos de élites o bosses.",
+          lista: ["1. Acumula Essence con habilidad básica", "2. Lanza Bone Spear con Essence alta", "3. Corpse Explosion en cadáveres cercanos", "4. Army of the Dead en grupos grandes o bosses"]
+        },
+        {
+          h2: "Endgame — Nightmare Dungeons y bosses",
+          texto: "Para el endgame la build escala muy bien hasta Torment 4. En Nightmare Dungeons prefiere mazmorras con muchos enemigos agrupados para maximizar el AoE de Corpse Explosion. Para los bosses de endgame como Duriel usa Bone Spear directamente sin Corpse Explosion ya que el boss no genera cadáveres."
+        }
+      ]
     },
     {
-      id: 3,
+      id: "guia-catedral",
       titulo: "Walkthrough Catedral del Abismo Profundo — Dark Souls III",
       juego: "Dark Souls III",
       juegoEmoji: "🩶",
@@ -2326,13 +2376,38 @@ const DB = {
       tipoLabel: "Zona",
       minutos: 20,
       badge: "updated",
-      descripcion:
-        "Guía completa de la Catedral del Abismo Profundo: ruta óptima, todos los objetos, enemigos especiales y cómo acceder a las zonas secretas del área.",
+      descripcion: "Guía completa de la Catedral del Abismo Profundo: ruta óptima, todos los objetos, enemigos especiales y cómo acceder a las zonas secretas del área.",
       fecha: "2026-03-20",
       visitas: 31700,
+      contenido: [
+        {
+          h2: "Cómo llegar a la Catedral",
+          texto: "La Catedral del Abismo Profundo es accesible desde el Jardín de la Lluvia después de derrotar a los Cristal Sage. Atraviesa el Bosque de Farron siguiendo los caminos principales hasta llegar a la ciudadela en ruinas. La hoguera de la Catedral está en la entrada principal del edificio.",
+          tip: "Antes de entrar a la Catedral asegúrate de tener el emblema de la Legión del Abismo para poder pasar por las puertas selladas."
+        },
+        {
+          h2: "Enemigos principales",
+          texto: "La Catedral está llena de No-muertos de la Catedral con escudos grandes que requieren ataques desde abajo o magia para romper su guardia. Los Evangelistas son las enemigas más peligrosas — lanzan hechizos a distancia y son resistentes al daño físico. Los Pontiff Knights aparecen en las zonas superiores y son significativamente más peligrosos.",
+          lista: ["Guardianes de la Catedral — ataca desde abajo de su escudo", "Evangelistas — usa daño físico rápido o hemorragia", "Pontiff Knights — los más peligrosos, combate uno a uno", "Gargoyles — en el tejado, cuidado con las caídas"]
+        },
+        {
+          h2: "Objetos importantes",
+          texto: "La Catedral esconde varios objetos únicos. El Talisman of the Sun se encuentra en el ala derecha en un cofre vigilado por dos Evangelistas. El Deep Soul hechizo está en el ala izquierda subterránea. El Estus Shard está en el tejado accesible desde la escalera del campanario.",
+          tip: "El Estus Shard del tejado requiere subir por el campanario y rodear el exterior del edificio. No te caigas — la caída es mortal."
+        },
+        {
+          h2: "Boss — Aldrich, Devorador de Dioses",
+          texto: "Aldrich es el boss de la Catedral del Abismo Profundo y uno de los Lords of Cinder. Combate con el tridente de Gwyndolin y magia de flechas. Su ataque más peligroso es la lluvia de flechas — un área de flechas que sigue al jugador durante varios segundos. Cuando empiece a invocar la lluvia corre continuamente en una dirección.",
+          lista: ["Ataca su cola — tiene el hitbox más grande", "La lluvia de flechas se evita corriendo en círculo", "Es débil al fuego — pyromancies muy efectivas", "Teletransporta al otro lado del escenario cuando está lejos"]
+        },
+        {
+          h2: "Zonas secretas y accesos",
+          texto: "La Catedral tiene dos zonas secretas. La primera está detrás del altar principal — destruye el altar atacándolo repetidamente para revelar una escalera que baja al Lago Smouldering. La segunda es el tejado accesible desde el campanario, con vista completa del área y el Estus Shard."
+        }
+      ]
     },
     {
-      id: 4,
+      id: "guia-finales-er",
       titulo: "Todos los finales de Elden Ring explicados",
       juego: "Elden Ring",
       juegoEmoji: "🌟",
@@ -2341,13 +2416,44 @@ const DB = {
       tipoLabel: "Lore",
       minutos: 15,
       badge: "hot",
-      descripcion:
-        "Los 6 finales de Elden Ring analizados en profundidad: requisitos para desbloquearlos, diferencias narrativas y cuál se considera el final canónico.",
+      descripcion: "Los 6 finales de Elden Ring analizados en profundidad: requisitos para desbloquearlos, diferencias narrativas y cuál se considera el final canónico.",
       fecha: "2026-04-02",
       visitas: 55100,
+      contenido: [
+        {
+          h2: "Introducción — Los 6 finales de Elden Ring",
+          texto: "Elden Ring tiene 6 finales distintos que representan visiones radicalmente diferentes del futuro de Las Tierras Intermedias. Todos comparten el mismo combate final contra el Soul of Cinder pero divergen después según las decisiones tomadas a lo largo del juego. No existe un final oficial canónico."
+        },
+        {
+          h2: "Final 1 — Edad de las Estrellas (Ranni)",
+          texto: "El final más elaborado y el favorito de la comunidad. Requiere completar toda la questline de Ranni the Witch — una de las questlines más largas y complejas del juego. Ranni usa el Élder Anillo para separar la Gracia Mayor del mundo, iniciando una nueva era guiada por las estrellas en lugar del Árbol Exaltado. El jugador se convierte en su consorte.",
+          tip: "Para este final debes encontrar a Ranni en su torre en Liurnia ANTES de progresar demasiado en la historia principal. Es fácil perderse."
+        },
+        {
+          h2: "Final 2 — Orden Perfecta (Goldmask)",
+          texto: "Requiere completar la questline de Brother Corhyn y Goldmask. Goldmask dedica su vida a resolver la ecuación perfecta del orden divino. El Tarnished usa el Élder Anillo para establecer una nueva Ley Dorada más perfecta que la de Gwyn, creando un mundo de orden absoluto sin las imperfecciones del original."
+        },
+        {
+          h2: "Final 3 — Desesperación (Dung Eater)",
+          texto: "El final más oscuro. Requiere completar la questline del Dung Eater y obtener su Seedbed Curse. El Dung Eater maldice el Élder Anillo para que todos los seres nacidos en adelante lleven la maldición de los No-muertos. Una visión nihilista y perturbadora del futuro.",
+          tip: "Este es el único final que requiere activamente completar una questline de un personaje villano. Moralmente es el más oscuro de los 6."
+        },
+        {
+          h2: "Final 4 — Frénesi de la Llama (Lord of Frenzied Flame)",
+          texto: "Requiere encontrar la Tres Dedos bajo la ciudad de Leyndell y recibir la Llama del Frénesi. El Tarnished se convierte en el Señor del Frénesi y quema Las Tierras Intermedias — el Árbol, el Élder Anillo y todo — hasta dejarlo en cenizas. La destrucción total como liberación."
+        },
+        {
+          h2: "Final 5 — Edad de las Estrellas Fragmentadas (Fia)",
+          texto: "Requiere completar la questline de Fia, la Abrazadora de Cadáveres, y derrotar a Lichdragon Fortissax en el sueño de Godwyn. Fia usa la Runa de la Muerte para crear un Élder Anillo que devuelve la muerte verdadera al mundo, iniciando una era de oscuridad y descanso para los No-muertos."
+        },
+        {
+          h2: "Final 6 — Señor del Élder Anillo (final básico)",
+          texto: "El final por defecto que ocurre si no completaste ninguna de las questlines anteriores. El Tarnished simplemente usa el Élder Anillo para restaurar la Gracia Mayor y el Árbol Exaltado, convirtiéndose en el nuevo Señor de Las Tierras Intermedias. Es el más simple narrativamente pero el más directo."
+        }
+      ]
     },
     {
-      id: 5,
+      id: "guia-radahn",
       titulo: "Guía de Radahn — Estrategia fase 1 y fase 2",
       juego: "Elden Ring",
       juegoEmoji: "🌟",
@@ -2356,13 +2462,34 @@ const DB = {
       tipoLabel: "Boss",
       minutos: 10,
       badge: "updated",
-      descripcion:
-        "Radahn el Conquistador de Estrellas en su versión remasterizada tras el parche 1.09. Patrones de ataque, ventanas de daño y builds recomendadas.",
+      descripcion: "Radahn el Conquistador de Estrellas en su versión remasterizada tras el parche 1.09. Patrones de ataque, ventanas de daño y builds recomendadas.",
       fecha: "2026-04-28",
       visitas: 29800,
+      contenido: [
+        {
+          h2: "Introducción — El Festival de Radahn",
+          texto: "Starscourge Radahn es uno de los semidioses más poderosos de Las Tierras Intermedias. Para enfrentarlo debes viajar a Caelid y activar el Festival de Radahn en el Castillo Redmane. El festival convoca a cazadores de todo el mundo para intentar derrotarlo — esto se refleja en las invocaciones de NPC disponibles durante la batalla.",
+          tip: "Puedes invocar hasta 6 NPCs durante la batalla de Radahn. Úsalos todos — distraen a Radahn y te dan ventanas de ataque seguras."
+        },
+        {
+          h2: "Fase 1 — Radahn a caballo",
+          texto: "En fase 1 Radahn combate montado en Leonard su pequeño caballo. A pesar del tamaño de Radahn, Leonard lo sostiene con magia gravitacional. Los ataques más peligrosos son las flechas de seguimiento — lanza oleadas de flechas gigantes que siguen al jugador. Monta a Torrent y esquiva en zigzag para evitarlas.",
+          lista: ["Monta a Torrent para máxima movilidad", "Las flechas de seguimiento se esquivan en zigzag", "Sus campos gravitacionales atraen y dañan — sal inmediatamente", "Ataca sus pies y piernas desde debajo de él"]
+        },
+        {
+          h2: "Fase 2 — El Meteoro de Caelid",
+          texto: "Al llegar a 0 HP en fase 1 Radahn no muere — cae al suelo y desaparece. Segundos después cae literalmente desde el espacio como un meteoro causando daño masivo en un radio enorme. En cuanto veas que la fase 1 termina corre lo más lejos posible del punto central. La fase 2 lo muestra sin caballo, atacando cuerpo a cuerpo con sus dos espadas colosales.",
+          tip: "El impacto meteórico de Radahn mata instantáneamente si estás cerca. Cuando caiga al suelo en fase 1 empieza a correr inmediatamente sin mirar atrás."
+        },
+        {
+          h2: "Builds recomendadas",
+          texto: "Radahn tiene alta resistencia a la mayoría de elementos pero es vulnerable a la hemorragia y al frío. La combinación de ambos estados alterados es devastadora.",
+          lista: ["Hemorragia — Rivers of Blood o Nagakiba con Arcano alto", "Frío + Hemorragia — doble proc para daño masivo", "Summons de NPC — usa todos los disponibles", "Magia a distancia — Comet Azur en fase 2 cuando está recuperándose"]
+        }
+      ]
     },
     {
-      id: 6,
+      id: "guia-espadachin",
       titulo: "Build Espadachín de fe — Sekiro early game",
       juego: "Sekiro",
       juegoEmoji: "⚔️",
@@ -2371,11 +2498,35 @@ const DB = {
       tipoLabel: "Build",
       minutos: 6,
       badge: "new",
-      descripcion:
-        "Cómo maximizar el daño desde el principio en Sekiro: habilidades prioritarias, prótesis recomendadas y técnica de postura para el early game.",
+      descripcion: "Cómo maximizar el daño desde el principio en Sekiro: habilidades prioritarias, prótesis recomendadas y técnica de postura para el early game.",
       fecha: "2026-05-03",
       visitas: 8900,
-    },
+      contenido: [
+        {
+          h2: "Introducción — El early game de Sekiro",
+          texto: "Sekiro no tiene builds en el sentido tradicional — no hay stats que subir ni equipo que cambiar. El progreso se basa en habilidades del jugador y en el árbol de habilidades de Wolf. Esta guía cubre las habilidades y prótesis prioritarias para superar el early game eficientemente."
+        },
+        {
+          h2: "Stats del personaje — qué subir primero",
+          texto: "En Sekiro solo hay dos recursos que gestionar: Vida y Postura. La vida se aumenta con Cuentas de Oración (4 por aumento) y la postura con Semillas del Árbol del Ídolo (3 por aumento). Prioriza las Cuentas de Oración sobre las Semillas al principio — más vida es más margen de error.",
+          lista: ["Cuentas de Oración — explora cada área exhaustivamente para encontrarlas", "Semillas del Árbol del Ídolo — busca los árboles blancos en cada zona", "No te saltes los cofres ocultos — muchos tienen Cuentas de Oración"]
+        },
+        {
+          h2: "Prótesis recomendadas para early game",
+          texto: "Las tres prótesis más útiles en el early game son el Shuriken, el Flame Vent y los Firecrackers. El Shuriken interrumpe saltos y ataques aéreos. El Flame Vent hace daño masivo a bestias y jefes vulnerables al fuego. Los Firecrackers aturden bestias y caballos.",
+          tip: "Consigue los Firecrackers lo antes posible — aturden a Gyoubu Oniwa y su caballo en el primer boss importante, facilitando enormemente esa batalla."
+        },
+        {
+          h2: "Árbol de habilidades — prioridades",
+          texto: "El árbol de habilidades más importante al principio es Shinobi Arts. Mikiri Counter es la habilidad más impactante del juego — permite contraatacar ataques de thrust pisando al enemigo y llenando masivamente su postura. Consíguela lo antes posible con tus primeros puntos de habilidad.",
+          lista: ["1. Mikiri Counter — prioridad absoluta", "2. Nightjar Slash — ataque aéreo muy útil", "3. Whirlwind Slash — para romper postura rápidamente", "4. Shadowrush — dash de ataque de largo alcance"]
+        },
+        {
+          h2: "Técnica de postura — la clave del combate",
+          texto: "El sistema de postura es la mecánica central de Sekiro. La postura de los enemigos se llena bloqueando y desviando sus ataques. Cuando la postura está llena quedan abiertos a un Deathblow que les quita una vida completa. La técnica más efectiva es la presión constante — nunca retrocedas, siempre ataca o desvía. Cada vez que retrocedas le das tiempo al enemigo de recuperar postura."
+        }
+      ]
+    }
   ],
   galeria: [
     {

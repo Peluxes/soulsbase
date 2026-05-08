@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ? (g.visitas / 1000).toFixed(1) + "k"
                 : g.visitas;
             return `
-            <div class="guia-card-full">
+            <div class="guia-card-full" onclick="window.location.href='guia.html?id=${g.id}'" style="cursor:pointer">
               <div class="guia-card-thumb" style="background:${g.juegoBg}">${g.juegoEmoji}</div>
               <div class="guia-card-body">
                 <div class="guia-card-top">

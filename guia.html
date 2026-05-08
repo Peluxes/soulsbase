@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía — SoulsBase</title>
+  <meta name="description" content="Guía detallada — SoulsBase">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💀</text></svg>">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+</head>
+<body>
+  <!-- ══ SIDEBAR ══ -->
+  <aside class="sidebar">
+    <div class="sidebar-logo" onclick="window.location.href='buscador.html'" style="cursor:pointer"><em>Souls</em>Base</div>
+    <nav class="sidebar-section">
+      <ul>
+        <li><a href="index.html" class="sidebar-item"><i class="ti ti-home"></i>Inicio</a></li>
+        <li><a href="catalogo.html" class="sidebar-item"><i class="ti ti-layout-grid"></i>Catálogo</a></li>
+        <li><a href="guias.html" class="sidebar-item active"><i class="ti ti-book"></i>Guías</a></li>
+        <li><a href="galeria.html" class="sidebar-item"><i class="ti ti-photo"></i>Galería</a></li>
+        <li><a href="builds.html" class="sidebar-item"><i class="ti ti-sword"></i>Builds</a></li>
+        <li><a href="planificador-elden-ring.html" class="sidebar-item"><i class="ti ti-calculator"></i>Planificador</a></li>
+        <li><a href="planificador-diablo4.html" class="sidebar-item"><i class="ti ti-fire"></i>Plan. Diablo IV</a></li>
+        <li><a href="planificador-poe2.html" class="sidebar-item"><i class="ti ti-hexagon"></i>Plan. PoE2</a></li>
+        <li><a href="tierlist.html" class="sidebar-item"><i class="ti ti-chart-bar"></i>Tier list</a></li>
+        <li><a href="comunidad.html" class="sidebar-item"><i class="ti ti-users"></i>Comunidad</a></li>
+        <li><a href="favoritos.html" class="sidebar-item"><i class="ti ti-heart"></i>Favoritos</a></li>
+        <li><a href="comparador.html" class="sidebar-item"><i class="ti ti-scale"></i>Comparador</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Juegos</div>
+      <a href="juego.html?id=elden-ring" class="game-pin"><span class="game-pin-dot" style="background:#9B7D3A"></span>Elden Ring</a>
+      <a href="juego.html?id=dark-souls-3" class="game-pin"><span class="game-pin-dot" style="background:#4A7AB5"></span>Dark Souls III</a>
+      <a href="juego.html?id=diablo-4" class="game-pin"><span class="game-pin-dot" style="background:#A83030"></span>Diablo IV</a>
+      <a href="juego.html?id=bloodborne" class="game-pin"><span class="game-pin-dot" style="background:#8A4DA0"></span>Bloodborne</a>
+      <a href="juego.html?id=sekiro" class="game-pin"><span class="game-pin-dot" style="background:#3D8A4A"></span>Sekiro</a>
+      <a href="juego.html?id=poe2" class="game-pin"><span class="game-pin-dot" style="background:#7A6B30"></span>Path of Exile 2</a>
+      <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#0a4a8a"></span>FF VII Remake</a>
+      <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#8a3a6a"></span>Persona 5</a>
+      <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#2a6a4a"></span>Baldur's Gate 3</a>
+      <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#6a2a2a"></span>Binding of Isaac</a>
+      <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#2a2a6a"></span>Hades II</a>
+      <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#5a3a8a"></span>Expedition 33</a>
+    </div>
+    <div class="sidebar-section" id="sidebar-historial">
+      <div class="sidebar-label">Recientes</div>
+      <div id="historial-items"></div>
+    </div>
+  </aside>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- ══ MAIN ══ -->
+  <div class="main-wrapper">
+    <header class="topbar">
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Menú"><i class="ti ti-menu-2"></i></button>
+      <a href="guias.html" class="back-btn"><i class="ti ti-arrow-left"></i> Guías</a>
+      <div class="search-box">
+        <i class="ti ti-search"></i>
+        <input type="text" placeholder="Buscar en SoulsBase..."
+          onkeydown="if(event.key==='Enter' && this.value.trim()) window.location.href='buscador.html?q='+encodeURIComponent(this.value.trim())">
+      </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+        <i class="ti ti-sun" id="theme-icon"></i>
+      </button>
+    </header>
+
+    <main class="content" style="padding:0">
+
+      <!-- Hero -->
+      <div class="guia-hero" id="guia-hero">
+        <div class="guia-hero-emoji" id="guia-emoji"></div>
+        <div class="guia-hero-info">
+          <div style="display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap" id="guia-badges"></div>
+          <h1 class="guia-hero-title" id="guia-titulo"></h1>
+          <div class="guia-hero-meta" id="guia-meta"></div>
+          <div class="guia-hero-actions">
+            <button class="tl-share-btn" id="guia-share-btn">
+              <i class="ti ti-share"></i> Compartir
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding:0 28px 28px">
+        <!-- Layout principal -->
+        <div class="guia-layout">
+
+          <!-- Contenido -->
+          <div>
+            <div class="guia-content" id="guia-content"></div>
+
+            <!-- Guías relacionadas -->
+            <div class="guia-relacionadas">
+              <div class="section-header" style="margin-bottom:14px">
+                <span class="section-title">Guías relacionadas</span>
+                <a href="guias.html" class="section-link">Ver todas →</a>
+              </div>
+              <div class="guides-list" id="guias-relacionadas"></div>
+            </div>
+          </div>
+
+          <!-- TOC -->
+          <div>
+            <div class="guia-toc" id="guia-toc">
+              <div class="guia-toc-title">Contenido</div>
+              <div id="toc-items"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/guia.js"></script>
+  <script src="js/favoritos.js"></script>
+  <script src="js/valoraciones.js"></script>
+  <script src="js/historial.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/responsive.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
