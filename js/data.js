@@ -522,6 +522,241 @@ const DB = {
         { rank: "2", rankColor: "#97C459", nombre: "Parry de escopeta + Saw Spear",   desc: "Dominar el parry con la escopeta interrumpe sus ataques constantemente. Requiere práctica pero transforma la pelea.", efectividad: 85, tags: ["Habilidad", "Parry", "Escopeta"] },
         { rank: "3", rankColor: "#85B7EB", nombre: "Hunter Axe — Daño bruto",         desc: "El hacha grande hace daño masivo por golpe. Más lento pero cada impacto cuenta. Buena opción para aprender sus patrones sin morir rápido.", efectividad: 75, tags: ["Fuerza", "Lento", "Seguro"] }
       ]
+    },
+    "nameless-king": {
+      id: "nameless-king",
+      nombre: "Nameless King",
+      subtitulo: "El Rey sin Nombre — Hijo de Gwyn",
+      juego: "Dark Souls III",
+      juegoId: "dark-souls-3",
+      juegoBg: "#101418",
+      emoji: "⚡",
+      zona: "Pico de Archdragon",
+      tipo: "Jefe opcional",
+      dificultad: "Extremo",
+      hp: "16.914",
+      runas: "80.000",
+      fases: 2,
+      debilidades_texto: ["Oscuro", "Magia"],
+      stats: {
+        hp:    { val: "16.914", label: "HP total" },
+        runas: { val: "80k",    label: "Almas" },
+        fases: { val: "2",      label: "Fases" },
+        nivel: { val: "~120",   label: "Nivel rec." }
+      },
+      descripcion: "El Nameless King es considerado por muchos el boss más difícil de Dark Souls III y uno de los más desafiantes de toda la saga. Es el hijo mayor de Gwyn que fue borrado de la historia por renegar de los dioses y aliarse con los dragones. En fase 1 combate montado en el Rey de los Dragones de Tormenta, y en fase 2 a pie con su lanza y magia de relámpago.",
+      estrategia: [
+        { titulo: "Fase 1 — ataca al dragón, no al jinete", texto: "En fase 1 el objetivo es el dragón — el Nameless King encima es inalcanzable. Enfócate en el cuello y la cabeza del dragón para hacer daño. Cuando el dragón baja la cabeza al suelo es tu mejor ventana." },
+        { titulo: "Usa lock-on solo en momentos clave", texto: "El lock-on puede traicionarte en fase 1 cuando el dragón vuela. Desactívalo para correr libremente y actívalo solo cuando el dragón esté en tierra." },
+        { titulo: "Fase 2 — aprende el combo de lanza", texto: "Su combo principal en fase 2 es 3-4 golpes de lanza seguidos de un slam. Esquiva hacia él en los primeros golpes. El slam final tiene área grande — esquiva hacia atrás." },
+        { titulo: "Los relámpagos son su mayor peligro", texto: "En fase 2 invoca relámpagos del cielo que caen con delay. Aprende a leer las nubes — los relámpagos caen donde estás parado, no donde irás. Sigue moviéndote." },
+        { titulo: "La oscuridad es su punto débil", texto: "El Nameless King tiene baja resistencia a la magia oscura y hechizos de oscuridad. Dark Edge o Affinity son especialmente efectivos en fase 2." }
+      ],
+      resistencias: [
+        { nombre: "Físico",  icono: "ti-sword",  valor: 25, color: "#85B7EB" },
+        { nombre: "Fuego",   icono: "ti-flame",  valor: 70, color: "#EF9F27" },
+        { nombre: "Trueno",  icono: "ti-bolt",   valor: 80, color: "#FAC775" },
+        { nombre: "Magia",   icono: "ti-wand",   valor: 10, color: "#AFA9EC" },
+        { nombre: "Oscuro",  icono: "ti-moon",   valor: 5,  color: "#8A4DA0" }
+      ],
+      debilidades: [
+        { nombre: "Oscuro", icono: "ti-moon",  valor: 90, color: "#8A4DA0" },
+        { nombre: "Magia",  icono: "ti-wand",  valor: 80, color: "#AFA9EC" }
+      ],
+      fases_data: [
+        { num: "I",  color: "#EF9F27", titulo: "Rey de los Dragones de Tormenta", sub: "100% — hasta matar al dragón",   hp_trigger: "100% HP",           desc: "El Nameless King combate montado en su dragón. El objetivo es el dragón — el jinete es inalcanzable. El dragón ataca con mordiscos, embestidas y aliento de relámpago. El Nameless King lanza rayos desde arriba. La cámara puede ser el mayor enemigo en esta fase.", nuevos: "Aliento de relámpago del dragón, rayos del jinete, mordisco aéreo, embestida" },
+        { num: "II", color: "#E24B4A", titulo: "El Rey sin Nombre",               sub: "Tras matar al dragón",           hp_trigger: "Dragón derrotado",  desc: "El Nameless King desciende a pie tras la muerte de su dragón. Combate con una lanza divina y magia de relámpago masiva. Sus ataques tienen gran alcance y los relámpagos del cielo son impredecibles. Es más lento que otros bosses de DS3 pero cada golpe hace daño enorme.", nuevos: "Combo de lanza, relámpagos del cielo, slam de área, ataque de carga" }
+      ],
+      ataques: [
+        { nombre: "Aliento de relámpago", tipo: "rayo",    tipoLabel: "Rayo",    desc: "El dragón exhala un rayo horizontal que barre el área delante de él.", tip: "Corre hacia el lado del dragón opuesto al aliento. Debajo del cuello es la zona más segura." },
+        { nombre: "Relámpagos del cielo", tipo: "rayo",    tipoLabel: "Rayo",    desc: "Solo fase 2. Invoca múltiples rayos que caen del cielo con un pequeño delay.", tip: "Los rayos caen donde estabas parado. Mantente en movimiento constante — nunca pares más de un segundo." },
+        { nombre: "Combo de lanza",       tipo: "fisico",  tipoLabel: "Físico",  desc: "Serie de 3-4 golpes de lanza con gran alcance horizontal. El último suele ser un slam descendente.", tip: "Esquiva hacia él en los primeros golpes. Para el slam final esquiva hacia atrás o lateral." },
+        { nombre: "Ataque de carga",      tipo: "fisico",  tipoLabel: "Físico",  desc: "Carga hacia el jugador a gran velocidad con la lanza en ristre.", tip: "Esquiva hacia un lateral en el último momento. La ventana es tarde — espera más de lo que crees." }
+      ],
+      drops: [
+        { emoji: "⚡", nombre: "Recuerdo del Nameless King", desc: "Canjeable por las Swordspear of the Storm o el hechizo Lightning Storm.", tasa: "100%", rareza: "legendario" },
+        { emoji: "💰", nombre: "Almas x80.000",              desc: "Recompensa de almas por derrotar al Nameless King.",                       tasa: "100%", rareza: "comun" }
+      ],
+      builds: [
+        { rank: "1", rankColor: "#EF9F27", nombre: "Dark Sorcery — Affinity",    desc: "La magia oscura es la mayor debilidad del Nameless King. Affinity o Dark Edge hacen daño masivo especialmente en fase 2.", efectividad: 92, tags: ["Inteligencia", "Fe", "Oscuro"] },
+        { rank: "2", rankColor: "#97C459", nombre: "Quality — Hyperarmor",       desc: "Arma colosal con Perseverance para fase 2. El Nameless King tiene ventanas de ataque claras entre sus combos.", efectividad: 80, tags: ["Fuerza", "Destreza", "Defensivo"] },
+        { rank: "3", rankColor: "#85B7EB", nombre: "Bleed — Fase 2 eficiente",   desc: "La hemorragia acumula bien en fase 2 donde estás cerca constantemente. Carthus Rouge en arma rápida.", efectividad: 75, tags: ["Destreza", "Hemorragia"] }
+      ]
+    },
+    "sister-friede": {
+      id: "sister-friede",
+      nombre: "Sister Friede",
+      subtitulo: "Friede y el Padre Ariandel",
+      juego: "Dark Souls III",
+      juegoId: "dark-souls-3",
+      juegoBg: "#101418",
+      emoji: "❄️",
+      zona: "Painted World of Ariandel (DLC)",
+      tipo: "Jefe DLC",
+      dificultad: "Extremo",
+      hp: "12.786",
+      runas: "70.000",
+      fases: 3,
+      debilidades_texto: ["Fuego", "Pyromancy"],
+      stats: {
+        hp:    { val: "12.786", label: "HP total" },
+        runas: { val: "70k",    label: "Almas" },
+        fases: { val: "3",      label: "Fases" },
+        nivel: { val: "~100",   label: "Nivel rec." }
+      },
+      descripcion: "Sister Friede es el boss del DLC Ashes of Ariandel y está considerado uno de los mejores de toda la saga por su diseño de 3 fases dramáticamente distintas. Friede es una ex-Ceniza que abandonó el ciclo del fuego para proteger el Painted World. La batalla es una obra maestra narrativa — cada fase revela más sobre su historia y desesperación.",
+      estrategia: [
+        { titulo: "Fase 1 — aprende sus patrones antes de presionar", texto: "Fase 1 es relativamente amable. Úsala para aprender el timing de sus ataques invisibles y su esquema de movimiento. Guarda Estus para las fases siguientes." },
+        { titulo: "Fase 2 — Padre Ariandel es la prioridad", texto: "En fase 2 el Padre Ariandel aparece. Mientras viva regenera la vida de Friede constantemente. Mata al Padre primero, luego remata a Friede." },
+        { titulo: "El fuego destruye fase 2 rápidamente", texto: "El Padre Ariandel tiene enorme vulnerabilidad al fuego. Cócteles molotov o Fireball hacen daño masivo. La fase 2 puede terminar en 30 segundos con buenas pyromancies." },
+        { titulo: "Fase 3 — Friede oscura es más agresiva", texto: "En fase 3 Friede resucita potenciada con magia oscura. Sus movimientos son más rápidos y añade nuevos ataques. Mantén presión constante — no le des tiempo para recuperarse." }
+      ],
+      resistencias: [
+        { nombre: "Físico", icono: "ti-sword",      valor: 20, color: "#85B7EB" },
+        { nombre: "Fuego",  icono: "ti-flame",      valor: 5,  color: "#EF9F27" },
+        { nombre: "Frío",   icono: "ti-snowflake",  valor: 90, color: "#85B7EB" },
+        { nombre: "Oscuro", icono: "ti-moon",       valor: 15, color: "#8A4DA0" }
+      ],
+      debilidades: [
+        { nombre: "Fuego",     icono: "ti-flame", valor: 92, color: "#EF9F27" },
+        { nombre: "Pyromancy", icono: "ti-flame", valor: 88, color: "#EF9F27" }
+      ],
+      fases_data: [
+        { num: "I",   color: "#85B7EB", titulo: "Sister Friede",                    sub: "Primera vida",                          hp_trigger: "100% HP",             desc: "Friede combate con su guadaña de hielo. Su característica más peligrosa es la invisibilidad — desaparece y reaparece para atacar por sorpresa. Aprende a leer las marcas de escarcha en el suelo que indican dónde reaparecerá.", nuevos: "Invisibilidad, guadaña de hielo, deslizamiento helado, combo aéreo" },
+        { num: "II",  color: "#EF9F27", titulo: "Padre Ariandel y Friede",          sub: "Tras matar a Friede por primera vez",   hp_trigger: "Friede a 0 HP",       desc: "El Padre Ariandel surge de su caldero y regenera a Friede. Mientras Ariandel viva, Friede se cura constantemente. Ariandel es lento pero sus azotes con el caldero tienen área masiva. Matar a Ariandel termina la fase.", nuevos: "Padre Ariandel activo, regeneración de Friede, azote de caldero, lluvia de sangre" },
+        { num: "III", color: "#E24B4A", titulo: "Friede Oscura — La Verdadera Ceniza", sub: "Tras matar al Padre Ariandel",      hp_trigger: "Ariandel derrotado",  desc: "Friede resucita transformada — su guadaña ahora tiene magia oscura además del hielo. Es más rápida, más agresiva y añade nuevos ataques. Es la fase más intensa y la que más sorprende a los jugadores.", nuevos: "Guadaña oscura, combo de triple guadaña, slam oscuro de área, velocidad aumentada" }
+      ],
+      ataques: [
+        { nombre: "Invisibilidad y ataque sorpresa", tipo: "fisico",  tipoLabel: "Físico",        desc: "Friede se vuelve invisible y reaparece para atacar. Las marcas de escarcha en el suelo indican su posición.", tip: "Observa las marcas de escarcha. Cuando veas escarcha moviéndose hacia ti prepara el esquive o aléjate." },
+        { nombre: "Azote del caldero",               tipo: "fisico",  tipoLabel: "Físico",        desc: "Solo fase 2. El Padre Ariandel golpea con su caldero en un arco enorme con splash de sangre.", tip: "El alcance es mayor de lo que parece. Corre alejándote en línea recta cuando el Padre alce el caldero." },
+        { nombre: "Triple guadaña oscura",           tipo: "magico",  tipoLabel: "Oscuro/Hielo",  desc: "Solo fase 3. Combo de tres guadañazos seguidos con magia oscura en cada uno.", tip: "Esquiva cada guadañazo individualmente hacia ella. El timing es diferente al de fases anteriores — más rápido." }
+      ],
+      drops: [
+        { emoji: "❄️", nombre: "Recuerdo de la Ceniza", desc: "Canjeable por la guadaña de Friede o el hechizo Snap Freeze.", tasa: "100%", rareza: "legendario" },
+        { emoji: "💰", nombre: "Almas x70.000",         desc: "Recompensa de almas por derrotar a Sister Friede.",              tasa: "100%", rareza: "comun" }
+      ],
+      builds: [
+        { rank: "1", rankColor: "#EF9F27", nombre: "Pyromancy — Fuego masivo", desc: "El fuego destruye fase 2 en segundos. Fireball o Fire Orb en el Padre Ariandel es la estrategia más eficiente.", efectividad: 95, tags: ["Fe", "Inteligencia", "Pyromancy"] },
+        { rank: "2", rankColor: "#97C459", nombre: "Bleed — Presión constante", desc: "La hemorragia funciona bien en fase 3 donde Friede está expuesta constantemente. Carthus Rouge.", efectividad: 82, tags: ["Destreza", "Hemorragia"] },
+        { rank: "3", rankColor: "#85B7EB", nombre: "Quality — Paciencia",       desc: "Build equilibrada para aprender los patrones de las 3 fases. Más segura pero requiere más tiempo.", efectividad: 72, tags: ["Fuerza", "Destreza", "Paciente"] }
+      ]
+    },
+    "isshin": {
+      id: "isshin",
+      nombre: "Isshin, el Santo Espadachín",
+      subtitulo: "El fundador del clan Ashina",
+      juego: "Sekiro",
+      juegoId: "sekiro",
+      juegoBg: "#0f1410",
+      emoji: "🌸",
+      zona: "Torre de Ashina — Batalla final",
+      tipo: "Jefe final",
+      dificultad: "Extremo",
+      hp: "4 barras de postura",
+      runas: "Recuerdo de Isshin",
+      fases: 4,
+      debilidades_texto: ["Fuego", "Relámpago devuelto"],
+      stats: {
+        hp:    { val: "4 vidas",  label: "Vidas de postura" },
+        runas: { val: "Recuerdo", label: "Recompensa" },
+        fases: { val: "4",        label: "Fases" },
+        nivel: { val: "Final",    label: "Momento del juego" }
+      },
+      descripcion: "Isshin el Santo Espadachín es el boss final del verdadero final de Sekiro y está considerado uno de los mejores jefes de la historia de los videojuegos. Surge del cuerpo de Genichiro — que absorbió su alma — para dar su último combate. Cuatro fases de pura maestría en esgrima japonesa, con una banda sonora épica y una conclusión perfecta para el juego.",
+      estrategia: [
+        { titulo: "Es el mismo lenguaje que Genichiro pero llevado al límite", texto: "Isshin usa los mismos fundamentos que Genichiro — desvía, ataca, sé agresivo — pero todo es más rápido, más largo y más peligroso. Si venciste a Genichiro con desvíos, Isshin es el examen final de esa habilidad." },
+        { titulo: "Fuego en fases 1 y 2", texto: "Isshin tiene alta vulnerabilidad al fuego en las dos primeras fases. Aceite + antorcha o Flame Vent hacen daño masivo. Aprovéchalo antes de que cambie de estilo." },
+        { titulo: "Fase 3 — devuelve el relámpago", texto: "En fase 3 usa relámpagos exactamente como Genichiro de Tomoe. Usa el contraataque de rayo para devolvérselos. Es la mecánica más espectacular del juego." },
+        { titulo: "Mantén presión constante", texto: "Isshin tiene más vidas que ningún otro boss de Sekiro. La clave es no darle respiro — cada vez que retrocede es una oportunidad perdida. Sé el agresor." },
+        { titulo: "La lanza en fase 4 tiene puntos ciegos", texto: "Cuando usa la lanza sus combos tienen punto ciego lateral. Posicionarte a su lado corta muchos de sus ataques más peligrosos." }
+      ],
+      resistencias: [
+        { nombre: "Físico", icono: "ti-sword",   valor: 25, color: "#85B7EB" },
+        { nombre: "Fuego",  icono: "ti-flame",   valor: 0,  color: "#EF9F27" },
+        { nombre: "Veneno", icono: "ti-droplet", valor: 70, color: "#97C459" }
+      ],
+      debilidades: [
+        { nombre: "Fuego",              icono: "ti-flame", valor: 95,  color: "#EF9F27" },
+        { nombre: "Relámpago devuelto", icono: "ti-bolt",  valor: 100, color: "#FAC775" }
+      ],
+      fases_data: [
+        { num: "I",   color: "#97C459", titulo: "Isshin con katana",       sub: "Primera vida de postura",          hp_trigger: "Deathblow 1",          desc: "Isshin combate con katana. Sus movimientos son elegantes y precisos, con combos de 3-5 golpes y un barrido bajo característico. Alta vulnerabilidad al fuego en esta fase.", nuevos: "Combo de katana, barrido bajo, dash de ataque, postura de guardia" },
+        { num: "II",  color: "#EF9F27", titulo: "Isshin — Segunda Vida",   sub: "Segunda vida de postura",         hp_trigger: "Deathblow 2",          desc: "Isshin saca la pistola además de la katana. Alterna ataques de espada con disparos a quemarropa. Sus combos se vuelven más mixtos y el ritmo aumenta. El fuego sigue siendo efectivo.", nuevos: "Pistola de disparo, combo espada-pistola, mayor velocidad" },
+        { num: "III", color: "#E24B4A", titulo: "Isshin — El Relámpago",   sub: "Tercera vida",                    hp_trigger: "Deathblow 3",          desc: "Isshin añade relámpagos de Tomoe como Genichiro. Salta al aire y lanza rayos que deben ser devueltos. Sus combos son ahora mezcla de katana, pistola y rayo. El contraataque de rayo devuelto hace daño masivo.", nuevos: "Relámpago de Tomoe, combo triple katana-pistola-rayo" },
+        { num: "IV",  color: "#8A4DA0", titulo: "Isshin — La Lanza",       sub: "Cuarta vida — la última",         hp_trigger: "Deathblow 4 necesario", desc: "Isshin desenfunda su lanza de hojas. Sus movimientos son más lentos pero con mayor alcance y daño. Esta fase es la más larga y requiere aplicar todo lo aprendido en las tres anteriores.", nuevos: "Lanza de hojas, combo de lanza, embestida con lanza" }
+      ],
+      ataques: [
+        { nombre: "Combo de katana",       tipo: "fisico", tipoLabel: "Físico", desc: "Serie de 3-5 cortes con la katana. Siempre termina con barrido bajo o ataque vertical.", tip: "Desvía cada golpe. El barrido bajo requiere salto — busca el símbolo rojo de peligro." },
+        { nombre: "Disparo de pistola",    tipo: "fisico", tipoLabel: "Físico", desc: "Dispara a quemarropa, a menudo mezclado con combos de katana.", tip: "El disparo tiene el mismo símbolo de peligro que las flechas. Usa Mikiri Counter o desvía." },
+        { nombre: "Relámpago de Tomoe",    tipo: "rayo",   tipoLabel: "Rayo",   desc: "Solo fases 3 y 4. Salta al aire y lanza un rayo que sigue al jugador.", tip: "Prepara el contraataque de rayo cuando salte. El rayo devuelto hace daño enorme de postura." },
+        { nombre: "Embestida con lanza",   tipo: "fisico", tipoLabel: "Físico", desc: "Solo fase 4. Carga con la lanza en ristre a gran velocidad.", tip: "Mikiri Counter en el momento exacto. La ventana es generosa comparada con otros ataques peikaku." }
+      ],
+      drops: [
+        { emoji: "📜", nombre: "Recuerdo de Isshin el Santo Espadachín", desc: "Desbloquea el arte de combate definitivo de Isshin en el árbol de habilidades.", tasa: "100%", rareza: "legendario" },
+        { emoji: "💎", nombre: "Cuentas de oración x3",                  desc: "Aumentan la salud y vigor de Wolf.",                                                tasa: "100%", rareza: "raro" }
+      ],
+      builds: [
+        { rank: "1", rankColor: "#EF9F27", nombre: "Fuego en fases 1-2 + relámpago en 3-4", desc: "Aceite + Flame Vent en fases 1 y 2 hace daño masivo. Guardar el contraataque de rayo para fases 3 y 4.", efectividad: 95, tags: ["Fuego", "Relámpago", "Prótesis"] },
+        { rank: "2", rankColor: "#97C459", nombre: "Desvío puro — sin prótesis",            desc: "La forma más elegante y satisfactoria. Solo katana y desvíos perfectos. Para jugadores que dominan el sistema.", efectividad: 88, tags: ["Postura", "Desvío", "Puro"] },
+        { rank: "3", rankColor: "#85B7EB", nombre: "Shuriken en saltos",                    desc: "Cada vez que Isshin salte usa el shuriken para interrumpir. Rompe su postura aérea y da ventanas de deathblow.", efectividad: 78, tags: ["Shuriken", "Prótesis", "Aéreo"] }
+      ]
+    },
+    "guardian-ape": {
+      id: "guardian-ape",
+      nombre: "Guardian Ape",
+      subtitulo: "El mono guardián del santuario",
+      juego: "Sekiro",
+      juegoId: "sekiro",
+      juegoBg: "#0f1410",
+      emoji: "🦍",
+      zona: "Santuario de Sunken Valley",
+      tipo: "Jefe mayor",
+      dificultad: "Alto",
+      hp: "2 barras de postura",
+      runas: "Recuerdo del Guardián",
+      fases: 2,
+      debilidades_texto: ["Fuego", "Slash en cuello fase 2"],
+      stats: {
+        hp:    { val: "2 vidas",  label: "Vidas de postura" },
+        runas: { val: "Recuerdo", label: "Recompensa" },
+        fases: { val: "2",        label: "Fases" },
+        nivel: { val: "Mid-game", label: "Momento del juego" }
+      },
+      descripcion: "El Guardian Ape es uno de los bosses más memorables de Sekiro por su sorpresa de diseño — tras una batalla intensa en fase 1, el mono coge su propia cabeza cortada y continúa combatiendo en fase 2. Es un ejemplo perfecto del diseño de FromSoftware para subvertir expectativas. En fase 2 el mecanismo de Deathblow cambia completamente.",
+      estrategia: [
+        { titulo: "Fase 1 — sé agresivo desde el principio", texto: "El Guardian Ape es enorme y sus ataques son caóticos, pero tiene ventanas de daño claras entre movimientos. Ataca constantemente su espalda cuando está erguido o su vientre cuando cae al suelo." },
+        { titulo: "Aléjate cuando se prepare para el gas", texto: "El mono se agacha y libera un gas venenoso en área. Es fácil de leer — aléjate inmediatamente cuando veas que se agacha." },
+        { titulo: "Fase 2 sorpresa — no bajes la guardia", texto: "Cuando hagas el Deathblow en fase 1 el mono parece muerto. Espera — coge su cabeza y continúa. La fase 2 comienza inmediatamente sin descanso." },
+        { titulo: "Fase 2 — el chillido requiere Deathblow especial", texto: "En fase 2 el mono usa un chillido fantasmal que no puede dañarse con katana normal. Necesitas el Mortal Blade para hacer el Deathblow final — asegúrate de tenerlo antes de enfrentarlo." }
+      ],
+      resistencias: [
+        { nombre: "Físico", icono: "ti-sword",   valor: 20, color: "#85B7EB" },
+        { nombre: "Fuego",  icono: "ti-flame",   valor: 0,  color: "#EF9F27" },
+        { nombre: "Veneno", icono: "ti-droplet", valor: 40, color: "#97C459" }
+      ],
+      debilidades: [
+        { nombre: "Fuego",        icono: "ti-flame", valor: 90,  color: "#EF9F27" },
+        { nombre: "Mortal Blade", icono: "ti-sword", valor: 100, color: "#E24B4A" }
+      ],
+      fases_data: [
+        { num: "I",  color: "#97C459", titulo: "El Guardián",         sub: "Primera vida de postura",               hp_trigger: "Deathblow 1",          desc: "El mono gigante combate con ataques de zarpa, lanzamiento de excrementos, gas venenoso y embestidas. Sus movimientos son grandes y lentos pero con mucho alcance. Busca su espalda para atacar de forma segura.", nuevos: "Zarpa de barrido, gas venenoso, lanzamiento de proyectiles, embestida" },
+        { num: "II", color: "#E24B4A", titulo: "El Mono Sin Cabeza",  sub: "Tras el primer Deathblow — sorpresa",   hp_trigger: "Deathblow 1 completado", desc: "El mono recoge su propia cabeza y la usa como arma, lanzando el chillido fantasmal que corrompe el alma. Sus movimientos en fase 2 son diferentes y más erráticos. El Deathblow final requiere el Mortal Blade.", nuevos: "Chillido fantasmal, cabeza como arma, movimientos erráticos, vulnerable solo a Mortal Blade" }
+      ],
+      ataques: [
+        { nombre: "Zarpa de barrido",    tipo: "fisico",  tipoLabel: "Físico",    desc: "Barre horizontalmente con una o ambas zarpas. Gran alcance lateral.", tip: "Salta o esquiva hacia él pasando por debajo de la zarpa. La zona pegada a su cuerpo es segura." },
+        { nombre: "Gas venenoso",        tipo: "veneno",  tipoLabel: "Veneno",    desc: "Se agacha y libera un gas venenoso en área alrededor suyo.", tip: "Muy fácil de leer. Cuando se agache aléjate inmediatamente en cualquier dirección." },
+        { nombre: "Chillido fantasmal",  tipo: "magico",  tipoLabel: "Fantasmal", desc: "Solo fase 2. Lanza la cabeza hacia adelante emitiendo un chillido que corrompe el alma y hace daño espiritual.", tip: "Bloquea o esquiva hacia un lateral. El chillido viaja en línea recta — sal de su trayectoria." }
+      ],
+      drops: [
+        { emoji: "📜", nombre: "Recuerdo del Mono Guardián",  desc: "Desbloquea el arte de combate del Guardian Ape.",     tasa: "100%", rareza: "legendario" },
+        { emoji: "💎", nombre: "Cuentas de oración x2",       desc: "Aumentan la salud y vigor de Wolf.",                  tasa: "100%", rareza: "raro" },
+        { emoji: "🌿", nombre: "Flor de Loto de la Nieve",    desc: "Ingrediente para la cura de la inmortalidad.",        tasa: "100%", rareza: "raro" }
+      ],
+      builds: [
+        { rank: "1", rankColor: "#EF9F27", nombre: "Fuego — Flame Vent",     desc: "El fuego hace daño enorme en ambas fases. Aceite + Flame Vent en fase 1 acelera mucho la pelea.", efectividad: 90, tags: ["Fuego", "Prótesis", "Agresivo"] },
+        { rank: "2", rankColor: "#97C459", nombre: "Agresivo directo",        desc: "Sin prótesis especiales — atacar constantemente la espalda en fase 1 y el cuello en fase 2.", efectividad: 82, tags: ["Postura", "Agresivo", "Directo"] },
+        { rank: "3", rankColor: "#85B7EB", nombre: "Shuriken + seguimiento",  desc: "Para sus saltos y embestidas el shuriken interrumpe bien. Útil para cortar sus movimientos más largos.", efectividad: 72, tags: ["Shuriken", "Interrupción"] }
+      ]
     }
   },
   juegos: [
