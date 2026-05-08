@@ -1,4 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // ── Hero banner — Juego del día ──
+  const banner = document.getElementById("hero-banner");
+  if (banner) {
+    const hoy = new Date();
+    const seed = hoy.getFullYear() * 10000 + (hoy.getMonth() + 1) * 100 + hoy.getDate();
+    const idx = seed % DB.juegos.length;
+    const jdd = DB.juegos[idx];
+
+    if (jdd.imagen) {
+      banner.style.backgroundImage = `url('${jdd.imagen}')`;
+      banner.style.backgroundSize = "cover";
+      banner.style.backgroundPosition = "center";
+    } else {
+      banner.style.background = `radial-gradient(ellipse at 20% 50%, ${jdd.thumbBg}cc 0%, #111213 80%)`;
+    }
+
+    document.getElementById("banner-title").textContent = jdd.titulo;
+    document.getElementById("banner-meta").innerHTML =
+      `<span><i class="ti ti-star" style="color:#EF9F27"></i> ${jdd.rating}</span>
+       <span class="tag tag-${jdd.tag}">${jdd.tagLabel}</span>
+       <span>${jdd.año}</span>`;
+    document.getElementById("banner-btn-primary").href = `juego.html?id=${jdd.id}`;
+    banner.addEventListener("click", (e) => {
+      if (!e.target.closest("a")) window.location.href = `juego.html?id=${jdd.id}`;
+    });
+  }
+
   // ── Juegos ──
   const grid = document.getElementById("games-grid");
   let filtroActivo = "todos";
@@ -27,7 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
   `,
       )
       .join("");
-    setTimeout(() => window.Favoritos && Favoritos.aplicarBotones(), 0);
+    setTimeout(() => {
+      window.Favoritos && Favoritos.aplicarBotones();
+      window.Valoraciones && Valoraciones.aplicarEnCards();
+    }, 0);
   }
 
   renderJuegos("todos");
@@ -71,7 +101,10 @@ document.addEventListener("DOMContentLoaded", () => {
           )
           .join("")
       : '<p style="color:var(--text-hint);font-size:13px;padding:12px 0">Sin resultados</p>';
-    setTimeout(() => window.Favoritos && Favoritos.aplicarBotones(), 0);
+    setTimeout(() => {
+      window.Favoritos && Favoritos.aplicarBotones();
+      window.Valoraciones && Valoraciones.aplicarEnCards();
+    }, 0);
   });
 
   // ── Guías ──

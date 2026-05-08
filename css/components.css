@@ -2440,3 +2440,160 @@
   .boss-hero-title { font-size: 18px; }
   .theme-toggle { margin-left: auto; }
 }
+
+/* ── Feature 1: Valoraciones con estrellas ── */
+.star-rating { display: flex; gap: 3px; align-items: center; }
+.star { font-size: 14px; color: var(--text-hint); cursor: pointer; transition: color .1s; line-height: 1; }
+.star.active { color: #EF9F27; }
+.star.preview { color: #EF9F27; opacity: .6; }
+.star-rating-label { font-size: 11px; color: var(--text-hint); margin-left: 6px; }
+.game-card-stars { position: absolute; bottom: 48px; left: 12px; opacity: 0; transition: opacity .15s; z-index: 2; }
+.game-card:hover .game-card-stars { opacity: 1; }
+.game-card-stars.has-rating { opacity: 1; }
+
+/* ── Feature 2: Comparador de juegos ── */
+.comparador-selectors { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.comparador-select-card { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 16px; }
+.comparador-select-label { font-size: 12px; color: var(--text-hint); margin-bottom: 8px; }
+.comparador-select { width: 100%; background: var(--bg-base); border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 8px 12px; color: var(--text-main); font-size: 13px; cursor: pointer; }
+.comparador-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+.comparador-table tr { border-bottom: 0.5px solid var(--border); }
+.comparador-table td { padding: 12px 16px; font-size: 13px; vertical-align: middle; }
+.comparador-table .row-label { color: var(--text-hint); font-size: 11px; text-transform: uppercase; letter-spacing: .5px; width: 120px; }
+.comparador-table .cell-winner { background: var(--accent-bg); color: #CECBF6; border-radius: var(--radius-sm); padding: 4px 8px; display: inline-block; }
+.comp-game-header { text-align: center; padding: 20px 16px; background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); margin-bottom: 16px; }
+.comp-game-img { height: 80px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; font-size: 32px; }
+.comp-game-img img { width: 100%; height: 100%; object-fit: cover; }
+.comp-game-title { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+.comp-empty { text-align: center; padding: 60px 20px; color: var(--text-hint); font-size: 14px; grid-column: 1 / -1; }
+
+/* ── Feature 3: Historial de visitas ── */
+.historial-empty { font-size: 11px; color: var(--text-hint); padding: 4px 16px; }
+
+/* ── Feature 4: Build individual ── */
+.build-hero { padding: 32px 28px 24px; background: var(--bg-surface); border-bottom: 0.5px solid var(--border); display: flex; gap: 20px; align-items: flex-start; }
+.build-hero-emoji { font-size: 52px; line-height: 1; flex-shrink: 0; }
+.build-hero-info { flex: 1; }
+.build-hero-title { font-size: 22px; font-weight: 500; margin-bottom: 6px; }
+.build-hero-badges { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; flex-wrap: wrap; }
+.build-badge { font-size: 11px; padding: 3px 10px; border-radius: 20px; font-weight: 500; }
+.build-badge-pvp { background: #1a2a40; color: #6eaaef; }
+.build-badge-pve { background: #1a2a1a; color: #6ec46e; }
+.build-badge-pvepvp { background: #2a1a2a; color: #c46ec4; }
+.build-badge-dif { background: var(--bg-hover); color: var(--text-muted); }
+.build-rating-bar { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+.build-rating-track { flex: 1; max-width: 200px; height: 6px; background: var(--bg-hover); border-radius: 3px; }
+.build-rating-fill { height: 100%; background: #EF9F27; border-radius: 3px; }
+.build-rating-num { font-size: 13px; color: #EF9F27; font-weight: 500; }
+.stat-bar-row { display: grid; grid-template-columns: 110px 1fr 36px; align-items: center; gap: 10px; margin-bottom: 10px; }
+.stat-bar-label { font-size: 12px; color: var(--text-muted); }
+.stat-bar-track { height: 6px; background: var(--bg-hover); border-radius: 3px; }
+.stat-bar-fill { height: 100%; border-radius: 3px; transition: width .4s ease; }
+.stat-bar-val { font-size: 12px; color: var(--text-main); text-align: right; }
+.equip-table { width: 100%; border-collapse: collapse; }
+.equip-table tr { border-bottom: 0.5px solid var(--border); }
+.equip-table td { padding: 10px 12px; font-size: 13px; }
+.equip-slot { color: var(--text-hint); font-size: 11px; width: 140px; }
+.prog-timeline { display: flex; flex-direction: column; gap: 0; }
+.prog-item { display: flex; gap: 16px; padding: 16px 0; border-bottom: 0.5px solid var(--border); }
+.prog-item:last-child { border-bottom: none; }
+.prog-nivel { min-width: 80px; font-size: 12px; color: var(--accent); font-weight: 500; background: var(--accent-bg); padding: 4px 8px; border-radius: var(--radius-sm); height: fit-content; text-align: center; }
+.prog-texto { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+.pros-contras { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.pros-list, .contras-list { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 16px; }
+.pros-list h4 { color: #97C459; font-size: 12px; margin-bottom: 12px; }
+.contras-list h4 { color: #E24B4A; font-size: 12px; margin-bottom: 12px; }
+.pros-item, .contras-item { font-size: 13px; color: var(--text-muted); padding: 6px 0; border-bottom: 0.5px solid var(--border); display: flex; gap: 8px; align-items: flex-start; }
+.pros-item:last-child, .contras-item:last-child { border-bottom: none; }
+.habil-card { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin-bottom: 10px; }
+.habil-header { display: flex; gap: 8px; align-items: center; margin-bottom: 6px; }
+.habil-nombre { font-size: 14px; font-weight: 500; }
+.habil-tipo { font-size: 10px; padding: 2px 8px; border-radius: 20px; }
+.habil-tipo-ofensiva { background: #2a1010; color: #ef9f27; }
+.habil-tipo-pasiva { background: #10102a; color: #85B7EB; }
+.habil-desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+/* ── Feature 5: Hero banner home ── */
+.hero-banner {
+  position: relative;
+  height: 220px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 28px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+.hero-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(17,18,19,0.95) 0%, rgba(17,18,19,0.6) 60%, rgba(17,18,19,0.1) 100%);
+}
+.hero-banner-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 28px;
+  max-width: 500px;
+}
+.hero-banner-label {
+  font-size: 11px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.hero-banner-title {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.hero-banner-meta {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.hero-banner-actions { display: flex; gap: 10px; }
+.hero-banner-btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 8px 16px;
+  color: white;
+  font-size: 13px;
+  text-decoration: none;
+  transition: opacity .15s;
+}
+.hero-banner-btn-primary:hover { opacity: .85; }
+.hero-banner-btn-secondary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 0.5px solid rgba(255,255,255,0.3);
+  border-radius: var(--radius-md);
+  padding: 8px 16px;
+  color: var(--text-muted);
+  font-size: 13px;
+  text-decoration: none;
+  transition: all .15s;
+}
+.hero-banner-btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+@media (max-width: 768px) {
+  .comparador-selectors { grid-template-columns: 1fr; }
+  .comparador-table .row-label { display: none; }
+  .pros-contras { grid-template-columns: 1fr; }
+  .hero-banner { height: 180px; }
+  .hero-banner-title { font-size: 20px; }
+}

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build — SoulsBase</title>
+    <meta name="description" content="Ficha detallada de build: stats, equipamiento, progresión y consejos de uso.">
+    <meta property="og:title" content="Build — SoulsBase">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💀</text></svg>">
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  </head>
+  <body>
+    <!-- ══ SIDEBAR ══ -->
+    <aside class="sidebar">
+      <div class="sidebar-logo" onclick="window.location.href='buscador.html'" style="cursor:pointer"><em>Souls</em>Base</div>
+      <nav class="sidebar-section">
+        <ul>
+          <li><a href="index.html" class="sidebar-item"><i class="ti ti-home"></i>Inicio</a></li>
+          <li><a href="catalogo.html" class="sidebar-item"><i class="ti ti-layout-grid"></i>Catálogo</a></li>
+          <li><a href="guias.html" class="sidebar-item"><i class="ti ti-book"></i>Guías</a></li>
+          <li><a href="galeria.html" class="sidebar-item"><i class="ti ti-photo"></i>Galería</a></li>
+          <li><a href="build.html" class="sidebar-item active"><i class="ti ti-sword"></i>Builds</a></li>
+          <li><a href="tierlist.html" class="sidebar-item"><i class="ti ti-chart-bar"></i>Tier list</a></li>
+          <li><a href="comunidad.html" class="sidebar-item"><i class="ti ti-users"></i>Comunidad</a></li>
+          <li><a href="favoritos.html" class="sidebar-item"><i class="ti ti-heart"></i>Favoritos</a></li>
+          <li><a href="comparador.html" class="sidebar-item"><i class="ti ti-scale"></i>Comparador</a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Juegos</div>
+        <a href="juego.html?id=elden-ring" class="game-pin"><span class="game-pin-dot" style="background:#9b7d3a"></span>Elden Ring</a>
+        <a href="juego.html?id=dark-souls-3" class="game-pin"><span class="game-pin-dot" style="background:#4a7ab5"></span>Dark Souls III</a>
+        <a href="juego.html?id=diablo-4" class="game-pin"><span class="game-pin-dot" style="background:#a83030"></span>Diablo IV</a>
+        <a href="juego.html?id=bloodborne" class="game-pin"><span class="game-pin-dot" style="background:#8a4da0"></span>Bloodborne</a>
+        <a href="juego.html?id=sekiro" class="game-pin"><span class="game-pin-dot" style="background:#3d8a4a"></span>Sekiro</a>
+        <a href="juego.html?id=poe2" class="game-pin"><span class="game-pin-dot" style="background:#7a6b30"></span>Path of Exile 2</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#0a4a8a"></span>FF VII Remake</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#8a3a6a"></span>Persona 5</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#2a6a4a"></span>Baldur's Gate 3</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#6a2a2a"></span>Binding of Isaac</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#2a2a6a"></span>Hades II</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#5a3a8a"></span>Expedition 33</a>
+      </div>
+      <div class="sidebar-section" id="sidebar-historial">
+        <div class="sidebar-label">Recientes</div>
+        <div id="historial-items"></div>
+      </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- ══ MAIN ══ -->
+    <div class="main-wrapper">
+      <header class="topbar">
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Menú">
+          <i class="ti ti-menu-2"></i>
+        </button>
+        <a href="catalogo.html" class="back-btn"><i class="ti ti-arrow-left"></i> Catálogo</a>
+        <div class="search-box">
+          <i class="ti ti-search"></i>
+          <input type="text" placeholder="Buscar en SoulsBase..." onkeydown="if(event.key==='Enter' && this.value.trim()) window.location.href='buscador.html?q='+encodeURIComponent(this.value.trim())" />
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+          <i class="ti ti-sun" id="theme-icon"></i>
+        </button>
+      </header>
+
+      <main class="content" style="padding:0">
+        <!-- Hero de la build -->
+        <div class="build-hero">
+          <div class="build-hero-emoji" id="build-emoji"></div>
+          <div class="build-hero-info">
+            <h1 class="build-hero-title" id="build-title"></h1>
+            <div class="build-hero-badges" id="build-badges"></div>
+            <div class="build-rating-bar">
+              <span style="font-size:11px;color:var(--text-hint)">Efectividad</span>
+              <div class="build-rating-track">
+                <div class="build-rating-fill" id="build-rating-fill" style="width:0%"></div>
+              </div>
+              <span class="build-rating-num" id="build-rating-num"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tab-bar" style="padding:0 28px;border-bottom:0.5px solid var(--border);display:flex;gap:0;">
+          <button class="tab-btn active" data-tab="resumen">Resumen</button>
+          <button class="tab-btn" data-tab="stats">Stats</button>
+          <button class="tab-btn" data-tab="equip">Equipamiento</button>
+          <button class="tab-btn" data-tab="prog">Progresión</button>
+          <button class="tab-btn" data-tab="pros">Pros y Contras</button>
+        </div>
+
+        <div style="padding:24px 28px">
+          <!-- Tab Resumen -->
+          <div class="tab-content active" id="tab-resumen">
+            <p id="build-desc" style="font-size:14px;color:var(--text-muted);line-height:1.7;margin-bottom:20px"></p>
+            <div class="section-header" style="margin-bottom:12px">
+              <span class="section-title">Habilidades clave</span>
+            </div>
+            <div id="build-habilidades"></div>
+          </div>
+
+          <!-- Tab Stats -->
+          <div class="tab-content" id="tab-stats">
+            <div class="section-header" style="margin-bottom:16px">
+              <span class="section-title">Distribución de estadísticas</span>
+            </div>
+            <div id="build-stats-bars"></div>
+          </div>
+
+          <!-- Tab Equipamiento -->
+          <div class="tab-content" id="tab-equip">
+            <div class="section-header" style="margin-bottom:12px">
+              <span class="section-title">Equipamiento recomendado</span>
+            </div>
+            <div id="build-equip"></div>
+          </div>
+
+          <!-- Tab Progresión -->
+          <div class="tab-content" id="tab-prog">
+            <div class="section-header" style="margin-bottom:12px">
+              <span class="section-title">Guía de progresión por niveles</span>
+            </div>
+            <div id="build-progresion"></div>
+          </div>
+
+          <!-- Tab Pros y Contras -->
+          <div class="tab-content" id="tab-pros">
+            <div id="build-proscontras"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/build.js"></script>
+    <script src="js/favoritos.js"></script>
+    <script src="js/valoraciones.js"></script>
+    <script src="js/historial.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>

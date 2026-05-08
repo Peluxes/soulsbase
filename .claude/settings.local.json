@@ -3,7 +3,9 @@
     "allow": [
       "Bash(Test-Path \"c:\\\\Users\\\\jorda\\\\Desktop\\\\Creacion de Paginas Web\\\\BDSouls\\\\buscador.html\")",
       "Bash(ls \"c:\\\\Users\\\\jorda\\\\Desktop\\\\Creacion de Paginas Web\\\\BDSouls\\\\\" 2>/dev/null || echo \"not found\")",
-      "Read(//c/Users/jorda/Desktop/Creacion de Paginas Web/BDSouls\" 2>/dev/**)"
+      "Read(//c/Users/jorda/Desktop/Creacion de Paginas Web/BDSouls\" 2>/dev/**)",
+      "Bash(python3 -)",
+      "Bash(python -)"
     ]
   }
 }

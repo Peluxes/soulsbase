@@ -106,7 +106,10 @@ document.addEventListener("DOMContentLoaded", () => {
       list.style.display = "flex";
       renderList(lista);
     }
-    setTimeout(() => window.Favoritos && Favoritos.aplicarBotones(), 0);
+    setTimeout(() => {
+      window.Favoritos && Favoritos.aplicarBotones();
+      window.Valoraciones && Valoraciones.aplicarEnCards();
+    }, 0);
   }
 
   // ── Pills filtro ──

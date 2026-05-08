@@ -95,7 +95,11 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>`,
     )
     .join("");
-  setTimeout(() => window.Favoritos && Favoritos.aplicarBotones(), 0);
+  setTimeout(() => {
+    window.Favoritos && Favoritos.aplicarBotones();
+    window.Valoraciones && Valoraciones.aplicarEnHero(juego.id);
+    window.Valoraciones && Valoraciones.aplicarEnCards();
+  }, 0);
 
   // ── Guías ──
   const badgeMap = {

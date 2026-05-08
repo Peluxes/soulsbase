@@ -1568,6 +1568,78 @@ const DB = {
       fecha: "2026-05-02",
     },
   ],
+  builds: {
+    "bleed-arcane-elden-ring": {
+      id: "bleed-arcane-elden-ring",
+      nombre: "Bleed Arcane — Rivers of Blood",
+      juego: "Elden Ring",
+      juegoId: "elden-ring",
+      juegoBg: "#1a1510",
+      emoji: "🩸",
+      tipo: "PvE",
+      dificultad: "Media",
+      descripcion: "La build más popular de Elden Ring. Rivers of Blood con alto Arcano acumula hemorragia en 2-3 hits, causando explosiones de daño masivo. Ideal para todos los bosses incluyendo Malenia.",
+      stats: { vigor: 60, mente: 15, resistencia: 25, fuerza: 12, destreza: 18, inteligencia: 9, fe: 8, arcano: 80 },
+      equipamiento: {
+        "Arma principal": "Rivers of Blood +10",
+        "Arma secundaria": "Mohgwyn's Sacred Spear +10",
+        "Cabeza": "White Mask",
+        "Pecho": "Ronin's Armor",
+        "Manos": "Ronin's Gauntlets",
+        "Piernas": "Ronin's Greaves",
+        "Talismanes": "Rotten Winged Sword Insignia, Millicent's Prosthesis, Lord of Blood's Exultation, Claw Talisman"
+      },
+      habilidades: [
+        { nombre: "Corpse Piler", desc: "La skill de Rivers of Blood. 5 cortes rápidos que acumulan hemorragia masiva. Úsala cuando el boss está vulnerable.", tipo: "ofensiva" },
+        { nombre: "White Mask activación", desc: "El White Mask aumenta el daño un 10% cuando hay hemorragia activa cerca. Procura que tu hemorragia active el buff antes de los ataques grandes.", tipo: "pasiva" },
+        { nombre: "Rotación de talismanes", desc: "Rotten Winged + Millicent se activan con hits consecutivos. Mantén presión constante para el stack máximo.", tipo: "pasiva" }
+      ],
+      progresion: [
+        { nivel: "1–30", texto: "Usa cualquier arma con bleed (Uchigatana) mientras farmeas Arcano. Prioriza vigor y arcano en este orden." },
+        { nivel: "30–60", texto: "Consigue Rivers of Blood en volcán Manor. Empieza a invertir en destreza hasta 18 para cumplir el requisito." },
+        { nivel: "60–120", texto: "Sube arcano hasta 80. Consigue White Mask en Mohgwyn Palace. Completa el set de Ronin." },
+        { nivel: "120–150", texto: "Optimiza con los 4 talismanes de la lista. Nivel final recomendado 150 para PvP equilibrado." }
+      ],
+      contras: ["Nerfeada varias veces — sigue siendo S-tier", "Requiere items del late game", "No funciona bien contra enemigos inmunes a hemorragia"],
+      pros: ["Daño masivo contra casi todos los bosses", "Fácil de ejecutar", "Muy efectiva en co-op y PvP"],
+      rating: 95
+    },
+    "quality-colossal-elden-ring": {
+      id: "quality-colossal-elden-ring",
+      nombre: "Quality Colossal — Greatsword",
+      juego: "Elden Ring",
+      juegoId: "elden-ring",
+      juegoBg: "#1a1510",
+      emoji: "⚔️",
+      tipo: "PvE/PvP",
+      dificultad: "Fácil",
+      descripcion: "La build más clásica y fiable de Elden Ring. La Greatsword colosal con una build quality (fuerza/destreza equilibrados) ofrece daño consistente, hyperarmor y facilidad de uso para todos los niveles.",
+      stats: { vigor: 60, mente: 20, resistencia: 35, fuerza: 54, destreza: 54, inteligencia: 9, fe: 8, arcano: 9 },
+      equipamiento: {
+        "Arma principal": "Greatsword +25",
+        "Arma secundaria": "Escudo mediano con 100% físico",
+        "Cabeza": "Bullgoat Helm",
+        "Pecho": "Crucible Tree Armor",
+        "Manos": "Crucible Gauntlets",
+        "Piernas": "Crucible Greaves",
+        "Talismanes": "Great-Jar's Arsenal, Erdtree's Favor +2, Bull-Goat's Talisman, Curved Sword Talisman"
+      },
+      habilidades: [
+        { nombre: "Stamp (Upward Cut)", desc: "La skill de la Greatsword. Absorbe un golpe y contraataca con un uppercut. Perfecta para romper la postura de bosses.", tipo: "ofensiva" },
+        { nombre: "Hyperarmor", desc: "Los ataques cargados de armas colosales tienen hyperarmor — no te interrumpen aunque te golpeen. Úsalo para intercambiar golpes con los bosses.", tipo: "pasiva" },
+        { nombre: "Poise stagger", desc: "Con suficiente daño acumulado puedes hacer tambalear a casi cualquier boss. Ataque cargado R2 es el mejor para esto.", tipo: "ofensiva" }
+      ],
+      progresion: [
+        { nivel: "1–30", texto: "La Greatsword está en un cofre en Limgrave, accesible desde el inicio. Sube fuerza a 30 para usarla bien." },
+        { nivel: "30–60", texto: "Equilibra fuerza y destreza hacia 40/40. La Greatsword escala bien en ambos stats con infusión Heavy inicialmente." },
+        { nivel: "60–120", texto: "Cambia a infusión Quality (sin infusión) cuando tengas 54/54. El AR total es máximo en este punto." },
+        { nivel: "120–150", texto: "Sube vigor a 60. Añade los talismanes de poise. Nivel 150 es el estándar PvP." }
+      ],
+      contras: ["Más lenta que otras builds", "Menor daño que bleed en bosses vulnerables", "Requiere buen posicionamiento"],
+      pros: ["Muy fácil de usar", "Consistente contra todo tipo de enemigos", "Excelente en PvP por el hyperarmor"],
+      rating: 82
+    }
+  },
   tierData: {
     global: {
       descripcion:
