@@ -823,7 +823,7 @@ const DB = {
       año: 2015,
       developer: "FromSoftware",
       descripcionCorta: "Souls gótico victoriano exclusivo de PS4. Combate agresivo, lore lovecraftiano y una atmósfera única que lo convierten en una obra maestra.",
-      imagen: "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tmu.jpg"
+      imagen: "img/bloodborne.png"
     },
     {
       id: "sekiro",
@@ -927,7 +927,7 @@ const DB = {
       año: 2025,
       developer: "Sandfall Interactive",
       descripcionCorta: "RPG por turnos francés inspirado en la Belle Époque. Cada año la Pintora borra a los humanos de cierta edad. La Expedición 33 parte a detenerla.",
-      imagen: "https://cdn.cloudflare.steamstatic.com/steam/apps/2973300/header.jpg"
+      imagen: "img/expedition-33.jpg"
     },
     {
       id: "persona-5",
