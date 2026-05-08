@@ -2697,3 +2697,38 @@
   .stats-grid { grid-template-columns: 1fr; }
   .results-sticky { position: static; }
 }
+
+/* ── Planificador Diablo IV ── */
+.d4-clase-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 10px; margin-bottom: 24px; }
+.d4-clase-card { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 14px 10px; text-align: center; cursor: pointer; transition: all .15s; }
+.d4-clase-card:hover { transform: translateY(-2px); }
+.d4-clase-card.active { border-width: 1.5px; }
+.d4-clase-emoji { font-size: 28px; margin-bottom: 8px; }
+.d4-clase-name { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+.d4-clase-desc { font-size: 10px; color: var(--text-hint); line-height: 1.4; }
+.skill-tree { display: flex; flex-direction: column; gap: 16px; }
+.skill-category { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 16px; }
+.skill-category-title { font-size: 12px; font-weight: 500; color: var(--text-hint); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 12px; }
+.skill-nodes { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-node { background: var(--bg-base); border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 10px 12px; min-width: 140px; cursor: pointer; transition: all .15s; user-select: none; }
+.skill-node:hover:not(.locked) { border-color: var(--accent-dark); }
+.skill-node.active { border-color: var(--accent-dark); background: var(--accent-bg); }
+.skill-node.locked { opacity: .4; cursor: not-allowed; }
+.skill-node-name { font-size: 12px; font-weight: 500; margin-bottom: 3px; }
+.skill-node-rank { font-size: 11px; color: var(--text-hint); }
+.skill-node-rank span { color: var(--accent); font-weight: 500; }
+.paragon-layout { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; margin-bottom: 16px; }
+.paragon-cat { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 14px; }
+.paragon-cat-name { font-size: 12px; font-weight: 500; margin-bottom: 8px; }
+.paragon-slider { width: 100%; accent-color: var(--accent); margin: 4px 0; }
+.aspecto-slot { display: flex; align-items: center; gap: 10px; background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 10px 12px; margin-bottom: 8px; }
+.aspecto-icon { font-size: 20px; flex-shrink: 0; }
+.aspecto-select { flex: 1; background: var(--bg-base); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 5px 8px; color: var(--text-main); font-size: 12px; }
+.d4-results { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 20px; position: sticky; top: calc(var(--topbar-h) + 16px); }
+.d4-potencia { font-size: 32px; font-weight: 500; text-align: center; margin-bottom: 4px; }
+.d4-potencia-label { font-size: 10px; color: var(--text-hint); text-align: center; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 16px; }
+@media (max-width: 900px) {
+  .d4-clase-grid { grid-template-columns: repeat(3,1fr); }
+  .d4-results { position: static; }
+  .paragon-layout { grid-template-columns: 1fr; }
+}

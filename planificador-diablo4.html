@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planificador de Builds — Diablo IV — SoulsBase</title>
+    <meta name="description" content="Planifica tu build de Diablo IV con árbol de habilidades, sistema Paragón, aspectos y glifos.">
+    <meta property="og:title" content="Planificador Diablo IV — SoulsBase">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💀</text></svg>">
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  </head>
+  <body>
+    <!-- ══ SIDEBAR ══ -->
+    <aside class="sidebar">
+      <div class="sidebar-logo" onclick="window.location.href='buscador.html'" style="cursor:pointer"><em>Souls</em>Base</div>
+      <nav class="sidebar-section">
+        <ul>
+          <li><a href="index.html" class="sidebar-item"><i class="ti ti-home"></i>Inicio</a></li>
+          <li><a href="catalogo.html" class="sidebar-item"><i class="ti ti-layout-grid"></i>Catálogo</a></li>
+          <li><a href="guias.html" class="sidebar-item"><i class="ti ti-book"></i>Guías</a></li>
+          <li><a href="galeria.html" class="sidebar-item"><i class="ti ti-photo"></i>Galería</a></li>
+          <li><a href="builds.html" class="sidebar-item"><i class="ti ti-sword"></i>Builds</a></li>
+          <li><a href="planificador-elden-ring.html" class="sidebar-item"><i class="ti ti-calculator"></i>Planificador</a></li>
+          <li><a href="planificador-diablo4.html" class="sidebar-item active"><i class="ti ti-fire"></i>Plan. Diablo IV</a></li>
+          <li><a href="tierlist.html" class="sidebar-item"><i class="ti ti-chart-bar"></i>Tier list</a></li>
+          <li><a href="comunidad.html" class="sidebar-item"><i class="ti ti-users"></i>Comunidad</a></li>
+          <li><a href="favoritos.html" class="sidebar-item"><i class="ti ti-heart"></i>Favoritos</a></li>
+          <li><a href="comparador.html" class="sidebar-item"><i class="ti ti-scale"></i>Comparador</a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Juegos</div>
+        <a href="juego.html?id=elden-ring" class="game-pin"><span class="game-pin-dot" style="background:#9b7d3a"></span>Elden Ring</a>
+        <a href="juego.html?id=dark-souls-3" class="game-pin"><span class="game-pin-dot" style="background:#4a7ab5"></span>Dark Souls III</a>
+        <a href="juego.html?id=diablo-4" class="game-pin"><span class="game-pin-dot" style="background:#a83030"></span>Diablo IV</a>
+        <a href="juego.html?id=bloodborne" class="game-pin"><span class="game-pin-dot" style="background:#8a4da0"></span>Bloodborne</a>
+        <a href="juego.html?id=sekiro" class="game-pin"><span class="game-pin-dot" style="background:#3d8a4a"></span>Sekiro</a>
+        <a href="juego.html?id=poe2" class="game-pin"><span class="game-pin-dot" style="background:#7a6b30"></span>Path of Exile 2</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#0a4a8a"></span>FF VII Remake</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#8a3a6a"></span>Persona 5</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#2a6a4a"></span>Baldur's Gate 3</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#6a2a2a"></span>Binding of Isaac</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#2a2a6a"></span>Hades II</a>
+        <a href="#" class="game-pin"><span class="game-pin-dot" style="background:#5a3a8a"></span>Expedition 33</a>
+      </div>
+      <div class="sidebar-section" id="sidebar-historial">
+        <div class="sidebar-label">Recientes</div>
+        <div id="historial-items"></div>
+      </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- ══ MAIN ══ -->
+    <div class="main-wrapper">
+      <header class="topbar">
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Menú">
+          <i class="ti ti-menu-2"></i>
+        </button>
+        <a href="catalogo.html" class="back-btn"><i class="ti ti-arrow-left"></i> Catálogo</a>
+        <div class="search-box">
+          <i class="ti ti-search"></i>
+          <input type="text" placeholder="Buscar en SoulsBase..." onkeydown="if(event.key==='Enter' && this.value.trim()) window.location.href='buscador.html?q='+encodeURIComponent(this.value.trim())" />
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+          <i class="ti ti-sun" id="theme-icon"></i>
+        </button>
+      </header>
+
+      <main class="content">
+        <!-- Header -->
+        <div class="section-header" style="margin-bottom:6px">
+          <span class="section-title">🔥 Planificador de Builds — Diablo IV</span>
+        </div>
+        <p style="font-size:13px;color:var(--text-muted);margin-bottom:24px">
+          Diseña tu build con árbol de habilidades, sistema Paragón, aspectos y glifos.
+        </p>
+
+        <div class="planificador-layout">
+          <!-- ══ COLUMNA IZQUIERDA ══ -->
+          <div>
+
+            <!-- SECCIÓN 1 — Clase -->
+            <div class="plan-section">
+              <div class="plan-section-title">
+                <i class="ti ti-user"></i> Clase
+              </div>
+              <div id="d4-clase-grid" class="d4-clase-grid"></div>
+            </div>
+
+            <!-- SECCIÓN 2 — Árbol de habilidades -->
+            <div class="plan-section">
+              <div class="plan-section-title">
+                <i class="ti ti-git-branch"></i> Árbol de habilidades
+                <span style="margin-left:auto;font-size:11px;color:var(--text-hint);font-weight:400">
+                  <span id="d4-puntos-gastados">0</span> / 58 puntos
+                </span>
+              </div>
+              <div id="d4-skill-tree" class="skill-tree"></div>
+            </div>
+
+            <!-- SECCIÓN 3 — Paragón -->
+            <div class="plan-section">
+              <div class="plan-section-title">
+                <i class="ti ti-diamond"></i> Paragón
+                <span style="margin-left:auto;font-size:11px;color:var(--text-hint);font-weight:400">
+                  Nivel <span id="d4-paragon-nivel">0</span> / 200
+                </span>
+              </div>
+              <div style="margin-bottom:16px">
+                <div class="nivel-slider-wrap">
+                  <input type="range" id="d4-paragon-slider" class="nivel-slider" min="0" max="200" value="0" />
+                  <span class="nivel-num" id="d4-paragon-num">0</span>
+                </div>
+              </div>
+              <div id="d4-paragon-cats" class="paragon-layout"></div>
+            </div>
+
+            <!-- SECCIÓN 4 — Aspectos -->
+            <div class="plan-section">
+              <div class="plan-section-title">
+                <i class="ti ti-bolt"></i> Aspectos ofensivos
+              </div>
+              <div id="d4-aspectos-ofe" class="d4-aspectos-grid"></div>
+            </div>
+
+            <div class="plan-section">
+              <div class="plan-section-title">
+                <i class="ti ti-shield"></i> Aspectos defensivos
+              </div>
+              <div id="d4-aspectos-def" class="d4-aspectos-grid"></div>
+            </div>
+
+            <!-- SECCIÓN 5 — Glifos -->
+            <div class="plan-section">
+              <div class="plan-section-title">
+                <i class="ti ti-hexagon"></i> Glifos de Paragón
+              </div>
+              <div id="d4-glifos-grid" class="d4-glifos-grid"></div>
+            </div>
+
+            <!-- SECCIÓN 6 — Guardar -->
+            <div class="plan-section">
+              <div class="plan-section-title">
+                <i class="ti ti-bookmark"></i> Guardar builds
+              </div>
+              <div style="display:flex;gap:8px;margin-bottom:8px">
+                <input type="text" id="d4-build-name" class="share-input" placeholder="Nombre de la build..." style="margin-bottom:0;flex:1" />
+                <button id="d4-btn-guardar" class="build-saved-btn" style="padding:8px 14px;font-size:12px;border-color:var(--accent-dark);color:var(--accent)">Guardar</button>
+              </div>
+              <button id="d4-btn-compartir" class="build-saved-btn" style="width:100%;padding:8px;font-size:12px;margin-bottom:4px">
+                <i class="ti ti-share"></i> Compartir build (copiar URL)
+              </button>
+              <div id="d4-saved-list" class="builds-saved-list"></div>
+            </div>
+
+          </div>
+
+          <!-- ══ COLUMNA DERECHA — Resultados ══ -->
+          <div class="results-sticky">
+
+            <div class="result-card">
+              <div class="result-big-num" id="d4-res-potencia" style="color:#E24B4A">—</div>
+              <div class="result-big-label">Potencia</div>
+            </div>
+
+            <div class="result-card" style="padding:14px 16px">
+              <div id="d4-res-buildtype" class="build-type-badge">—</div>
+            </div>
+
+            <div class="result-card" style="padding:14px 16px">
+              <div style="font-size:11px;color:var(--text-hint);margin-bottom:8px">Puntos de habilidad</div>
+              <div style="display:flex;justify-content:space-between;font-size:13px">
+                <span style="color:var(--text-muted)">Gastados</span>
+                <span id="d4-res-skills" style="color:var(--accent);font-weight:600">0 / 58</span>
+              </div>
+            </div>
+
+            <div class="result-card" style="padding:14px 16px">
+              <div style="font-size:11px;color:var(--text-hint);margin-bottom:8px">Paragón</div>
+              <div style="display:flex;justify-content:space-between;font-size:13px">
+                <span style="color:var(--text-muted)">Nivel</span>
+                <span id="d4-res-paragon" style="color:#EF9F27;font-weight:600">0 / 200</span>
+              </div>
+            </div>
+
+            <div class="result-card" style="padding:14px 16px">
+              <div style="font-size:11px;color:var(--text-hint);margin-bottom:6px">Stats Paragón</div>
+              <div id="d4-res-parstats" style="display:flex;flex-direction:column;gap:4px;font-size:12px"></div>
+            </div>
+
+            <div class="result-card" style="padding:14px 16px">
+              <div style="font-size:11px;color:var(--text-hint);margin-bottom:6px">Aspectos activos</div>
+              <div style="display:flex;justify-content:space-between;font-size:13px">
+                <span style="color:var(--text-muted)">Ofensivos</span>
+                <span id="d4-res-aofe" style="color:#E24B4A;font-weight:600">0 / 6</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-top:4px">
+                <span style="color:var(--text-muted)">Defensivos</span>
+                <span id="d4-res-adef" style="color:#85B7EB;font-weight:600">0 / 3</span>
+              </div>
+            </div>
+
+            <div class="result-card" style="padding:14px 16px">
+              <div style="font-size:11px;color:var(--text-hint);margin-bottom:6px">Glifos equipados</div>
+              <div style="display:flex;justify-content:space-between;font-size:13px">
+                <span style="color:var(--text-muted)">Activos</span>
+                <span id="d4-res-glifos" style="color:#97C459;font-weight:600">0 / 4</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/planificador-diablo4.js"></script>
+    <script src="js/favoritos.js"></script>
+    <script src="js/valoraciones.js"></script>
+    <script src="js/historial.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>
