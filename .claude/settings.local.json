@@ -25,7 +25,8 @@
       "Bash(node -e \"const DB = require\\('./js/data.js'\\); console.log\\('videos' in DB.fichas['elden-ring']\\);\")",
       "Bash(node --input-type=module)",
       "Bash(node --check js/data.js)",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(node --check \"c:/Users/jorda/Desktop/Creacion de Paginas Web/BDSouls/js/planificador-diablo4.js\")"
     ]
   }
 }
