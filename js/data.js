@@ -2593,6 +2593,113 @@ const DB = {
       contras: ["Más lenta que otras builds", "Menor daño que bleed en bosses vulnerables", "Requiere buen posicionamiento"],
       pros: ["Muy fácil de usar", "Consistente contra todo tipo de enemigos", "Excelente en PvP por el hyperarmor"],
       rating: 82
+    },
+    "necromancer-diablo4": {
+      id: "necromancer-diablo4",
+      nombre: "Nigromante Huesos S-Tier — Temporada 8",
+      juego: "Diablo IV",
+      juegoId: "diablo-4",
+      juegoBg: "#150f0f",
+      emoji: "💀",
+      tipo: "PvE",
+      dificultad: "Fácil",
+      descripcion: "La build de Nigromante más potente de la temporada 8. Basada en invocación de esqueletos y explosión de huesos, con una rotación simple y daño masivo en endgame. Ideal para farmear Duriel y Andariel eficientemente.",
+      stats: { vigor: 55, mente: 30, resistencia: 20, fuerza: 10, destreza: 10, inteligencia: 10, fe: 10, arcano: 10 },
+      equipamiento: {
+        "Arma principal": "Scythe of the Crone +6",
+        "Arma secundaria": "Foco de nigromante",
+        "Cabeza": "Deathless Visage",
+        "Pecho": "Blood Artisan's Cuirass",
+        "Manos": "Howl from Below",
+        "Piernas": "Tibault's Will",
+        "Talismanes": "Frenzied Dead, Hulking Monstrosity, Grasping Veins, Splintering Aspect"
+      },
+      habilidades: [
+        { nombre: "Bone Spear",             desc: "La habilidad principal. Lanza una lanza de hueso que atraviesa enemigos y explota al final.", tipo: "ofensiva" },
+        { nombre: "Corpse Explosion",       desc: "Explota cadáveres cercanos causando daño en área masivo. Combina con Bone Spear para máximo daño.", tipo: "ofensiva" },
+        { nombre: "Army of the Dead",       desc: "Ultimate que invoca un ejército masivo de esqueletos. Úsala en grupos de élites o bosses.", tipo: "ofensiva" },
+        { nombre: "Ossified Essence pasiva", desc: "Cada punto de Essence aumenta el daño de Bone Spear. Mantén la Essence alta antes de disparar.", tipo: "pasiva" }
+      ],
+      progresion: [
+        { nivel: "1-30",  texto: "Levea con Bone Spear y esqueletos básicos. Cualquier equipo sirve — enfócate en subir nivel rápido." },
+        { nivel: "30-60", texto: "Consigue Blood Artisan's Cuirass — es el item central de la build. Sube Bone Spear a rango máximo." },
+        { nivel: "60-100", texto: "Optimiza los aspectos del equipamiento. Empieza Nightmare Dungeons con nivel de sigil bajo." },
+        { nivel: "100+",  texto: "Farmea Duriel para los uniques BiS. Sube dificultad Torment gradualmente hasta T4." }
+      ],
+      pros: ["Daño masivo con rotación simple", "Excelente para farmeo de bosses", "Muy buena en grupos y AoE"],
+      contras: ["Requiere items específicos para endgame", "Frágil si te rodean", "Dependiente de cadáveres para Corpse Explosion"],
+      rating: 91
+    },
+    "faith-dark-souls-3": {
+      id: "faith-dark-souls-3",
+      nombre: "Faith Paladin — Lightning Spear",
+      juego: "Dark Souls III",
+      juegoId: "dark-souls-3",
+      juegoBg: "#101418",
+      emoji: "⚡",
+      tipo: "PvE/PvP",
+      dificultad: "Media",
+      descripcion: "La build de fe más versátil de Dark Souls III. Lightning Spear y sus variantes hacen daño masivo contra casi todos los jefes. Además del daño por hechizos, un arma infundida con trueno proporciona daño físico consistente para situaciones donde los milagros no son óptimos.",
+      stats: { vigor: 40, mente: 30, resistencia: 20, fuerza: 14, destreza: 12, inteligencia: 9, fe: 60, arcano: 9 },
+      equipamiento: {
+        "Arma principal": "Sunlight Straight Sword +10 (trueno)",
+        "Arma secundaria": "Talismán de la Sunlight (catalizador)",
+        "Cabeza": "Sunlight Helm",
+        "Pecho": "Armor of the Sun",
+        "Manos": "Gauntlets of the Sun",
+        "Piernas": "Leggings of the Sun",
+        "Talismanes": "Sun Princess Ring, Morne's Ring, Ring of the Sun's First Born, Lightning Clutch Ring"
+      },
+      habilidades: [
+        { nombre: "Lightning Spear / Greater / Sunlight", desc: "Tres variantes del mismo hechizo — usa la más potente disponible. Gran Sunlight Spear es la versión definitiva.", tipo: "ofensiva" },
+        { nombre: "Lightning Stake",                      desc: "Clava una estaca de trueno en el suelo con gran daño. Perfecta para bosses lentos o cuando están caídos.", tipo: "ofensiva" },
+        { nombre: "Sacred Oath",                          desc: "Buff de grupo que aumenta el daño y la defensa. En PvP y co-op es esencial. Dura 60 segundos.", tipo: "pasiva" },
+        { nombre: "Sunlight Straight Sword Skill",        desc: "La skill del arma activa Sacred Oath directamente. Siempre actívala antes de un boss.", tipo: "pasiva" }
+      ],
+      progresion: [
+        { nivel: "1-30",    texto: "Empieza como Herald — tiene Faith base alta. Sube Fe a 30 primero para acceder a Lightning Spear." },
+        { nivel: "30-60",   texto: "Sube Fe a 45 para Greater Lightning Spear. Consigue el Sunlight Straight Sword en Lothric." },
+        { nivel: "60-120",  texto: "Fe hasta 60 para Gran Sunlight Spear. Equipa los 4 talismanes de la lista para máximo daño." },
+        { nivel: "120-150", texto: "Sube vigor a 40. Nivel 120 es estándar para PvP. Unirse al Covenant de los Guerreros del Sol." }
+      ],
+      pros: ["Daño masivo contra la mayoría de jefes", "Muy versátil — arma física + hechizos", "Excelente en co-op con Sacred Oath"],
+      contras: ["Requiere alta inversión en Fe", "Algunos jefes resisten el trueno", "FP limitado sin buena gestión"],
+      rating: 85
+    },
+    "postura-sekiro": {
+      id: "postura-sekiro",
+      nombre: "Postura Agresiva — Desvío Perfecto",
+      juego: "Sekiro",
+      juegoId: "sekiro",
+      juegoBg: "#0f1410",
+      emoji: "⚔️",
+      tipo: "PvE",
+      dificultad: "Difícil",
+      descripcion: "En Sekiro no hay builds tradicionales — el progreso se basa en habilidades del jugador. Esta guía de estilo de juego cubre la mentalidad y técnicas para dominar el sistema de postura: desvío perfecto, Mikiri Counter, uso de prótesis y árboles de habilidades prioritarios para maximizar la eficiencia en combate.",
+      stats: { vigor: 99, mente: 99, resistencia: 99, fuerza: 99, destreza: 99, inteligencia: 0, fe: 0, arcano: 0 },
+      equipamiento: {
+        "Arma principal": "Katana de Wolf (única)",
+        "Prótesis 1": "Flame Vent — fuego contra bestias y jefes vulnerables",
+        "Prótesis 2": "Shuriken — interrumpir saltos y ataques aéreos",
+        "Prótesis 3": "Firecrackers — aturdir bestias y caballos",
+        "Prótesis 4": "Loaded Umbrella — bloquear ataques no desviables",
+        "Habilidades clave": "Mikiri Counter, Nightjar Slash, Shadowrush, Spiral Cloud Passage"
+      },
+      habilidades: [
+        { nombre: "Mikiri Counter",        desc: "La habilidad más importante del juego. Permite contraatacar ataques de thrust pisando al enemigo. Llena masivamente la postura del enemigo.", tipo: "ofensiva" },
+        { nombre: "Desvío perfecto",       desc: "Bloquear en el último momento hace un desvío que no consume postura propia y llena la del enemigo. La base de todo combate en Sekiro.", tipo: "pasiva" },
+        { nombre: "Flame Vent + aceite",   desc: "Cubrir al enemigo de aceite y activar el Flame Vent hace daño masivo de fuego. Esencial contra jefes vulnerables al fuego.", tipo: "ofensiva" },
+        { nombre: "Shadowrush",            desc: "Dash de ataque largo que hace mucho daño de postura. Excelente para iniciar el combate o para castigar recuperaciones largas del enemigo.", tipo: "ofensiva" }
+      ],
+      progresion: [
+        { nivel: "Inicio",    texto: "Aprende el desvío perfecto contra enemigos básicos antes de intentar bosses. La paciencia aquí ahorra horas de frustración." },
+        { nivel: "Early",     texto: "Consigue Mikiri Counter lo antes posible — está en el árbol Shinobi Arts al inicio. Cambia completamente el combate." },
+        { nivel: "Mid-game",  texto: "Añade Flame Vent y Shuriken a tu rotación. Aprende qué prótesis es óptima para cada boss antes de entrar." },
+        { nivel: "Late-game", texto: "Con Shadowrush y Spiral Cloud Passage tienes todas las herramientas. Cada boss tiene un set de herramientas óptimo — memorízalo." }
+      ],
+      pros: ["El sistema de combate más satisfactorio del género", "Sin dependencia de builds o farmeo", "Cada boss es un puzzle con solución elegante"],
+      contras: ["Curva de aprendizaje muy alta", "No hay forma de sobrepotenciarse para compensar habilidad", "Frustrante hasta que el sistema hace click"],
+      rating: 88
     }
   },
   tierData: {

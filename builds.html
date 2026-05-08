@@ -1,11 +1,11 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Build — SoulsBase</title>
-    <meta name="description" content="Ficha detallada de build: stats, equipamiento, progresión y consejos de uso.">
-    <meta property="og:title" content="Build — SoulsBase">
+    <title>Builds — SoulsBase</title>
+    <meta name="description" content="Guías de personaje y builds para Elden Ring, Dark Souls, Sekiro, Diablo IV y más.">
+    <meta property="og:title" content="Builds — SoulsBase">
     <meta property="og:type" content="website">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💀</text></svg>">
     <link rel="stylesheet" href="css/components.css" />
@@ -56,92 +56,39 @@
         <button class="hamburger-btn" id="hamburger-btn" aria-label="Menú">
           <i class="ti ti-menu-2"></i>
         </button>
-        <a href="catalogo.html" class="back-btn"><i class="ti ti-arrow-left"></i> Catálogo</a>
         <div class="search-box">
           <i class="ti ti-search"></i>
-          <input type="text" placeholder="Buscar en SoulsBase..." onkeydown="if(event.key==='Enter' && this.value.trim()) window.location.href='buscador.html?q='+encodeURIComponent(this.value.trim())" />
+          <input type="text" id="search-input" placeholder="Buscar builds..." onkeydown="if(event.key==='Enter' && this.value.trim()) window.location.href='buscador.html?q='+encodeURIComponent(this.value.trim())" />
+        </div>
+        <div style="display:flex;gap:6px;align-items:center;flex-shrink:0">
+          <button class="pill active" data-filter="todos">Todas</button>
+          <button class="pill" data-filter="pve">PvE</button>
+          <button class="pill" data-filter="pvp">PvP</button>
+          <button class="pill" data-filter="pve-pvp">PvE/PvP</button>
         </div>
         <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
           <i class="ti ti-sun" id="theme-icon"></i>
         </button>
       </header>
 
-      <main class="content" style="padding:0">
-        <!-- Hero de la build -->
-        <div class="build-hero">
-          <div class="build-hero-emoji" id="build-emoji"></div>
-          <div class="build-hero-info">
-            <h1 class="build-hero-title" id="build-nombre"></h1>
-            <div id="build-juego" style="font-size:12px;color:var(--text-hint);margin-bottom:8px"></div>
-            <div class="build-hero-badges" style="display:flex;gap:8px;align-items:center;margin-bottom:10px;flex-wrap:wrap">
-              <span class="build-badge" id="build-tipo"></span>
-              <span class="build-badge build-badge-dif" id="build-dificultad"></span>
-              <span class="build-badge" id="build-rating"
-                style="background:#2a2010;color:#EF9F27;font-weight:600"></span>
-            </div>
-            <div class="build-rating-bar">
-              <span style="font-size:11px;color:var(--text-hint)">Efectividad</span>
-              <div class="build-rating-track">
-                <div class="build-rating-fill" id="build-efectividad-bar" style="width:0%"></div>
-              </div>
-              <span class="build-rating-num" id="build-rating-num"></span>
-            </div>
-          </div>
+      <main class="content">
+        <!-- Header -->
+        <div class="section-header" style="margin-bottom:6px">
+          <span class="section-title">Builds</span>
+          <span id="results-count" style="font-size:12px;color:var(--text-hint)"></span>
         </div>
+        <p style="font-size:13px;color:var(--text-muted);margin-bottom:20px">Guías de personaje para cada juego</p>
 
-        <!-- Tabs -->
-        <div class="tab-bar" style="padding:0 28px;border-bottom:0.5px solid var(--border);display:flex;gap:0;">
-          <button class="tab-btn active" data-tab="resumen">Resumen</button>
-          <button class="tab-btn" data-tab="stats">Stats</button>
-          <button class="tab-btn" data-tab="equip">Equipamiento</button>
-          <button class="tab-btn" data-tab="prog">Progresión</button>
-          <button class="tab-btn" data-tab="pros">Pros y Contras</button>
-        </div>
+        <!-- Filtro por juego -->
+        <div id="juego-filter-bar" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px"></div>
 
-        <div style="padding:24px 28px">
-          <!-- Tab Resumen -->
-          <div class="tab-content active" id="tab-resumen">
-            <p id="build-desc" style="font-size:14px;color:var(--text-muted);line-height:1.7;margin-bottom:20px"></p>
-            <div class="section-header" style="margin-bottom:12px">
-              <span class="section-title">Habilidades clave</span>
-            </div>
-            <div id="build-habilidades"></div>
-          </div>
-
-          <!-- Tab Stats -->
-          <div class="tab-content" id="tab-stats">
-            <div class="section-header" style="margin-bottom:16px">
-              <span class="section-title">Distribución de estadísticas</span>
-            </div>
-            <div id="build-stats-bars"></div>
-          </div>
-
-          <!-- Tab Equipamiento -->
-          <div class="tab-content" id="tab-equip">
-            <div class="section-header" style="margin-bottom:12px">
-              <span class="section-title">Equipamiento recomendado</span>
-            </div>
-            <div id="build-equip"></div>
-          </div>
-
-          <!-- Tab Progresión -->
-          <div class="tab-content" id="tab-prog">
-            <div class="section-header" style="margin-bottom:12px">
-              <span class="section-title">Guía de progresión por niveles</span>
-            </div>
-            <div id="build-progresion"></div>
-          </div>
-
-          <!-- Tab Pros y Contras -->
-          <div class="tab-content" id="tab-pros">
-            <div id="build-proscontras"></div>
-          </div>
-        </div>
+        <!-- Grid de builds -->
+        <div class="builds-grid" id="builds-grid"></div>
       </main>
     </div>
 
     <script src="js/data.js"></script>
-    <script src="js/build.js"></script>
+    <script src="js/builds-index.js"></script>
     <script src="js/favoritos.js"></script>
     <script src="js/valoraciones.js"></script>
     <script src="js/historial.js"></script>
