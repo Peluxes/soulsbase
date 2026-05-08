@@ -728,9 +728,9 @@
 
     svg.style.cursor = 'grab';
 
-    var btnIn    = document.getElementById('zoom-in');
-    var btnOut   = document.getElementById('zoom-out');
-    var btnReset = document.getElementById('zoom-reset');
+    var btnIn    = document.getElementById('zoom-in-btn');
+    var btnOut   = document.getElementById('zoom-out-btn');
+    var btnReset = document.getElementById('zoom-reset-btn');
     if (btnIn)    btnIn.onclick    = function() { doZoom(0.8, svg); };
     if (btnOut)   btnOut.onclick   = function() { doZoom(1.25, svg); };
     if (btnReset) btnReset.onclick = function() { vb = { x: 0, y: 0, w: 800, h: 600 }; updateViewBox(svg); };
@@ -739,8 +739,8 @@
   // ── Render árbol SVG ──
   function renderSkillTree(className) {
     className = className || claseActual;
-    var container = document.getElementById('d4-skill-tree');
-    if (!container) return;
+    var wrapper = document.getElementById('skill-tree-container');
+    if (!wrapper) return;
 
     var color = CLASES[className].color;
     var arbol = CLASES[className].arbol;
@@ -750,26 +750,11 @@
 
     vb = { x: 0, y: 0, w: 800, h: 600 };
 
-    // Wrapper
-    var wrapper = document.getElementById('skill-tree-container');
-    if (!wrapper) {
-      wrapper = document.createElement('div');
-      wrapper.id = 'skill-tree-container';
-      wrapper.className = 'skill-tree-container';
-      container.innerHTML = '';
-      container.appendChild(wrapper);
-    } else {
-      wrapper.innerHTML = '';
-    }
+    // Remove previous SVG only, keep static zoom controls
+    var oldSvg = wrapper.querySelector('svg');
+    if (oldSvg) oldSvg.parentNode.removeChild(oldSvg);
 
-    // Zoom controls
-    var zoomCtrl = document.createElement('div');
-    zoomCtrl.className = 'zoom-controls';
-    zoomCtrl.innerHTML =
-      '<button class="zoom-btn" id="zoom-in" title="Acercar"><i class="ti ti-plus"></i></button>' +
-      '<button class="zoom-btn" id="zoom-reset" title="Restablecer"><i class="ti ti-focus-centered"></i></button>' +
-      '<button class="zoom-btn" id="zoom-out" title="Alejar"><i class="ti ti-minus"></i></button>';
-    wrapper.appendChild(zoomCtrl);
+    var zoomCtrl = wrapper.querySelector('.zoom-controls');
 
     // SVG
     var svgNS = 'http://www.w3.org/2000/svg';
@@ -936,7 +921,12 @@
       svg.appendChild(g);
     });
 
-    wrapper.appendChild(svg);
+    // Insert SVG before zoom controls so it sits behind them
+    if (zoomCtrl) {
+      wrapper.insertBefore(svg, zoomCtrl);
+    } else {
+      wrapper.appendChild(svg);
+    }
 
     attachSVGEvents(svg, className, nodes, edges);
     updateAllConnections(svg, className, edges);
