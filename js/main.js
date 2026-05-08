@@ -107,21 +107,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 0);
   });
 
+  // ── Stats (primero, antes de cualquier render que pueda fallar) ──
+  const statJuegos = document.getElementById("stat-juegos");
+  const statGuias  = document.getElementById("stat-guias");
+  const statBosses = document.getElementById("stat-bosses");
+  const statBuilds = document.getElementById("stat-builds");
+  if (statJuegos) statJuegos.textContent = DB.juegos.length;
+  if (statGuias)  statGuias.textContent  = DB.guias.length.toLocaleString("es");
+  if (statBosses) statBosses.textContent = Object.keys(DB.bosses).length;
+  if (statBuilds) statBuilds.textContent = DB.guias.filter((g) => g.tipo === "build").length;
+
   // ── Guías ──
   const guiasList = document.getElementById("guides-list");
   const badgeMap = {
-    hot: ["badge-hot", "Popular"],
-    new: ["badge-new", "Nueva"],
+    hot:     ["badge-hot", "Popular"],
+    new:     ["badge-new", "Nueva"],
     updated: ["badge-up", "Actualizada"],
   };
 
-  guiasList.innerHTML = DB.guias
-    .map((g) => {
-      const [cls, label] = badgeMap[g.badge];
-      const juegoData = DB.juegos.find((j) => j.titulo === g.juego);
-      const emoji = juegoData ? juegoData.emoji : "🎮";
-      const bg = juegoData ? juegoData.thumbBg : "#17181a";
-      return `
+  if (guiasList) {
+    guiasList.innerHTML = DB.guias
+      .map((g) => {
+        const badge = badgeMap[g.badge] || ["badge-hot", g.badge];
+        const [cls, label] = badge;
+        const juegoData = DB.juegos.find((j) => j.titulo === g.juego);
+        const emoji = juegoData ? juegoData.emoji : "🎮";
+        const bg    = juegoData ? juegoData.thumbBg : "#17181a";
+        return `
       <div class="guide-row">
         <div class="guide-icon" style="background:${bg}">${emoji}</div>
         <div class="guide-text">
@@ -130,14 +142,16 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <span class="badge ${cls}">${label}</span>
       </div>`;
-    })
-    .join("");
+      })
+      .join("");
+  }
 
   // ── Tier list ──
   const tierRow = document.getElementById("tier-row");
-  tierRow.innerHTML = DB.tier
-    .map(
-      (t) => `
+  if (tierRow && DB.tier) {
+    tierRow.innerHTML = DB.tier
+      .map(
+        (t) => `
   <div class="tier-badge">
     <span class="tier-letter" style="color:${t.color}">${t.letra}</span>
     <div class="tier-names">
@@ -145,17 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
   </div>
 `,
-    )
-    .join("");
-
-  // ── Stats ──
-  document.getElementById("stat-juegos").textContent = DB.juegos.length;
-  document.getElementById("stat-guias").textContent =
-    DB.guias.length.toLocaleString("es");
-  document.getElementById("stat-bosses").textContent = Object.keys(
-    DB.bosses
-  ).length;
-  document.getElementById("stat-builds").textContent = DB.guias.filter(
-    (g) => g.tipo === "build"
-  ).length;
+      )
+      .join("");
+  }
 });

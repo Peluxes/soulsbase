@@ -61,17 +61,17 @@
   window.Historial = { registrar, load, renderSidebar };
 
   const path = window.location.pathname;
-  const page = path.split("/").pop() || "index.html";
+  const page = path.split("/").pop().split("?")[0] || "index.html";
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", () => {
-      if (page === "juego.html") registrarJuego();
-      else if (page === "boss.html") registrarBoss();
-      renderSidebar();
-    });
-  } else {
+  function init() {
     if (page === "juego.html") registrarJuego();
     else if (page === "boss.html") registrarBoss();
     renderSidebar();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
   }
 })();
