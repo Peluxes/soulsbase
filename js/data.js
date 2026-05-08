@@ -1239,6 +1239,11 @@ const DB = {
           tag: "Personajes",
         },
       ],
+      videos: [
+        { titulo: "Trailer oficial — Elden Ring",           youtubeId: "E3Huy2cdih0", tipo: "trailer" },
+        { titulo: "Gameplay reveal — 15 minutos",           youtubeId: "mwDrOiILqkQ", tipo: "gameplay" },
+        { titulo: "Guía de Malenia — estrategia completa",  youtubeId: "aDFASFCEG2M", tipo: "guia" }
+      ],
     },
     "final-fantasy-10": {
       descripcion: "Final Fantasy X es un JRPG desarrollado por Square Enix, el primero de la saga en usar voces y entornos 3D completos. Ambientado en Spira, sigue a Tidus y Yuna en un viaje para derrotar a Sin, una criatura colosal que destruye la civilización. Su sistema de combate por turnos con la Esfera de Cristal es considerado uno de los más profundos de la saga.",
@@ -1278,6 +1283,9 @@ const DB = {
         { titulo: "El ciclo de Sin y la mentira de Yevon",  texto: "Spira vive bajo el ciclo eterno de Sin, una criatura que destruye la civilización cada vez que alcanza cierto nivel tecnológico. La Iglesia de Yevon oculta la verdad: Sin nunca puede ser derrotado permanentemente con la Invocación Final.", tag: "Historia" },
         { titulo: "Tidus y Zanarkand Sueño",                texto: "Tidus no es de Spira sino de Zanarkand Sueño, una ciudad conjurada por los Fayth hace mil años. Su existencia entera es parte del sueño colectivo de los Fayth que mantienen a Yu Yevon.", tag: "Lore" },
         { titulo: "Los Fayth y las Invocaciones",           texto: "Las Invocaciones son espíritus de personas que se sacrificaron voluntariamente para ser esculpidas en piedra. Los Fayth sueñan eternamente invocando a Zanarkand y a los Eones.", tag: "Cosmología" }
+      ],
+      videos: [
+        { titulo: "Trailer HD Remaster oficial", youtubeId: "BwSK9zEG-Cs", tipo: "trailer" }
       ]
     },
     "persona-5": {
@@ -1318,6 +1326,9 @@ const DB = {
         { titulo: "El Metaverso y los Palacios",          texto: "El Metaverso es una dimensión cognitiva donde los deseos distorsionados de las personas toman forma física. Los Palacios son manifestaciones de la psique corrupta de individuos poderosos, y los Tesoros son la encarnación de sus deseos más profundos.", tag: "Cosmología" },
         { titulo: "Yaldabaoth y el Juego del Destino",   texto: "Yaldabaoth, el Dios del Control, manipuló la humanidad para que abandonara su libre albedrío. Creó un juego entre Igor falso y los Ladrones Fantasma para determinar si la humanidad merece la salvación o la esclavitud.", tag: "Historia" },
         { titulo: "Las Personas y las Máscaras",          texto: "Las Personas son la manifestación del yo verdadero, arrancado violentamente mediante la rebeldía contra la opresión social. Cada Ladrón Fantasma despierta su Persona al rechazar una figura de autoridad abusiva.", tag: "Personajes" }
+      ],
+      videos: [
+        { titulo: "Trailer oficial Persona 5 Royal", youtubeId: "L0qdxqb4wNI", tipo: "trailer" }
       ]
     },
     "expedition-33": {
@@ -1357,6 +1368,9 @@ const DB = {
         { titulo: "El ciclo de la Pintora y los Números",  texto: "Cada año la Pintora despierta de su sueño eterno y pinta un número en su monolito. Todos los humanos que han alcanzado esa edad desaparecen instantáneamente. El número decrece cada año, acercando la extinción de la humanidad.", tag: "Historia" },
         { titulo: "Los Expedicionarios y el sacrificio",   texto: "Las Expediciones son grupos de humanos que parten a destruir a la Pintora antes de que pinte el siguiente número. Todas han fracasado. La Expedición 33 es la última oportunidad antes de que pinte el 32.", tag: "Personajes" },
         { titulo: "El mundo de Lumière",                   texto: "El mundo está construido sobre capas de realidad pictórica. La Pintora no solo mata sino que literalmente borra a las personas de la existencia, como si nunca hubieran sido pintadas en el lienzo del mundo.", tag: "Cosmología" }
+      ],
+      videos: [
+        { titulo: "Trailer de anuncio — The Game Awards", youtubeId: "b7nHPAPg3XY", tipo: "trailer" }
       ]
     },
     "baldurs-gate-3": {
@@ -1397,6 +1411,10 @@ const DB = {
         { titulo: "El Huevo de Nautiloid y los Elegidos",    texto: "Un huevo de Nautiloid transforma lentamente al portador en un Illithid. Los tres Elegidos de los Dioses Muertos — Ketheric, Orin y Gortash — buscan usar el Cerebro Inferior para conquistar Faerûn mediante el control mental masivo.", tag: "Historia" },
         { titulo: "Los Compañeros y sus historias",          texto: "Cada compañero tiene una historia profunda conectada con los eventos principales: Shadowheart guarda un secreto sobre Shar, Astarion es un vampiro que busca su libertad, Gale es un mago con un orbe de destrucción en el pecho.", tag: "Personajes" },
         { titulo: "El Tejido y la magia de Faerûn",         texto: "Faerûn opera bajo el Sistema de magia del Tejido de Mystra. Tras los eventos de la Spellplague, la magia es menos estable. Los Illithid operan fuera del Tejido usando magia psiónica que no puede ser contrarrestada con métodos convencionales.", tag: "Cosmología" }
+      ],
+      videos: [
+        { titulo: "Launch trailer oficial",           youtubeId: "kFhHHDyMOLY", tipo: "trailer" },
+        { titulo: "Gameplay — acto 1 completo",       youtubeId: "KJGsSFDdJrU", tipo: "gameplay" }
       ]
     },
     "bloodborne": {
@@ -1440,6 +1458,10 @@ const DB = {
         { titulo: "La Sangre Antigua y la plaga de bestias",     texto: "Yharnam prosperó gracias a la sangre curativa descubierta bajo la ciudad. Pero la sobreexposición a la sangre de los Grandes Seres desencadenó la transformación de sus habitantes en bestias. La noche de la caza es el intento de la iglesia de controlar la plaga.", tag: "Historia" },
         { titulo: "Los Grandes Seres cósmicos",                  texto: "Bloodborne bebe del horror cósmico de Lovecraft. Entidades como Ébrietas, Rom o la Presencia Lunar existen en dimensiones más allá de la comprensión humana. La investigación de Byrgenwerth buscaba elevar a la humanidad al nivel de estos seres.", tag: "Cosmología" },
         { titulo: "Gehrman y el Sueño del Cazador",              texto: "El Primer Cazador está atrapado en el sueño por la Presencia Lunar, sirviendo como guía para los cazadores que llegan. Al final, el jugador puede liberarlo — o tomar su lugar como nuevo guardián del sueño eterno.", tag: "Personajes" }
+      ],
+      videos: [
+        { titulo: "Trailer de lanzamiento oficial",      youtubeId: "G203e1HbGpk", tipo: "trailer" },
+        { titulo: "Gameplay — primeros 30 minutos",      youtubeId: "RjJVE_f-a6E", tipo: "gameplay" }
       ]
     },
     "sekiro": {
@@ -1481,6 +1503,10 @@ const DB = {
         { titulo: "El Dragón de la Herencia y la inmortalidad",  texto: "El Dragón de la Herencia otorga inmortalidad a quien lo porte. Kuro, el joven señor de Wolf, nació con este poder. Tanto el clan Ashina como los guerreros del Interior buscan a Kuro para aprovechar o erradicar el poder del dragón.", tag: "Historia" },
         { titulo: "Wolf y el código shinobi",                    texto: "Wolf (Sekiro) es un shinobi entrenado por el Gran Shinobi Búho. Su código de lealtad absoluta hacia Kuro entra en conflicto con las órdenes de su maestro. El juego explora el honor shinobi a través de sus finales múltiples.", tag: "Personajes" },
         { titulo: "El clan Ashina y su decadencia",              texto: "Isshin Ashina fundó el clan con su espada legendaria, pero el clan envejece y los ejércitos imperiales avanzan. Genichiro, nieto de Isshin, busca la inmortalidad del Dragón para salvar Ashina — a cualquier precio.", tag: "Política" }
+      ],
+      videos: [
+        { titulo: "Trailer E3 2018 — anuncio oficial",         youtubeId: "rXMX4YJ7Lks", tipo: "trailer" },
+        { titulo: "Guía de Genichiro — sistema de postura",    youtubeId: "czgCk-T2GOo", tipo: "guia" }
       ]
     },
     "dark-souls-3": {
@@ -1522,6 +1548,10 @@ const DB = {
         { titulo: "El ciclo del fuego y la Primera Llama",          texto: "Dark Souls III concluye el ciclo iniciado en el primer juego. La Primera Llama se apaga inevitablemente y los no-muertos son convocados para atizar el fuego con sus almas. Los Señores de las Cenizas — los más poderosos — rechazaron este destino y deben ser traídos de vuelta.", tag: "Historia" },
         { titulo: "Lothric y los Príncipes Gemelos",                texto: "Lothric y Lorian son los príncipes de la última línea real. Lothric, enfermizo desde su nacimiento, rechazó su destino como Portador de la Llama. Su hermano Lorian asumió su maldición y juntos se convirtieron en uno de los jefes más trágicos de la saga.", tag: "Personajes" },
         { titulo: "Los caballeros de Irithyll y Sulyvahn",          texto: "Pontiff Sulyvahn corrompió a los caballeros de Anor Londo con su veneno y esclavizó a los dioses. Irithyll del Valle Boreal era la ciudad sagrada de Gwyn, ahora sometida a un tirano que usa gemelos fantasmales para sus propios fines.", tag: "Política" }
+      ],
+      videos: [
+        { titulo: "Trailer oficial Dark Souls III",         youtubeId: "zNSbHjCQHGQ", tipo: "trailer" },
+        { titulo: "Guía de Pontiff Sulyvahn",               youtubeId: "Ks_hCbUNKs0", tipo: "guia" }
       ]
     },
     "diablo-4": {

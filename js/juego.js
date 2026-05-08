@@ -123,15 +123,68 @@ document.addEventListener("DOMContentLoaded", () => {
     .join("");
 
   // ── Galería ──
-  document.getElementById("galeria-grid").innerHTML = ficha.galeria
-    .map(
-      (g) => `
+  const tipoBadge = { trailer: 'badge-hot', gameplay: 'badge-up', guia: 'badge-new' };
+  const tipoLabel = { trailer: 'Trailer', gameplay: 'Gameplay', guia: 'Guía' };
+
+  function renderVideos(videos, bg) {
+    if (!videos || !videos.length) return '';
+    return `
+      <div style="margin-bottom:20px">
+        <div class="section-header" style="margin-bottom:12px">
+          <span class="section-title" style="font-size:13px">Vídeos</span>
+        </div>
+        <div class="videos-grid">
+          ${videos.map(v => `
+            <div class="video-card" onclick="abrirVideo('${v.youtubeId}', '${v.titulo.replace(/'/g, "\\'")}')">
+              <div class="video-thumb-yt" style="background:${bg}">
+                <img src="https://img.youtube.com/vi/${v.youtubeId}/mqdefault.jpg"
+                     alt="${v.titulo}" loading="lazy"
+                     onerror="this.style.display='none'">
+                <div class="video-play-btn"><i class="ti ti-player-play"></i></div>
+              </div>
+              <div class="video-card-info">
+                <div class="video-card-titulo">${v.titulo}</div>
+                <span class="badge ${tipoBadge[v.tipo]}">${tipoLabel[v.tipo]}</span>
+              </div>
+            </div>`).join('')}
+        </div>
+      </div>`;
+  }
+
+  window.abrirVideo = function(youtubeId, titulo) {
+    const modal = document.createElement('div');
+    modal.className = 'video-modal';
+    modal.innerHTML = `
+      <div class="video-modal-backdrop"></div>
+      <div class="video-modal-box">
+        <div class="video-modal-header">
+          <span class="video-modal-titulo">${titulo}</span>
+          <button class="video-modal-close" onclick="this.closest('.video-modal').remove(); document.body.style.overflow=''">
+            <i class="ti ti-x"></i>
+          </button>
+        </div>
+        <div class="video-modal-embed">
+          <iframe src="https://www.youtube.com/embed/${youtubeId}?autoplay=1"
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>`;
+    modal.querySelector('.video-modal-backdrop').onclick = () => {
+      modal.remove();
+      document.body.style.overflow = '';
+    };
+    document.body.appendChild(modal);
+    document.body.style.overflow = 'hidden';
+  };
+
+  document.getElementById("tab-galeria").innerHTML =
+    renderVideos(ficha.videos, juego.thumbBg) +
+    `<div class="galeria-grid">` +
+    ficha.galeria.map(g => `
     <div class="galeria-item">
       ${g.emoji}
       <div class="galeria-label">${g.label}</div>
-    </div>`,
-    )
-    .join("");
+    </div>`).join("") +
+    `</div>`;
 
   // ── Lore ──
   document.getElementById("lore-list").innerHTML = ficha.lore

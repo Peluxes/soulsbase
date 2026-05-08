@@ -24,6 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
     banner.addEventListener("click", (e) => {
       if (!e.target.closest("a")) window.location.href = `juego.html?id=${jdd.id}`;
     });
+
+    window.addEventListener('scroll', () => {
+      const rate = window.scrollY * 0.4;
+      banner.style.backgroundPositionY = `calc(center + ${rate}px)`;
+    }, { passive: true });
   }
 
   // ── Juegos ──
